@@ -1,0 +1,17 @@
+html {
+  background: url(/src/assets/img/stars.png) center center repeat;
+  background-size: 30rem;
+}
+
+body {
+  background-color: transparent;
+  display: grid;
+  height: 100vh;
+  grid-template-rows: auto 1fr auto;
+}
+
+footer {
+  width: 100vw;
+  height: 56px;
+  background-color: rgb(165, 128, 42);
+}
