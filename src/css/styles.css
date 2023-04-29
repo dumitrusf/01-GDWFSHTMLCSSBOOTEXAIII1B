@@ -1,3 +1,127 @@
+@font-face {
+  font-family: arial-black;
+  src: url("../assets/fonts/Arial/ariblk.ttf") format("truetype");
+}
+@font-face {
+  font-family: arial-bold;
+  src: url("../assets/fonts/Arial/arialbd.ttf") format("truetype");
+}
+@font-face {
+  font-family: arial-bold-italic;
+  src: url("../assets/fonts/Arial/arialbi.ttf") format("truetype");
+}
+@font-face {
+  font-family: arial-italic;
+  src: url("../assets/fonts/Arial/ariali.ttf") format("truetype");
+}
+@font-face {
+  font-family: arial-italic;
+  src: url("../assets/fonts/Arial/ariali.ttf") format("truetype");
+}
+@font-face {
+  font-family: arial-regular;
+  src: url("../assets/fonts/Arial/arialrg.ttf") format("truetype");
+}
+@font-face {
+  font-family: hnt-thin-italic;
+  src: url("../assets/fonts/helvetica-now-text/HelveticaNowText-ThinItalic.ttf") format("truetype");
+}
+@font-face {
+  font-family: hnt-thin;
+  src: url("../assets/fonts/helvetica-now-text/HelveticaNowText-Thin.ttf") format("truetype");
+}
+@font-face {
+  font-family: hnt-regular;
+  src: url("../assets/fonts/helvetica-now-text/HelveticaNowText-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: hnt-regular-italic;
+  src: url("../assets/fonts/helvetica-now-text/HelveticaNowText-RegIta.ttf") format("truetype");
+}
+@font-face {
+  font-family: -italic;
+  src: url("../assets/fonts/helvetica-now-text/HelveticaNowText-MediumItalic.ttf") format("truetype");
+}
+@font-face {
+  font-family: hnt-medium;
+  src: url("../assets/fonts/helvetica-now-text/HelveticaNowText-Medium.ttf") format("truetype");
+}
+@font-face {
+  font-family: hnt-light-italic;
+  src: url("../assets/fonts/helvetica-now-text/HelveticaNowText-LightItalic.ttf") format("truetype");
+}
+@font-face {
+  font-family: hnt-light;
+  src: url("../assets/fonts/helvetica-now-text/HelveticaNowText-Light.ttf") format("truetype");
+}
+@font-face {
+  font-family: hnt-extra-light;
+  src: url("../assets/fonts/helvetica-now-text/HelveticaNowText-ExtraLight.ttf") format("truetype");
+}
+@font-face {
+  font-family: hnt-extra-bold;
+  src: url("../assets/fonts/helvetica-now-text/HelveticaNowText-ExtraBold.ttf") format("truetype");
+}
+@font-face {
+  font-family: hnt-extra-light-italic;
+  src: url("../assets/fonts/helvetica-now-text/HelveticaNowText-ExtLtIta.ttf") format("truetype");
+}
+@font-face {
+  font-family: hnt-extra-bold-italic;
+  src: url("../assets/fonts/helvetica-now-text/HelveticaNowText-ExtBdIta.ttf") format("truetype");
+}
+@font-face {
+  font-family: hnt-bold-italic;
+  src: url("../assets/fonts/helvetica-now-text/HelveticaNowText-BoldItalic.ttf") format("truetype");
+}
+@font-face {
+  font-family: hnt-bold;
+  src: url("../assets/fonts/helvetica-now-text/HelveticaNowText-Bold.ttf") format("truetype");
+}
+@font-face {
+  font-family: hnt-black-italic;
+  src: url("../assets/fonts/helvetica-now-text/HelveticaNowText-BlackItalic.ttf") format("truetype");
+}
+@font-face {
+  font-family: hnt-black;
+  src: url("../assets/fonts/helvetica-now-text/HelveticaNowText-Black.ttf") format("truetype");
+}
+@font-face {
+  font-family: Inter-fonts;
+  src: url();
+}
+@font-face {
+  font-family: Inter-thin;
+  src: url("../assets/fonts/inter/Inter-Thin.ttf") format("truetype");
+}
+@font-face {
+  font-family: Inter-semi-bold;
+  src: url("../assets/fonts/inter/Inter-SemiBold.ttf") format("truetype");
+}
+@font-face {
+  font-family: Inter-regular;
+  src: url("../assets/fonts/inter/Inter-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: Inter-medium;
+  src: url("../assets/fonts/inter/Inter-Medium.ttf") format("truetype");
+}
+@font-face {
+  font-family: Inter-extra-bold;
+  src: url("../assets/fonts/inter/Inter-ExtraBold.ttf") format("truetype");
+}
+@font-face {
+  font-family: Inter-extra-light;
+  src: url("../assets/fonts/inter/Inter-ExtraLight.ttf") format("truetype");
+}
+@font-face {
+  font-family: Inter-bold;
+  src: url("../assets/fonts/inter/Inter-Bold.ttf") format("truetype");
+}
+@font-face {
+  font-family: Inter-black;
+  src: url("../assets/fonts/inter/Inter-Black.ttf") format("truetype");
+}
 html {
   background: url(/src/assets/img/stars.png) center center repeat;
   background-size: 30rem;
@@ -14,4 +138,163 @@ footer {
   width: 100vw;
   height: 56px;
   background-color: rgb(165, 128, 42);
+}
+
+h1 {
+  color: white;
+  font-size: 1rem;
+}
+
+.navbar-toggler {
+  border: none;
+  box-shadow: none;
+}
+
+.navbar {
+  padding: 0;
+  background-color: black;
+}
+.navbar__div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  list-style-type: none;
+  background: linear-gradient(120deg, #1860bd 13.53%, rgba(24, 150, 204, 0.1) 35.84%, rgba(24, 204, 204, 0.025) 43.81%), linear-gradient(60deg, rgba(24, 204, 204, 0.025) 60.5%, rgba(18, 218, 135, 0.1) 67.34%, #0a9205 92.72%);
+  text-align: center;
+  border-radius: 0px 0px 2px 2px;
+  -webkit-border-radius: 0px 0px 2px 2px;
+  -moz-border-radius: 0px 0px 2px 2px;
+  -ms-border-radius: 0px 0px 2px 2px;
+  -o-border-radius: 0px 0px 2px 2px;
+}
+.navbar__ul {
+  font-family: inter-regular;
+  width: 100%;
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  width: 100vw;
+  justify-content: center;
+  background: radial-gradient(50% 3% at 50% 1%, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
+}
+.navbar__svg {
+  height: 50px;
+  width: 60px;
+  margin: 0px;
+  padding: 0px;
+  filter: blur(0.6px);
+  -webkit-filter: blur(0.6px);
+}
+.navbar__svg--big {
+  width: 122px;
+  height: 24px;
+  border-radius: 50px;
+  box-shadow: 0px 0px 3px 0px white, inset 0px 0px 3px 0px white;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
+}
+
+.show {
+  overflow: hidden;
+}
+
+.menus {
+  position: relative;
+  min-width: 100vw;
+  padding: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 0px;
+  background: radial-gradient(60% 1% at 50% 100%, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
+}
+.menus__list {
+  position: absolute;
+  display: flex;
+  justify-content: space-around;
+  width: 100vw;
+  margin-right: 45px;
+  padding: 0px;
+  background: radial-gradient(20% 1% at 50% 100%, #ffffff 0%, rgba(255, 255, 255, 0) 100%), radial-gradient(10% 1% at 50% 0%, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
+}
+.menus__svg {
+  max-height: 160px;
+  margin: 0px -70px 30px -90px;
+}
+.menus__list a {
+  color: rgb(255, 255, 255);
+  font-family: "hnt-medium";
+}
+.menus__list .nav-item {
+  font-size: 16px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.menus__list a:hover {
+  color: rgb(0, 0, 0);
+}
+.menus__list .nav-item:hover {
+  background: linear-gradient(270deg, rgba(0, 0, 0, 0) 0%, #ffffff 49.65%, rgba(0, 0, 0, 0) 100%);
+}
+.menus__list .nav-item:nth-child(2) {
+  background: transparent;
+}
+
+.but {
+  position: relative;
+  box-shadow: 0px 0px 6px 0px rgba(255, 255, 255, 0.669), inset 0px 0px 2.5px 0px rgba(255, 255, 255, 0.64);
+  border-radius: 73.5px;
+}
+
+.but::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 73.5px;
+  padding: 1.6px;
+  background: radial-gradient(100% 330.61% at 0% 100%, #1860bd, rgba(0, 0, 0, 0), #1b7a18), linear-gradient(270.04deg, rgba(255, 255, 255, 0) 23.44%, rgba(255, 255, 255, 0) 29.88%, rgba(255, 255, 255, 0.35) 39.13%, #ffffff 46.09%, #ffffff 57.01%, rgba(255, 255, 255, 0.35) 65.11%, rgba(255, 255, 255, 0) 72.43%, rgba(255, 255, 255, 0) 80.23%);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  -webkit-border-radius: 73.5px;
+  -moz-border-radius: 73.5px;
+  -ms-border-radius: 73.5px;
+  -o-border-radius: 73.5px;
+}
+
+.video-wrapper {
+  background-color: transparent;
+  position: relative;
+  padding-bottom: 56.25%;
+  /*proportion 16:9*/
+  height: auto;
+  overflow: hidden;
+}
+
+.video-wrapper object {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.nav-link:focus,
+.nav-link:hover {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.navbar-toggler:focus {
+  text-decoration: none;
+  outline: 0;
+  box-shadow: none;
+  box-shadow: 0px 0px 11px 0px rgba(255, 255, 255, 0.669);
+}
+
+.navbar-nav .nav-link.active,
+.navbar-nav .show > .nav-link {
+  color: rgb(219, 255, 0);
 }
