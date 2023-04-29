@@ -1,4 +1,12 @@
+# In the future when delivering the project, I would have to ignore everything that is here below on the list, to only deliver HTML CSS with its Bootstrap folder and its Assets, the rest like JSON and absolutely everything will be ignored, So, for the moment I will comment on everything here from this list.
 .vscode/
 .husky/
-node_modules/
+/node_modules/*
+!/node_modules/bootstrap/
+!/node_modules/Reset-css/
+!/node_modules/Normalize-css/
 commitlint.config.js
+# /src/*
+# !/src/css/
+# !/src/assets/*
+# *.json
