@@ -215,7 +215,7 @@ Des tests ont été ajoutés à la partie existante du code pour assurer la stab
 3. Intégration mobile first (4 points).
 
 
-  Design, box logic, responsive et max-width pour avoir un bon Mobile first
+  Design, box logic, responsive et min-width pour avoir un bon Mobile first
 
 ---
 
@@ -231,9 +231,21 @@ Des tests ont été ajoutés à la partie existante du code pour assurer la stab
 ```
 
 
+---
 
+## nouvelle règle
 
+<br>
 
+Le site contiendra deux page, a chaque développement de page creer une branche en la nommant comme la page a développer.
+
+1. ère page page X-STATION = dev/X-STATION
+
+2. e page The New Union = dev/TNU
+
+et puis en suite, numéroter notre ticket soit depuis Trello soit depuis github (ca depende), dans le commit parai que les premiere commits.
+
+si pour example pour le navbar: dev/X-STATION/Navbar soit dev/X-STATION/sec-1
 
 
 
