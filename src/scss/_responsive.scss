@@ -1,0 +1,22 @@
+// #5 responsive with @content in scss
+
+$breakpoints: (
+  tablet: 644px,
+  laptop: 1024px,
+  desk: 1440px,
+);
+
+
+
+
+@mixin responsive($key) {
+  @if mas-has-key($breakpoints, $key) {
+    @media screen and (min-width: map-get($breakpoints, $key)) {
+      @content;
+    }
+  } @else {
+    @media screen and (min-width: $key) {
+      @content;
+    }
+  }
+} 
