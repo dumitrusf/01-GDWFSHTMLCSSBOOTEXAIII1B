@@ -2,11 +2,9 @@
 @import "fonts";
 @import "responsive";
 
-
 // #2 structuration html with metas and grid css
 html {
-  background: url(/src/assets/img/stars.png) center center
-    repeat;
+  background: url(/src/assets/img/stars.png) center center repeat;
   background-size: 30rem;
 }
 
@@ -205,7 +203,7 @@ h1 {
   -o-border-radius: 73.5px;
 }
 
-// Video created by myself added 
+// Video created by myself added
 
 .video-wrapper {
   background-color: transparent;
@@ -220,10 +218,9 @@ h1 {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 100vw;
   height: 100%;
 }
-
 
 // Video created by myself added
 
@@ -243,3 +240,84 @@ h1 {
 .navbar-nav .show > .nav-link {
   color: rgb(219, 255, 0);
 }
+
+// sec-2 playstation with Joel
+.playstation {
+  display: flex;
+  flex-direction: column;
+  padding-top: 1rem;
+  width: 100vw;
+  height: auto;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+  box-shadow: inset 0px 108px 48px 11px #000000, inset 2px 0px 60px 5px #000000,
+    inset -2px 0px 60px 5px #000000;
+  position: relative;
+
+  &__h2 {
+    position: relative;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 1rem;
+    line-height: 32px;
+    letter-spacing: 1.085rem;
+    text-align: center;
+    color: white;
+  }
+
+  &__h2::after{
+    content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(50% 50% at 100% 50%, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
+  background-blend-mode: hard-light;
+  }
+
+  &__wrapper {
+    padding-top: 3rem;
+    min-width: 100%;
+  }
+
+  &__wrapper > img {
+    height: 160%;
+    width: 114%;
+    mix-blend-mode: color-dodge;
+  }
+
+  &__joel {
+     position: absolute;
+     bottom: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     display: flex;
+}
+
+  &__joel > img {
+    align-self: flex-end;
+    filter: saturate(60%);
+    transform: scaleX(1.09) scaleY(0.97);
+    -webkit-transform: scaleX(1.09) scaleY(0.97);
+    -moz-transform: scaleX(1.09) scaleY(0.97);
+    -ms-transform: scaleX(1.09) scaleY(0.97);
+    -o-transform: scaleX(1.09) scaleY(0.97);
+    -webkit-filter: saturate(60%);
+    padding-left: 25px;
+  }
+}
+
+.playstation::after{
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  box-shadow: inset 0px -45px 48px 11px #000000;
+}
+// sec-2 playstation with Joel
