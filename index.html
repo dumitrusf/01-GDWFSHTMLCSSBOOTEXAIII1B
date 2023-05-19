@@ -48,75 +48,86 @@
     <meta name="theme-color" content="#000000" />
     <!-- Favicon icon site web -->
 
-
     <!-- #4 installation of Reset, Normalize, Bootstrap and our Styles  -->
 
-    
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="/node_modules/bootstrap/css/bootstrap.min.css"
-   />
+    <link
+      rel="stylesheet"
+      href="/node_modules/bootstrap/css/bootstrap.min.css"
+    />
     <!-- Bootstrap CSS -->
-
 
     <!-- Normalize CSS -->
-    <link rel="stylesheet" href="/node_modules/Normalize-css/normalize.css"
-  />
+    <link rel="stylesheet" href="/node_modules/Normalize-css/normalize.css" />
     <!-- Normalize CSS -->
 
+    <!-- reset installed -->
+    <link rel="stylesheet" href="node_modules/Reset-css/reset.css" />
+    <!-- reset installed -->
 
-    <!-- reset installed -->
-   <link rel="stylesheet" href="node_modules/Reset-css/reset.css">
-    <!-- reset installed -->
-   
     <!-- My CSS -->
-   <link rel="stylesheet" href="src/css/styles.css"/>
+    <link rel="stylesheet" href="src/css/styles.css" />
     <!-- My CSS -->
 
     <!-- #4 installation of Reset, Normalize, Bootstrap and our Styles  -->
-    
   </head>
 
   <body>
-
-
-    
     <!-- Top content -->
     <header>
       <nav class="navbar navbar-expand-md">
         <div class="navbar__div container-xs d-flex">
-         <ul class="navbar__ul ">
-           <li>
-             <a href="https://www.playstation.com/en-us/" target="_blank" rel="noopener">
-               <img class="navbar__svg  " src="/src/assets/img/svg/ps-svg-logo.svg">
-             </a>
-           </li>
-   
-           <li>
-             <button
-             class="but button-nav navbar-toggler"
-             type="button"
-             data-bs-toggle="collapse"
-             data-bs-target="#navbarSupportedContent"
-             aria-controls="navbarSupportedContent"
-             aria-expanded="false"
-             aria-label="Toggle navigation"
-             >
-             <div class="logo-x-station">
-               <h1>X - STATION</h1> 
-             </div>
-              <!-- <img class="navbar__svg navbar__svg--big" src="/src/assets/img/svg/xstationlogoheader.svg" alt="New logo x-station"> -->
-             </button>
-           </li>
-   
-           <li>
-             <a href="https://www.xbox.com/en-US/" target="_blank" rel="noopener">
-               <img class="navbar__svg" src="/src/assets/img/svg/xbox-svg-logo.svg">
-             </a>
-           </li>
-         </ul>
-  
+          <ul class="navbar__ul">
+            <li>
+              <a
+                href="https://www.playstation.com/en-us/"
+                target="_blank"
+                rel="noopener"
+              >
+                <img
+                  class="navbar__svg"
+                  src="/src/assets/img/svg/ps-svg-logo.svg"
+                />
+              </a>
+            </li>
+
+            <li>
+              <button
+                class="but button-nav navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+              >
+                <div class="logo-x-station">
+                  <h1>X - STATION</h1>
+                </div>
+                <!-- <img class="navbar__svg navbar__svg--big" src="/src/assets/img/svg/xstationlogoheader.svg" alt="New logo x-station"> -->
+              </button>
+            </li>
+
+            <li>
+              <a
+                href="https://www.xbox.com/en-US/"
+                target="_blank"
+                rel="noopener"
+              >
+                <img
+                  class="navbar__svg"
+                  src="/src/assets/img/svg/xbox-svg-logo.svg"
+                />
+              </a>
+            </li>
+          </ul>
+
           <div class="menus collapse navbar" id="navbarSupportedContent">
-            <img class="menus__svg menus__svg--ps" src="/src/assets/img/svg/ps-svg-logo-grey.svg" alt="">
+            <img
+              class="menus__svg menus__svg--ps"
+              src="/src/assets/img/svg/ps-svg-logo-grey.svg"
+              alt=""
+            />
             <ul class="menus__list navbar-nav">
               <li class="nav-item">
                 <a class="nav-link" aria-current="page" href="#">XBOX X|S</a>
@@ -131,47 +142,58 @@
                 <a class="nav-link" href="#">PS5</a>
               </li>
             </ul>
-            <img class="menus__svg menus__svg--xb" src="/src/assets/img/svg/xbox-svg-logo-gray.svg" alt="">
+            <img
+              class="menus__svg menus__svg--xb"
+              src="/src/assets/img/svg/xbox-svg-logo-gray.svg"
+              alt=""
+            />
           </div>
         </div>
       </nav>
     </header>
     <!-- Top content -->
 
-
-
-    
-    
     <!-- Main content -->
     <main>
-      <div class="video-wrapper">
-        <object class="object-fit-fit" data="https://www.youtube.com/v/Motc0Iu40NI" width="560" height="315">
-          <param name="movie" value="https://www.youtube.com/v/Motc0Iu40NI">
-          <param name="allowFullScreen" value="true">
-          <param name="allowscriptaccess" value="always">
-        </object>
-      </div>
-      
-      
+      <!-- Sec-1 video -->
+      <section class="video-wrapper">
+        <iframe 
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/Motc0Iu40NI"
+          frameborder="0"
+          allowfullscreen
+        ></iframe>
+      </section>
+      <!-- Sec-1 video -->
+
+      <!-- Sec-2 play-station Intro with Joel -->
+      <section class="playstation">
+        <h2 class="playstation__h2">THE BATTLE IT'S OVER</h2>
+        <div class="playstation__wrapper">
+          <img
+            src="src/assets/img/sec-2PS/PlayStation-Icon-Logo-desk.svg"
+            alt="Playstation Big Logo"
+          />
+        </div>
+        <div class="playstation__joel">
+          <img
+            src="src/assets/img/sec-2PS/joel-last-of-us-desk.svg"
+            alt="Joel the men that dies in tlou2 🤣"
+          />
+        </div>
+      </section>
+      <!-- Sec-2 play-station Intro with Joel -->
     </main>
     <!-- main content -->
 
-
-<!-- footer content -->
-    <footer>
-      
-      dfyhdrhsrh
-    
-    </footer>
+    <!-- footer content -->
+    <footer>dfyhdrhsrh</footer>
     <!-- footer content -->
 
-
-    
-      
-     <!-- #4 Bootstrap js -->
+    <!-- #4 Bootstrap js -->
     <script src="node_modules/bootstrap/js/bootstrap.bundle.min.js"></script>
-     <!-- #4 Bootstrap js -->
-
+    <!-- #4 Bootstrap js -->
   </body>
   <!-- end of HTML -->
 </html>

@@ -256,6 +256,7 @@ h1 {
   border-radius: 73.5px;
   padding: 1.6px;
   background: radial-gradient(100% 330.61% at 0% 100%, #1860bd, rgba(0, 0, 0, 0), #1b7a18), linear-gradient(270.04deg, rgba(255, 255, 255, 0) 23.44%, rgba(255, 255, 255, 0) 29.88%, rgba(255, 255, 255, 0.35) 39.13%, #ffffff 46.09%, #ffffff 57.01%, rgba(255, 255, 255, 0.35) 65.11%, rgba(255, 255, 255, 0) 72.43%, rgba(255, 255, 255, 0) 80.23%);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
   mask-composite: exclude;
@@ -274,11 +275,11 @@ h1 {
   overflow: hidden;
 }
 
-.video-wrapper object {
+.video-wrapper iframe {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 100vw;
   height: 100%;
 }
 
@@ -297,4 +298,78 @@ h1 {
 .navbar-nav .nav-link.active,
 .navbar-nav .show > .nav-link {
   color: rgb(219, 255, 0);
+}
+
+.playstation {
+  display: flex;
+  flex-direction: column;
+  padding-top: 1rem;
+  width: 100vw;
+  height: auto;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+  box-shadow: inset 0px 108px 48px 11px #000000, inset 2px 0px 60px 5px #000000, inset -2px 0px 60px 5px #000000;
+  position: relative;
+}
+.playstation__h2 {
+  position: relative;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 1rem;
+  line-height: 32px;
+  letter-spacing: 1.6rem;
+  text-align: center;
+  color: white;
+  padding: 1.1rem 0.6rem;
+  text-shadow: 0px 0px 10px rgb(255, 255, 255), 0px 0px 50px rgb(255, 255, 255), 0px 0px 70px rgb(255, 255, 255);
+}
+.playstation__h2::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(30% 1.8% at 50% 90%, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
+  background-blend-mode: hard-light;
+}
+.playstation__wrapper {
+  padding-top: 3rem;
+  min-width: 100%;
+}
+.playstation__wrapper > img {
+  height: 160%;
+  width: 114%;
+  mix-blend-mode: color-dodge;
+}
+.playstation__joel {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+.playstation__joel > img {
+  align-self: flex-end;
+  filter: saturate(60%);
+  transform: scaleX(1.09) scaleY(0.97);
+  -webkit-transform: scaleX(1.09) scaleY(0.97);
+  -moz-transform: scaleX(1.09) scaleY(0.97);
+  -ms-transform: scaleX(1.09) scaleY(0.97);
+  -o-transform: scaleX(1.09) scaleY(0.97);
+  -webkit-filter: saturate(60%);
+  padding-left: 25px;
+}
+
+.playstation::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  box-shadow: inset 0rem -2.8125rem 3rem 0.375rem #000000;
 }
