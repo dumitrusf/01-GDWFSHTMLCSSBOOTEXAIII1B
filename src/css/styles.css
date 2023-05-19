@@ -321,7 +321,6 @@ h1 {
   letter-spacing: 1.6rem;
   text-align: center;
   color: white;
-  padding: 1.1rem 0.6rem;
   text-shadow: 0px 0px 10px rgb(255, 255, 255), 0px 0px 50px rgb(255, 255, 255), 0px 0px 70px rgb(255, 255, 255);
 }
 .playstation__h2::after {
@@ -333,6 +332,7 @@ h1 {
   height: 100%;
   background: radial-gradient(30% 1.8% at 50% 90%, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
   background-blend-mode: hard-light;
+  padding: 3rem 1.6rem;
 }
 .playstation__wrapper {
   padding-top: 3rem;
@@ -346,24 +346,100 @@ h1 {
 .playstation__joel {
   position: absolute;
   bottom: 0;
-  left: 0;
   width: 100%;
   height: 100%;
   display: flex;
+  justify-content: start;
 }
 .playstation__joel > img {
   align-self: flex-end;
-  filter: saturate(60%);
+  filter: saturate(77%);
   transform: scaleX(1.09) scaleY(0.97);
   -webkit-transform: scaleX(1.09) scaleY(0.97);
   -moz-transform: scaleX(1.09) scaleY(0.97);
   -ms-transform: scaleX(1.09) scaleY(0.97);
   -o-transform: scaleX(1.09) scaleY(0.97);
-  -webkit-filter: saturate(60%);
-  padding-left: 25px;
+  -webkit-filter: saturate(77%);
+  padding-left: 1.5625rem;
 }
 
 .playstation::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  box-shadow: inset 0rem -2.8125rem 3rem 0.375rem #000000;
+}
+
+.xbox {
+  display: flex;
+  flex-direction: column;
+  padding-top: 1rem;
+  width: 100vw;
+  height: auto;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+  box-shadow: inset 0px 108px 48px 11px #000000, inset 2px 0px 60px 5px #000000, inset -2px 0px 60px 5px #000000;
+  position: relative;
+}
+.xbox__h2 {
+  position: relative;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 1rem;
+  line-height: 32px;
+  letter-spacing: 1.6rem;
+  text-align: center;
+  color: white;
+  padding: 1.1rem 0.6rem;
+  text-shadow: 0px 0px 10px rgb(255, 255, 255), 0px 0px 50px rgb(255, 255, 255), 0px 0px 70px rgb(255, 255, 255);
+}
+.xbox__h2::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(30% 1.8% at 50% 90%, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
+  background-blend-mode: hard-light;
+  padding: 3rem 1.6rem;
+}
+.xbox__wrapper {
+  padding-top: 3rem;
+  min-width: 100%;
+}
+.xbox__wrapper > img {
+  height: 160%;
+  width: 114%;
+  mix-blend-mode: color-dodge;
+}
+.xbox__marcus {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 120%;
+  display: flex;
+  justify-content: end;
+}
+.xbox__marcus > img {
+  align-self: end;
+  filter: saturate(90%);
+  transform: scaleX(-1.09) scaleY(1.1);
+  -webkit-transform: scaleX(-1.09) scaleY(1.1);
+  -moz-transform: scaleX(-1.09) scaleY(1.1);
+  -ms-transform: scaleX(-1.09) scaleY(1.1);
+  -o-transform: scaleX(-1.09) scaleY(1.1);
+  -webkit-filter: saturate(90%);
+  padding-right: 1.5625rem;
+  padding: 0rem 1.5625rem 0rem 0rem;
+}
+
+.xbox::after {
   content: "";
   position: absolute;
   top: 0;
