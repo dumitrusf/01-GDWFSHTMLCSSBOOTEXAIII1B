@@ -122,9 +122,19 @@
   font-family: Inter-black;
   src: url("../assets/fonts/inter/Inter-Black.ttf") format("truetype");
 }
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
 html {
   background: url(/src/assets/img/stars.png) center center repeat;
-  background-size: 30rem;
+  background-size: 30vw;
+}
+
+header {
+  min-width: 100vw;
 }
 
 body {
@@ -142,7 +152,7 @@ footer {
 
 h1 {
   color: white;
-  font-size: 1rem;
+  font-size: clamp(2.6vw, 3.5vw, 0.9rem);
 }
 
 .navbar-toggler {
@@ -153,6 +163,7 @@ h1 {
 .navbar {
   padding: 0;
   background-color: black;
+  width: 100%;
 }
 .navbar__div {
   display: flex;
@@ -167,6 +178,7 @@ h1 {
   -moz-border-radius: 0px 0px 2px 2px;
   -ms-border-radius: 0px 0px 2px 2px;
   -o-border-radius: 0px 0px 2px 2px;
+  flex: 1 0 100vw;
 }
 .navbar__ul {
   font-family: inter-regular;
@@ -179,8 +191,8 @@ h1 {
   background: radial-gradient(50% 3% at 50% 1%, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
 }
 .navbar__svg {
-  height: 50px;
-  width: 60px;
+  height: auto;
+  width: 18vw;
   margin: 0px;
   padding: 0px;
   filter: blur(0.6px);
@@ -229,7 +241,7 @@ h1 {
   font-family: "hnt-medium";
 }
 .menus__list .nav-item {
-  font-size: 16px;
+  font-size: clamp(2vw, 16px, 4vw);
   margin-top: 5px;
   margin-bottom: 5px;
 }
@@ -309,19 +321,20 @@ h1 {
   overflow: hidden;
   justify-content: center;
   align-items: center;
-  box-shadow: inset 0px 108px 48px 11px #000000, inset 2px 0px 60px 5px #000000, inset -2px 0px 60px 5px #000000;
+  box-shadow: inset 0rem 6.75rem 3rem 0.6875rem #000000, inset 0.125rem 0rem 3.75rem 0.3125rem #000000, inset -0.125rem 0rem 3.75rem 0.3125rem #000000;
   position: relative;
 }
 .playstation__h2 {
   position: relative;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: bold;
-  font-size: 1rem;
-  line-height: 32px;
-  letter-spacing: 1.6rem;
+  font-size: clamp(2vw, 16px, 4vw);
+  line-height: clamp(3vw, 5vw, 1.7rem);
+  letter-spacing: clamp(3vw, 5.3vw, 1.7rem);
   text-align: center;
   color: white;
   text-shadow: 0px 0px 10px rgb(255, 255, 255), 0px 0px 50px rgb(255, 255, 255), 0px 0px 70px rgb(255, 255, 255);
+  padding: 0 1.8rem;
 }
 .playstation__h2::after {
   content: "";
@@ -332,7 +345,7 @@ h1 {
   height: 100%;
   background: radial-gradient(30% 1.8% at 50% 90%, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
   background-blend-mode: hard-light;
-  padding: 3rem 1.6rem;
+  margin-top: 3.6vw;
 }
 .playstation__wrapper {
   padding-top: 3rem;
@@ -361,6 +374,7 @@ h1 {
   -o-transform: scaleX(1.09) scaleY(0.97);
   -webkit-filter: saturate(77%);
   padding-left: 1.5625rem;
+  width: min(400px, 67%);
 }
 
 .playstation::after {
@@ -383,20 +397,20 @@ h1 {
   overflow: hidden;
   justify-content: center;
   align-items: center;
-  box-shadow: inset 0px 108px 48px 11px #000000, inset 2px 0px 60px 5px #000000, inset -2px 0px 60px 5px #000000;
+  box-shadow: inset 0rem 6.75rem 3rem 0.6875rem #000000, inset 0.125rem 0rem 3.75rem 0.3125rem #000000, inset -0.125rem 0rem 3.75rem 0.3125rem #000000;
   position: relative;
 }
 .xbox__h2 {
   position: relative;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: bold;
-  font-size: 1rem;
-  line-height: 32px;
-  letter-spacing: 1.6rem;
+  font-size: clamp(2vw, 16px, 4vw);
+  line-height: clamp(3vw, 5vw, 1.7rem);
+  letter-spacing: clamp(3vw, 5.3vw, 1.7rem);
   text-align: center;
   color: white;
-  padding: 1.1rem 0.6rem;
   text-shadow: 0px 0px 10px rgb(255, 255, 255), 0px 0px 50px rgb(255, 255, 255), 0px 0px 70px rgb(255, 255, 255);
+  padding: 0 1.8rem;
 }
 .xbox__h2::after {
   content: "";
@@ -407,7 +421,7 @@ h1 {
   height: 100%;
   background: radial-gradient(30% 1.8% at 50% 90%, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
   background-blend-mode: hard-light;
-  padding: 3rem 1.6rem;
+  margin-top: 3.6vw;
 }
 .xbox__wrapper {
   padding-top: 3rem;
@@ -437,6 +451,7 @@ h1 {
   -webkit-filter: saturate(90%);
   padding-right: 1.5625rem;
   padding: 0rem 1.5625rem 0rem 0rem;
+  width: min(400px, 67%);
 }
 
 .xbox::after {
