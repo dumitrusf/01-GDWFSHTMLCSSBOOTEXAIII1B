@@ -122,12 +122,6 @@
   font-family: Inter-black;
   src: url("../assets/fonts/inter/Inter-Black.ttf") format("truetype");
 }
-*,
-*::after,
-*::before {
-  box-sizing: border-box;
-}
-
 html {
   background: url(../assets/img/stars.png) center center repeat;
   background-size: 30vw;
@@ -481,55 +475,65 @@ h1 {
 .carousel-caption {
   z-index: 5;
   width: auto;
-  height: clamp(28px, 27vw, 10rem);
+  height: clamp(67px, 20vw, 7rem);
 }
 
 .carousel-caption img {
   width: auto;
-  height: min(100px, 70%);
+  height: min(100px, 100%);
   filter: drop-shadow(0px 0px 1rem #00f018);
   -webkit-filter: drop-shadow(0px 0px 1rem #00f018);
 }
 
 .carousel-caption img:nth-child(2) {
-  margin-top: 1.5rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: clamp(2.5px, 3vw, 1.5rem);
+  margin-top: clamp(2.5px, 3vw, 1.5rem);
+}
+
+.carousel-item:nth-child(1) > .carousel-caption > img:nth-child(2) {
+  height: min(200px, 90%);
 }
 
 .carousel-item:nth-child(2) > .carousel-caption > img:nth-child(2) {
-  height: min(200px, 100%);
-  margin-bottom: 1.5rem;
-  margin-top: 1.5rem;
+  height: min(200px, 120%);
+}
+
+.carousel-item:nth-child(3) > .carousel-caption > img:nth-child(2) {
+  height: min(200px, 70%);
+}
+
+.carousel-item:nth-child(4) > .carousel-caption > img:nth-child(2) {
+  height: min(200px, 80%);
 }
 
 .carousel-item:nth-child(5) > .carousel-caption > img:nth-child(2) {
-  height: min(200px, 100%);
-  margin-bottom: 1.5rem;
-  margin-top: 1.5rem;
+  height: min(200px, 120%);
 }
 
 .image-indicators {
-  padding: 2.5rem 1rem;
+  padding: clamp(16px, 10vw, 5rem) clamp(2px, 1.4vw, 0.3rem);
   width: 100vw;
   background: linear-gradient(to bottom, #000000 0%, rgba(0, 0, 0, 0.87) 35.73%, rgba(0, 0, 0, 0.765797) 51.87%, rgba(0, 0, 0, 0.585446) 67.5%, rgba(0, 0, 0, 0.379039) 78.96%, rgba(0, 0, 0, 0.200778) 88.85%, rgba(0, 0, 0, 0) 100%);
 }
 
 .image-indicators .indicator {
+  display: inline-flex;
+  align-items: center;
   transition: 0.9s;
   border: none;
-  padding: 0 clamp(2px, 2vw, 4rem);
+  justify-content: space-evenly;
 }
 
 .image-indicators .indicator > img {
   height: auto;
   width: min(60px, 67%);
-  margin: 0px clamp(2px, 2vw, 4rem);
+  margin: 0px clamp(4px, 0.8vw, 1.7rem);
   border-radius: 10%;
   -webkit-border-radius: 10%;
   -moz-border-radius: 10%;
   -ms-border-radius: 10%;
   -o-border-radius: 10%;
-  box-shadow: 0rem 0rem 0.8rem #ffffff;
+  box-shadow: 0rem 0rem 0.5rem #ffffff;
   transition: all 0.9s ease-in-out;
   -webkit-transition: all 0.9s ease-in-out;
   -moz-transition: all 0.9s ease-in-out;
@@ -541,12 +545,12 @@ h1 {
 }
 
 .indicator:hover > img {
-  transform: scale(1.5) translateY(0.4rem);
-  -webkit-transform: scale(1.5) translateY(0.4rem);
-  -moz-transform: scale(1.5) translateY(0.4rem);
-  -ms-transform: scale(1.5) translateY(0.4rem);
-  -o-transform: scale(1.5) translateY(0.4rem);
-  box-shadow: 0rem 0rem 1.08rem #45be19, 0rem 0rem 1.3rem #45dd0e;
+  transform: scale(1.5) translateY(0.2rem);
+  -webkit-transform: scale(1.5) translateY(0.2rem);
+  -moz-transform: scale(1.5) translateY(0.2rem);
+  -ms-transform: scale(1.5) translateY(0.2rem);
+  -o-transform: scale(1.5) translateY(0.2rem);
+  box-shadow: 0rem 0rem 0.03rem #45be19, 0rem 0rem 1.125rem #45dd0e;
   opacity: 1;
   outline: 0.0625rem solid white;
   background-color: transparent;
