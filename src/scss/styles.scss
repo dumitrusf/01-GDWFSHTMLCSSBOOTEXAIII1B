@@ -5,7 +5,7 @@
 // #2 structuration html with metas and grid css
 html {
   background: url(../assets/img/stars.png) center center repeat;
-  background-size: 30vw;
+  background-size: 38vw;
 }
 
 header {
@@ -254,7 +254,7 @@ h1 {
     position: relative;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
-    font-size: clamp(3px, 3vw, 3.7rem);
+    font-size: clamp(5px, 3.4vw, 2.3rem);
     line-height: clamp(5px, 6vw, 7.4rem);
     letter-spacing: clamp(5px, 3.3vw, 4.5rem);
     text-align: center;
@@ -299,13 +299,14 @@ h1 {
     display: flex;
     justify-content: start;
     padding-left: 5vw;
+    padding-bottom: 2vw;
   }
 
   &__joel > img {
     align-self: end;
     filter: saturate(170%);
     -webkit-filter: saturate(170%);
-    width: min(400px, 50%);
+    width: min(280px, 57%);
     transform: scaleX(-1);
     -webkit-transform: scaleX(-1);
     -moz-transform: scaleX(-1);
@@ -357,7 +358,7 @@ h1 {
     position: relative;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
-    font-size: clamp(3px, 3vw, 3.7rem);
+    font-size: clamp(5px, 3.4vw, 2.3rem);
     line-height: clamp(5px, 6vw, 7.4rem);
     letter-spacing: clamp(5px, 3.3vw, 4.5rem);
     text-align: center;
@@ -449,7 +450,6 @@ h1 {
   height: auto;
   position: relative;
   padding-top: 6vw;
-  position: relative;
 }
 
 .carousel::before {
@@ -552,13 +552,8 @@ h1 {
 .image-indicators .indicator {
   display: inline-flex;
   align-items: center;
-  transition: 0.9s;
   border: none;
   justify-content: center;
-  -webkit-transition: 0.9s;
-  -moz-transition: 0.9s;
-  -ms-transition: 0.9s;
-  -o-transition: 0.9s;
   margin: 0 1.6vw;
 }
 
@@ -595,5 +590,208 @@ h1 {
 }
 
 // fixing indicator lines from carousel to replace lines by images
-
 // Sec-4 carousel Bootstrap modified, xbox incoming games
+
+// Sec-5 Ultimate Benefits
+.ultimate {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+
+  &__text {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: clamp(5px, 3.1vw, 2rem);
+    line-height: clamp(5px, 6vw, 7.4rem);
+    letter-spacing: clamp(5px, 2.8vw, 4rem);
+    text-align: center;
+    color: white;
+    text-shadow: rgb(255, 255, 255) 0px 0px 10px;
+    padding: 23vw 2vw 0;
+  }
+
+  &__logo {
+    width: min(340px, 80%);
+    height: auto;
+    padding: 7vw 0;
+    filter: drop-shadow(0px 0px 10px #00f018);
+    -webkit-filter: drop-shadow(0px 0px 10px #00f018);
+  }
+}
+
+.benefits {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    margin-top: 7vw;
+  }
+
+  &__header {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__header img {
+    height: auto;
+    width: min(200px, 10.3%);
+    align-self: center;
+    filter: drop-shadow(rgb(255, 255, 255) 0px 0px 9px);
+    -webkit-filter: drop-shadow(rgb(255, 255, 255) 0px 0px 9px);
+  }
+
+  &__header h3 {
+    padding-top: 2.7vw;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: clamp(3px, 2.7vw, 1.7rem);
+    letter-spacing: clamp(2px, 1vw, 0.8rem);
+    line-height: clamp(2px, 5vw, 1.5rem);
+    text-align: center;
+    color: white;
+    text-shadow: rgb(255, 255, 255) 0px 0px 15px;
+  }
+
+  &__body {
+    position: relative;
+    width: min(380px, 90vw);
+    display: flex;
+    margin-top: 1.7vw;
+    border-radius: 5.9%;
+    -webkit-border-radius: 5.9%;
+    -moz-border-radius: 5.9%;
+    -ms-border-radius: 5.9%;
+    -o-border-radius: 5.9%;
+    padding: 3.2px 3.2px;
+    text-align: center;
+    vertical-align: middle;
+    height: auto;
+  }
+
+  &__body::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 3vw;
+    padding: 1.6px;
+    background: radial-gradient(
+      361.44% 100% at 50% 0%,
+      #ff0000 0%,
+      #faa500 16.15%,
+      #faff00 33.85%,
+      #38f527 50.52%,
+      #4ecaca 66.67%,
+      #8c00fa 83.33%,
+      #db00ff 100%
+    );
+    mask: linear-gradient(#ffffff 0 0) content-box, linear-gradient(#ffffff 0 0);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box,
+      linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    -webkit-border-radius: 3vw;
+    -moz-border-radius: 3vw;
+    -ms-border-radius: 3vw;
+    -o-border-radius: 3vw;
+  }
+
+  &__body img {
+    height: auto;
+    width: min(380px, 100%);
+    border-radius: 5vw;
+    -webkit-border-radius: 2.02vw;
+    -moz-border-radius: 5vw;
+    -ms-border-radius: 5vw;
+    -o-border-radius: 5vw;
+    margin: auto auto;
+  }
+
+  &__body::after {
+    position: absolute;
+    content: "";
+    top: 0.5%;
+    left: 0.5%;
+    width: calc(100% - (2 * 0.7%));
+    height: calc(0% - (2 * 0.7%));
+    transition: all 0.9s ease-in-out;
+    -webkit-transition: all 0.9s ease-in-out;
+    -moz-transition: all 0.9s ease-in-out;
+    -ms-transition: all 0.9s ease-in-out;
+    -o-transition: all 0.9s ease-in-out;
+    border-radius: 2.5vw;
+    -webkit-border-radius: 2.5vw;
+    -moz-border-radius: 2.5vw;
+    -ms-border-radius: 2.5vw;
+    -o-border-radius: 2.5vw;
+    opacity: 1;
+    background: linear-gradient(
+      to top,
+      #039600 0%,
+      rgba(3, 150, 0, 0.92159) 7.84%,
+      rgba(3, 150, 0, 0.862793) 13.72%,
+      rgba(3, 150, 0, 0.779846) 22.02%,
+      rgba(3, 150, 0, 0.667501) 33.25%,
+      rgba(3, 150, 0, 0.556205) 44.38%,
+      rgba(3, 150, 0, 0.44386) 55.61%,
+      rgba(3, 150, 0, 0.272717) 72.73%,
+      rgba(3, 150, 0, 0.161422) 83.86%,
+      rgba(3, 150, 0, 0) 100%
+    );
+    width: calc(100% - (2 * 0.7%));
+    height: calc(100% - (2 * 0.7%));
+    opacity: 0;
+  }
+
+  &__body p {
+    position: absolute;
+    bottom: 1.8%;
+    left: 1.8%;
+    width: calc(100% - (2 * 1.8%));
+    height: auto;
+    font-size: clamp(5%, 5vw, 1rem);
+    letter-spacing: clamp(2px, 1.6vw, 0.5rem);
+    line-height: clamp(8px, 6vw, 1.9rem);
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    text-shadow: 0px 0px 15px rgb(255, 255, 255);
+    opacity: 0;
+    transition: all 0.9s ease-in-out;
+    -webkit-transition: all 0.9s ease-in-out;
+    -moz-transition: all 0.9s ease-in-out;
+    -ms-transition: all 0.9s ease-in-out;
+    -o-transition: all 0.9s ease-in-out;
+    border-radius: 2.5vw;
+    -webkit-border-radius: 2.5vw;
+    -moz-border-radius: 2.5vw;
+    -ms-border-radius: 2.5vw;
+    -o-border-radius: 2.5vw;
+    text-shadow: 0px 0px 9px #000000;
+    text-transform: uppercase;
+    -webkit-text-stroke: 0.282014px #000000;
+    margin-bottom: 10%;
+    padding: 0 5vw;
+}
+
+  &__body:hover::after {
+    opacity: 1;
+  }
+
+  &__body:hover > p {
+    opacity: 1;
+    z-index: 3;
+  }
+}
+
+.benefits__card:nth-child(3) > .benefits__body > p{
+  margin-bottom: 4%;
+}
+
+// Sec-5 Ultimate Benefits
