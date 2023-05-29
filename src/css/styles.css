@@ -147,7 +147,7 @@ footer {
 
 h1 {
   color: white;
-  font-size: clamp(6px, 3.5vw, 2.1rem);
+  font-size: clamp(6%, 3.5vw, 2.1rem);
 }
 
 .navbar-toggler {
@@ -168,11 +168,6 @@ h1 {
   list-style-type: none;
   background: linear-gradient(120deg, #1860bd 13.53%, rgba(24, 150, 204, 0.1) 35.84%, rgba(24, 204, 204, 0.025) 43.81%), linear-gradient(60deg, rgba(24, 204, 204, 0.025) 60.5%, rgba(18, 218, 135, 0.1) 67.34%, #0a9205 92.72%);
   text-align: center;
-  border-radius: 0 0 0.2rem 0.2rem;
-  -webkit-border-radius: 0 0 0.2rem 0.2rem;
-  -moz-border-radius: 0 0 0.2rem 0.2rem;
-  -ms-border-radius: 0 0 0.2rem 0.2rem;
-  -o-border-radius: 0 0 0.2rem 0.2rem;
 }
 .navbar__ul {
   font-family: Arial, Helvetica, sans-serif;
@@ -198,12 +193,10 @@ h1 {
 
 .menus {
   position: relative;
-  min-width: 100vw;
+  width: 100vw;
   padding: 0px;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin: 5px 0px;
+  justify-content: center;
   background: radial-gradient(60% 1% at 50% 100%, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
 }
 .menus__list {
@@ -212,18 +205,36 @@ h1 {
   justify-content: space-around;
   width: 100vw;
   background: radial-gradient(20% 1% at 50% 100%, #ffffff 0%, rgba(255, 255, 255, 0) 100%), radial-gradient(10% 1% at 50% 0%, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
+  padding: clamp(1.3vw, 0.4rem, 11px) 0;
 }
 .menus__svg {
-  max-height: 160px;
-  margin: 0px -70px 30px -90px;
+  margin: clamp(5vw, 2.2rem, 140px) 0;
+}
+.menus__svg--ps {
+  width: clamp(18vw, 45%, 280px);
+  transform: translateX(-25vw);
+  -webkit-transform: translateX(-25vw);
+  -moz-transform: translateX(-25vw);
+  -ms-transform: translateX(-25vw);
+  -o-transform: translateX(-25vw);
+}
+.menus__svg--xb {
+  width: clamp(17vw, 35%, 260px);
+  transform: translateX(20vw);
+  -webkit-transform: translateX(20vw);
+  -moz-transform: translateX(20vw);
+  -ms-transform: translateX(20vw);
+  -o-transform: translateX(20vw);
 }
 .menus__list a {
   color: rgb(255, 255, 255);
   font-family: "hnt-medium";
+  padding-top: clamp(2vw, 4px, 0.8rem);
+  letter-spacing: clamp(1px, 0.5vw, 0.2rem);
 }
 .menus__list .nav-item {
-  font-size: clamp(2.7vw, 3vw, 4rem);
-  margin: clamp(5px, 0.4vw, 1.3rem) 0px;
+  font-size: clamp(3vw, 4.95%, 1rem);
+  margin-bottom: clamp(2vw, 4px, 0.8rem);
 }
 .menus__list a:hover {
   color: rgb(0, 0, 0);
@@ -239,6 +250,7 @@ h1 {
   position: relative;
   box-shadow: 0px 0px 6px 0px rgba(255, 255, 255, 0.669), inset 0px 0px 2.5px 0px rgba(255, 255, 255, 0.64);
   border-radius: 73.5px;
+  padding: auto clamp(20%, 5vw, 1.6rem);
 }
 
 .but::before {
@@ -295,7 +307,7 @@ h1 {
 .playstation {
   display: flex;
   flex-direction: column;
-  padding-top: 1rem;
+  padding-top: clamp(1.7vw, 0.7rem, 17px);
   width: 100vw;
   height: auto;
   overflow: hidden;
@@ -372,7 +384,7 @@ h1 {
 .xbox {
   display: flex;
   flex-direction: column;
-  padding-top: 1rem;
+  padding-top: clamp(1.7vw, 0.7rem, 17px);
   width: 100vw;
   height: auto;
   overflow: hidden;
@@ -473,46 +485,53 @@ h1 {
 
 .carousel-caption {
   z-index: 5;
-  width: auto;
-  height: clamp(55px, 30vw, 7rem);
-}
-
-.carousel-caption img {
-  width: auto;
-  height: min(100px, 100%);
+  width: clamp(40vw, 5rem, 50%);
+  height: 33.3%;
+  display: flex;
+  margin: 7vmin auto;
   filter: drop-shadow(0px 0px 1rem #00f018);
   -webkit-filter: drop-shadow(0px 0px 1rem #00f018);
 }
 
+.carousel-caption img:nth-child(1) {
+  width: min(100px, 20%);
+  height: auto;
+  margin: 2vmin auto;
+}
+
 .carousel-caption img:nth-child(2) {
-  margin-bottom: clamp(2.5px, 3vw, 1.5rem);
-  margin-top: clamp(2.5px, 3vw, 1.5rem);
+  margin-bottom: 7vmin;
 }
 
 .carousel-item:nth-child(1) > .carousel-caption > img:nth-child(2) {
-  height: min(200px, 88%);
+  width: min(200px, 88%);
+  margin: 0 auto;
 }
 
 .carousel-item:nth-child(2) > .carousel-caption > img:nth-child(2) {
-  height: min(200px, 100%);
+  width: min(170px, 70%);
+  margin: 0 auto;
 }
 
 .carousel-item:nth-child(3) > .carousel-caption > img:nth-child(2) {
-  height: min(200px, 70%);
+  width: min(200px, 100%);
+  margin: 0 auto;
 }
 
 .carousel-item:nth-child(4) > .carousel-caption > img:nth-child(2) {
-  height: min(200px, 80%);
+  width: min(200px, 77%);
+  margin: 0 auto;
 }
 
 .carousel-item:nth-child(5) > .carousel-caption > img:nth-child(2) {
-  height: min(200px, 120%);
+  width: min(200px, 70%);
+  margin: 0 auto;
 }
 
 .image-indicators {
-  padding: 8vw 2vw;
-  width: 100vw;
-  background: linear-gradient(to bottom, #000000 0%, rgba(0, 0, 0, 0.87) 35.73%, rgba(0, 0, 0, 0.765797) 51.87%, rgba(0, 0, 0, 0.585446) 67.5%, rgba(0, 0, 0, 0.379039) 78.96%, rgba(0, 0, 0, 0.200778) 88.85%, rgba(0, 0, 0, 0) 100%);
+  padding: 10vw 1vw;
+  width: 87vw;
+  margin: 0 auto;
 }
 
 .image-indicators .indicator {
@@ -570,7 +589,7 @@ h1 {
   text-align: center;
   color: white;
   text-shadow: rgb(255, 255, 255) 0px 0px 10px;
-  padding: 23vw 2vw 0;
+  padding: 17vw 5vw 7vw;
 }
 .ultimate__logo {
   width: min(340px, 80%);
@@ -600,7 +619,7 @@ h1 {
 }
 .benefits__header img {
   height: auto;
-  width: min(200px, 10.3%);
+  width: min(70px, 10.3vw);
   align-self: center;
   filter: drop-shadow(rgb(255, 255, 255) 0px 0px 9px);
   -webkit-filter: drop-shadow(rgb(255, 255, 255) 0px 0px 9px);
@@ -609,7 +628,7 @@ h1 {
   padding-top: 2.7vw;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: bold;
-  font-size: clamp(3px, 2.7vw, 1.7rem);
+  font-size: clamp(2%, 4vw, 19px);
   letter-spacing: clamp(2px, 1vw, 0.8rem);
   line-height: clamp(2px, 5vw, 1.5rem);
   text-align: center;
@@ -618,7 +637,7 @@ h1 {
 }
 .benefits__body {
   position: relative;
-  width: min(380px, 90vw);
+  width: min(500px, 90vw);
   display: flex;
   margin-top: 1.7vw;
   border-radius: 5.9%;
@@ -649,7 +668,7 @@ h1 {
 }
 .benefits__body img {
   height: auto;
-  width: min(380px, 100%);
+  width: 100%;
   border-radius: 5vw;
   -webkit-border-radius: 2.02vw;
   -moz-border-radius: 5vw;
@@ -691,7 +710,7 @@ h1 {
   line-height: clamp(8px, 6vw, 1.9rem);
   font-family: Arial, Helvetica, sans-serif;
   color: white;
-  text-shadow: 0px 0px 15px rgb(255, 255, 255);
+  text-shadow: 0px 0px 15px rgb(0, 0, 0);
   opacity: 0;
   transition: all 0.9s ease-in-out;
   -webkit-transition: all 0.9s ease-in-out;
@@ -707,7 +726,7 @@ h1 {
   text-transform: uppercase;
   -webkit-text-stroke: 0.282014px #000000;
   margin-bottom: 10%;
-  padding: 0 5vw;
+  padding: 0 5.1vw;
 }
 .benefits__body:hover::after {
   opacity: 1;
