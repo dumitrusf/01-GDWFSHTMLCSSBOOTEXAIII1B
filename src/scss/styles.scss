@@ -5,7 +5,7 @@
 // #2 structuration html with metas and grid css
 
 html {
-  background: url(../assets/img/stars.png) center center repeat;
+  background: url(../assets/img/stars-1.png) center center repeat;
   background-size: 38vw;
 }
 
@@ -297,7 +297,8 @@ h1 {
 
   &__wrapper {
     padding-top: 20vw;
-    width: 100vw;
+    margin-left: max(0%, -40%);
+    width: min(643px, 140vw);
   }
 
   &__wrapper > img {
@@ -401,7 +402,8 @@ h1 {
 
   &__wrapper {
     padding-top: 20vw;
-    width: 100vw;
+    margin-right: max(0%, -70%);
+    width: min(643px, 100vw);
   }
 
   &__wrapper > img {
@@ -474,7 +476,7 @@ h1 {
   width: 100vw;
   height: 5vw;
   background: radial-gradient(
-    17vw 0.9vw at 50% 50%,
+    19% 6% at 50% 50%,
     #ffffff 0%,
     rgba(255, 255, 255, 0) 100%
   );
@@ -558,9 +560,11 @@ h1 {
 // fixing indicator lines from carousel to replace lines by images
 
 .image-indicators {
-  padding: 10vw 1vw;
-  width: 87vw;
+  padding: 10vw max(10vw, 10%);
+  width: 100vw;
   margin: 0 auto;
+  background: rgba(0, 0, 0, 0.01);
+  box-shadow: inset 0px 293px 150px -229px #000000;
 }
 
 .image-indicators .indicator {
@@ -820,6 +824,7 @@ h1 {
   justify-content: center;
   margin: 20vw auto 0;
   position: relative;
+  box-shadow: 0px 20px 40px #000000;
 
   &__img {
     width: 100%;
@@ -941,7 +946,7 @@ h1 {
   background-blend-mode: hard-light;
   margin-top: 0;
   z-index: 4;
-  background-color: rgb(0, 0, 0);
+  background-color: transparent;
   -webkit-transform: translateY(-6vw);
   -moz-transform: translateY(-6vw);
   -ms-transform: translateY(-6vw);
