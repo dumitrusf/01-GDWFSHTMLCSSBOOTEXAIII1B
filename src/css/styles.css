@@ -467,10 +467,11 @@ h1 {
   content: "";
   top: 0;
   width: 100vw;
-  padding: 6vw 0;
+  height: 5vw;
   background: radial-gradient(17vw 0.9vw at 50% 50%, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
   background-blend-mode: hard-light;
   background-color: black;
+  padding-bottom: 7vw;
 }
 
 .carousel-item::after {
@@ -738,4 +739,109 @@ h1 {
 
 .benefits__card:nth-child(3) > .benefits__body > p {
   margin-bottom: 4%;
+}
+
+.cloud {
+  width: min(643px, 100%);
+  height: auto;
+  background-color: red;
+  display: flex;
+  justify-content: center;
+  margin: 20vw auto 0;
+  position: relative;
+}
+.cloud__img {
+  width: 100%;
+  height: auto;
+}
+.cloud__img::after {
+  content: "";
+  position: absolute;
+  background: linear-gradient(to top, #a092fc 2.02%, rgba(255, 255, 255, 0.98) 100%);
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+.cloud__xcloud {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+.cloud__xcloud > img {
+  width: 100%;
+  height: 50%;
+  mix-blend-mode: exclusion;
+  padding-top: 7%;
+  margin: 0 auto;
+}
+.cloud__dualsense::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 50%;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(360deg, #a092fc 2.02%, rgba(255, 255, 255, 0.98) 100%);
+  box-shadow: 0px -10px 11px #ffffff;
+}
+.cloud__dualsense > img {
+  position: absolute;
+  width: 50%;
+  height: auto;
+  z-index: 3;
+  bottom: min(180px, 18%);
+  left: 0;
+  margin: 0 25%;
+}
+.cloud__dualsense > h2 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 20%;
+  padding: 7vw 11vw min(70px, 5%);
+  text-align: center;
+  text-transform: uppercase;
+  background: linear-gradient(to top, #000000 0%, rgba(0, 0, 0, 0.435443) 7.15%, rgba(0, 0, 0, 0) 17.75%, rgba(0, 0, 0, 0) 100%);
+  font-weight: 600;
+  /* or 15px */
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: clamp(3px, 3.12vw, 1rem);
+  line-height: clamp(4px, 3.12vw, 1.3rem);
+  letter-spacing: clamp(2px, 1.1vw, 0.8rem);
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+  text-shadow: 0px 8px 8px rgba(130, 125, 232, 0.65);
+}
+
+.cloud::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, #000000 0%, rgba(0, 0, 0, 0.435443) 6.15%, rgba(0, 0, 0, 0) 9.75%, rgba(0, 0, 0, 0) 100%);
+}
+
+.cloud::before {
+  content: "";
+  position: absolute;
+  transform: translateY(-6vw);
+  width: 100%;
+  height: 6vw;
+  background: radial-gradient(37% 0.5vw at 50% 50%, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
+  background-blend-mode: hard-light;
+  margin-top: 0;
+  z-index: 4;
+  background-color: rgb(0, 0, 0);
+  -webkit-transform: translateY(-6vw);
+  -moz-transform: translateY(-6vw);
+  -ms-transform: translateY(-6vw);
+  -o-transform: translateY(-6vw);
 }
