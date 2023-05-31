@@ -771,10 +771,10 @@ h1 {
   height: 100%;
 }
 .cloud__xcloud > img {
-  width: 100%;
-  height: 50%;
+  width: 60%;
+  height: 60%;
   mix-blend-mode: exclusion;
-  padding-top: 7%;
+  padding-top: clamp(3px, 7%, 1rem);
   margin: 0 auto;
 }
 .cloud__dualsense::before {
@@ -785,7 +785,7 @@ h1 {
   bottom: 0;
   left: 0;
   background: linear-gradient(360deg, #a092fc 2.02%, rgba(255, 255, 255, 0.98) 100%);
-  box-shadow: 0px -10px 11px #ffffff;
+  box-shadow: 0px -10px 8px -6px #ffffff;
 }
 .cloud__dualsense > img {
   position: absolute;
@@ -794,29 +794,33 @@ h1 {
   z-index: 3;
   bottom: min(180px, 18%);
   left: 0;
-  margin: 0 25%;
+  transform: translateX(50%);
+  -webkit-transform: translateX(50%);
+  -moz-transform: translateX(50%);
+  -ms-transform: translateX(50%);
+  -o-transform: translateX(50%);
 }
 .cloud__dualsense > h2 {
   position: absolute;
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 20%;
-  padding: 7vw 11vw min(70px, 5%);
-  text-align: center;
+  height: min(90px, 6vw);
   text-transform: uppercase;
-  background: linear-gradient(to top, #000000 0%, rgba(0, 0, 0, 0.435443) 7.15%, rgba(0, 0, 0, 0) 17.75%, rgba(0, 0, 0, 0) 100%);
+  line-height: clamp(4px, 3.6vw, 22px);
+  padding: 0 7vw 10vw;
+  overflow-wrap: break-word;
   font-weight: 600;
   /* or 15px */
   color: #fff;
+  text-align: center;
+  letter-spacing: clamp(2px, 1.3vw, 7px);
+  z-index: 1;
+  vertical-align: middle;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: clamp(3px, 3.12vw, 1rem);
-  line-height: clamp(4px, 3.12vw, 1.3rem);
-  letter-spacing: clamp(2px, 1.1vw, 0.8rem);
-  display: flex;
-  align-items: center;
+  font-size: clamp(3px, 2.2vw, 22px);
   text-transform: uppercase;
-  text-shadow: 0px 8px 8px rgba(130, 125, 232, 0.65);
+  text-shadow: 0px 1px 10px rgba(102, 255, 200, 0.77);
 }
 
 .cloud::after {
@@ -826,7 +830,7 @@ h1 {
   bottom: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(to bottom, #000000 0%, rgba(0, 0, 0, 0.435443) 6.15%, rgba(0, 0, 0, 0) 9.75%, rgba(0, 0, 0, 0) 100%);
+  box-shadow: inset 0px -44px 35px -13px rgba(0, 0, 0, 0.77), inset 0px 26px 20px -13px #2d1933;
 }
 
 .cloud::before {
