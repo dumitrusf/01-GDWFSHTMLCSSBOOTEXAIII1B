@@ -1,0 +1,956 @@
+// #5 Import of Fonts and _responsive.scss
+@import "fonts";
+@import "responsive";
+
+// #2 structuration html with metas and grid css
+
+html {
+  background: url(../assets/img/stars-1.png) center center repeat;
+  background-size: 38vw;
+}
+
+header {
+  width: 100vw;
+}
+
+body {
+  background-color: transparent;
+  display: grid;
+  height: 100vh;
+  grid-template-rows: auto 1fr auto;
+}
+
+footer {
+  width: 100vw;
+  height: 56px;
+  background-color: rgb(165, 128, 42);
+  margin-top: 30rem;
+}
+
+h1 {
+  color: white;
+  font-size: clamp(6%, 3.5vw, 2.1rem);
+}
+
+.navbar-toggler {
+  border: none;
+  box-shadow: none;
+}
+
+.navbar {
+  background-color: black;
+  width: 100%;
+  padding: 0;
+
+  &__div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    list-style-type: none;
+    background: linear-gradient(
+        120deg,
+        #1860bd 13.53%,
+        rgba(24, 150, 204, 0.1) 35.84%,
+        rgba(24, 204, 204, 0.025) 43.81%
+      ),
+      linear-gradient(
+        60deg,
+        rgba(24, 204, 204, 0.025) 60.5%,
+        rgba(18, 218, 135, 0.1) 67.34%,
+        #0a9205 92.72%
+      );
+    text-align: center;
+  }
+
+  &__ul {
+    font-family: Arial, Helvetica, sans-serif;
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    width: 100vw;
+    justify-content: center;
+    background: radial-gradient(
+      50% 3% at 50% 1%,
+      #ffffff 0%,
+      rgba(255, 255, 255, 0) 100%
+    );
+  }
+
+  &__svg {
+    height: auto;
+    width: clamp(1rem, 20vw, 5.8rem);
+    margin: 0px;
+    padding: 0px;
+    filter: blur(0.6px);
+    -webkit-filter: blur(0.6px);
+  }
+}
+
+.show {
+  overflow: hidden;
+}
+
+.menus {
+  position: relative;
+  width: 100vw;
+  padding: 0px;
+  display: flex;
+  justify-content: center;
+  background: radial-gradient(
+    60% 1% at 50% 100%,
+    #ffffff 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+
+  &__list {
+    position: absolute;
+    display: flex;
+    justify-content: space-around;
+    width: 100vw;
+    background: radial-gradient(
+        20% 1% at 50% 100%,
+        #ffffff 0%,
+        rgba(255, 255, 255, 0) 100%
+      ),
+      radial-gradient(10% 1% at 50% 0%, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
+    padding: clamp(1.3vw, 0.4rem, 11px) 0;
+  }
+
+  &__svg {
+    margin: clamp(5vw, 2.2rem, 140px) 0;
+  }
+
+  &__svg--ps {
+    width: clamp(18vw, 45%, 280px);
+    transform: translateX(-25vw);
+    -webkit-transform: translateX(-25vw);
+    -moz-transform: translateX(-25vw);
+    -ms-transform: translateX(-25vw);
+    -o-transform: translateX(-25vw);
+  }
+
+  &__svg--xb {
+    width: clamp(17vw, 35%, 260px);
+    transform: translateX(20vw);
+    -webkit-transform: translateX(20vw);
+    -moz-transform: translateX(20vw);
+    -ms-transform: translateX(20vw);
+    -o-transform: translateX(20vw);
+  }
+
+  &__list a {
+    color: rgb(255, 255, 255);
+    font-family: "hnt-medium";
+    padding-top: clamp(2vw, 4px, 0.8rem);
+    letter-spacing: clamp(1px, 0.5vw, 0.2rem);
+  }
+
+  &__list .nav-item {
+    font-size: clamp(3vw, 4.95%, 1rem);
+    margin-bottom: clamp(2vw, 4px, 0.8rem);
+  }
+
+  &__list a:hover {
+    color: rgb(0, 0, 0);
+  }
+
+  &__list .nav-item:hover {
+    background: linear-gradient(
+      270deg,
+      rgba(0, 0, 0, 0) 0%,
+      #ffffff 49.65%,
+      rgba(0, 0, 0, 0) 100%
+    );
+  }
+
+  &__list .nav-item:nth-child(2) {
+    background: transparent;
+  }
+}
+
+// button dropdown mobile
+
+.but {
+  position: relative;
+  box-shadow: 0px 0px 6px 0px rgba(255, 255, 255, 0.669),
+    inset 0px 0px 2.5px 0px rgba(255, 255, 255, 0.64);
+  border-radius: 73.5px;
+  padding: auto clamp(20%, 5vw, 1.6rem);
+}
+
+.but::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 73.5px;
+  padding: 1.6px;
+  background: radial-gradient(
+      100% 330.61% at 0% 100%,
+      #1860bd,
+      rgba(0, 0, 0, 0),
+      #1b7a18
+    ),
+    linear-gradient(
+      270.04deg,
+      rgba(255, 255, 255, 0) 23.44%,
+      rgba(255, 255, 255, 0) 29.88%,
+      rgba(255, 255, 255, 0.35) 39.13%,
+      #ffffff 46.09%,
+      #ffffff 57.01%,
+      rgba(255, 255, 255, 0.35) 65.11%,
+      rgba(255, 255, 255, 0) 72.43%,
+      rgba(255, 255, 255, 0) 80.23%
+    );
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  -webkit-border-radius: 73.5px;
+  -moz-border-radius: 73.5px;
+  -ms-border-radius: 73.5px;
+  -o-border-radius: 73.5px;
+}
+
+// button dropdown mobile
+
+// Video created by myself added
+
+.video-wrapper {
+  background-color: transparent;
+  position: relative;
+  padding-bottom: 56.25%;
+  /*proportion 16:9*/
+  height: auto;
+  overflow: hidden;
+}
+
+.video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100%;
+}
+// Video created by myself added
+
+// the interaction and aspect with menu navbar
+.nav-link:focus,
+.nav-link:hover {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.navbar-toggler:focus {
+  text-decoration: none;
+  outline: 0;
+  box-shadow: none;
+  box-shadow: 0px 0px 11px 0px rgba(255, 255, 255, 0.669);
+}
+
+.navbar-nav .nav-link.active,
+.navbar-nav .show > .nav-link {
+  color: rgb(219, 255, 0);
+}
+// the interaction and aspect with menu navbar
+
+// sec-2 playstation with Joel
+.playstation {
+  display: flex;
+  flex-direction: column;
+  padding-top: clamp(1.7vw, 0.7rem, 17px);
+  width: 100vw;
+  height: auto;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+  &__h2 {
+    position: relative;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: clamp(5px, 3.4vw, 2.3rem);
+    line-height: clamp(5px, 6vw, 7.4rem);
+    letter-spacing: clamp(5px, 3.3vw, 4.5rem);
+    text-align: center;
+    color: white;
+    text-shadow: 0px 0px 15px rgb(255, 255, 255);
+    padding: 0 2vw;
+    z-index: 1;
+  }
+
+  &__h2::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(
+      37% 0.5vw at 50% 95%,
+      #ffffff 0%,
+      rgba(255, 255, 255, 0) 100%
+    );
+    background-blend-mode: hard-light;
+    margin-top: clamp(5px, 3vw, 2rem);
+  }
+
+  &__wrapper {
+    padding-top: 20vw;
+    margin-left: max(0%, -40%);
+    width: min(643px, 140vw);
+  }
+
+  &__wrapper > img {
+    height: 160%;
+    width: 114%;
+    mix-blend-mode: color-dodge;
+  }
+
+  &__joel {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 120%;
+    display: flex;
+    justify-content: start;
+    padding-left: 5vw;
+    padding-bottom: 2vw;
+  }
+
+  &__joel > img {
+    align-self: end;
+    filter: saturate(170%);
+    -webkit-filter: saturate(170%);
+    width: min(280px, 57%);
+    transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    -moz-transform: scaleX(-1);
+    -ms-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+  }
+}
+
+.playstation::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  background: linear-gradient(
+      to top,
+      #000000 0%,
+      rgba(0, 0, 0, 0.808108) 6.28%,
+      rgba(0, 0, 0, 0.557881) 10.3%,
+      rgba(0, 0, 0, 0.24) 17.46%,
+      rgba(0, 0, 0, 0) 30.6%,
+      rgba(0, 0, 0, 0) 100%
+    ),
+    linear-gradient(
+      to bottom,
+      #000000 0%,
+      rgba(0, 0, 0, 0.435443) 8.15%,
+      rgba(0, 0, 0, 0) 15.75%,
+      rgba(0, 0, 0, 0) 100%
+    );
+}
+// sec-2 playstation with Joel
+
+// sec-3 xbox with Marcus Phoenix
+.xbox {
+  display: flex;
+  flex-direction: column;
+  padding-top: clamp(1.7vw, 0.7rem, 17px);
+  width: 100vw;
+  height: auto;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+  &__h2 {
+    position: relative;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: clamp(5px, 3.4vw, 2.3rem);
+    line-height: clamp(5px, 6vw, 7.4rem);
+    letter-spacing: clamp(5px, 3.3vw, 4.5rem);
+    text-align: center;
+    color: white;
+    text-shadow: 0px 0px 15px rgb(255, 255, 255);
+    padding: 0 2vw;
+    z-index: 1;
+  }
+
+  &__h2::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(
+      37% 0.5vw at 50% 95%,
+      #ffffff 0%,
+      rgba(255, 255, 255, 0) 100%
+    );
+    background-blend-mode: hard-light;
+    margin-top: clamp(5px, 3vw, 2rem);
+  }
+
+  &__wrapper {
+    padding-top: 20vw;
+    margin-right: max(0%, -70%);
+    width: min(643px, 100vw);
+  }
+
+  &__wrapper > img {
+    height: 160%;
+    width: 114%;
+    mix-blend-mode: color-dodge;
+  }
+
+  &__marcus {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 120%;
+    display: flex;
+    justify-content: end;
+    padding-right: 5vw;
+  }
+
+  &__marcus > img {
+    align-self: end;
+    filter: saturate(90%);
+    -webkit-filter: saturate(90%);
+    width: min(400px, 77%);
+    transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    -moz-transform: scaleX(-1);
+    -ms-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+  }
+}
+
+.xbox::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+      to top,
+      #000000 0%,
+      rgba(0, 0, 0, 0.808108) 6.28%,
+      rgba(0, 0, 0, 0.557881) 10.3%,
+      rgba(0, 0, 0, 0.24) 17.46%,
+      rgba(0, 0, 0, 0) 30.6%,
+      rgba(0, 0, 0, 0) 100%
+    ),
+    linear-gradient(
+      to bottom,
+      #000000 0%,
+      rgba(0, 0, 0, 0.435443) 8.15%,
+      rgba(0, 0, 0, 0) 15.75%,
+      rgba(0, 0, 0, 0) 100%
+    );
+}
+// sec-3 xbox with Marcus Phoenix
+
+// Sec-4 carousel Bootstrap modified, xbox incoming games
+
+.carousel {
+  height: auto;
+  position: relative;
+  padding-top: 6vw;
+}
+
+.carousel::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  width: 100vw;
+  height: 5vw;
+  background: radial-gradient(
+    19% 6% at 50% 50%,
+    #ffffff 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  background-blend-mode: hard-light;
+  background-color: black;
+  padding-bottom: 7vw;
+}
+
+.carousel-item::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+      to top,
+      #000000 0%,
+      rgba(0, 0, 0, 0.808108) 15.28%,
+      rgba(0, 0, 0, 0.557881) 22.23%,
+      rgba(0, 0, 0, 0.24) 33.26%,
+      rgba(0, 0, 0, 0) 62.6%,
+      rgba(0, 0, 0, 0) 100%
+    ),
+    linear-gradient(
+      to bottom,
+      #000000 0%,
+      rgba(0, 0, 0, 0.435443) 14.15%,
+      rgba(0, 0, 0, 0) 24.75%,
+      rgba(0, 0, 0, 0) 100%
+    );
+}
+
+.carousel-caption {
+  z-index: 5;
+  width: clamp(40vw, 5rem, 50%);
+  height: 33.3%;
+  display: flex;
+  margin: 7vmin auto;
+  filter: drop-shadow(0px 0px 1rem #00f018);
+  -webkit-filter: drop-shadow(0px 0px 1rem #00f018);
+}
+
+.carousel-caption img:nth-child(1) {
+  width: min(100px, 20%);
+  height: auto;
+  margin: 2vmin auto;
+}
+
+.carousel-caption img:nth-child(2) {
+  margin-bottom: 7vmin;
+}
+
+// fixing size of disproportionate images as captions
+.carousel-item:nth-child(1) > .carousel-caption > img:nth-child(2) {
+  width: min(200px, 88%);
+  margin: 0 auto;
+}
+
+.carousel-item:nth-child(2) > .carousel-caption > img:nth-child(2) {
+  width: min(170px, 70%);
+  margin: 0 auto;
+}
+
+.carousel-item:nth-child(3) > .carousel-caption > img:nth-child(2) {
+  width: min(200px, 100%);
+  margin: 0 auto;
+}
+
+.carousel-item:nth-child(4) > .carousel-caption > img:nth-child(2) {
+  width: min(200px, 77%);
+  margin: 0 auto;
+}
+
+.carousel-item:nth-child(5) > .carousel-caption > img:nth-child(2) {
+  width: min(200px, 70%);
+  margin: 0 auto;
+}
+// fixing size of disproportionate images as captions
+
+// fixing indicator lines from carousel to replace lines by images
+
+.image-indicators {
+  padding: 10vw max(10vw, 10%);
+  width: 100vw;
+  margin: 0 auto;
+  background: rgba(0, 0, 0, 0.01);
+  box-shadow: inset 0px 293px 150px -229px #000000;
+}
+
+.image-indicators .indicator {
+  display: inline-flex;
+  align-items: center;
+  border: none;
+  justify-content: center;
+  margin: 0 1.6vw;
+}
+
+.image-indicators .indicator > img {
+  height: auto;
+  width: min(60px, 67%);
+  margin: 0px clamp(4px, 0.8vw, 1.7rem);
+  border-radius: 10%;
+  -webkit-border-radius: 10%;
+  -moz-border-radius: 10%;
+  -ms-border-radius: 10%;
+  -o-border-radius: 10%;
+  box-shadow: 0rem 0rem 0.5rem #ffffff;
+  transition: all 0.9s ease-in-out;
+  -webkit-transition: all 0.9s ease-in-out;
+  -moz-transition: all 0.9s ease-in-out;
+  -ms-transition: all 0.9s ease-in-out;
+  -o-transition: all 0.9s ease-in-out;
+  opacity: 0.63;
+  outline: 0.1px solid rgba(255, 255, 255, 0);
+  background-color: white;
+}
+
+.indicator:hover > img {
+  transform: scale(1.5) translateY(0.2rem);
+  -webkit-transform: scale(1.5) translateY(0.2rem);
+  -moz-transform: scale(1.5) translateY(0.2rem);
+  -ms-transform: scale(1.5) translateY(0.2rem);
+  -o-transform: scale(1.5) translateY(0.2rem);
+  box-shadow: 0rem 0rem 0.03rem #45be19, 0rem 0rem 1.125rem #45dd0e;
+  opacity: 1;
+  outline: 0.0625rem solid white;
+  background-color: transparent;
+}
+
+// fixing indicator lines from carousel to replace lines by images
+// Sec-4 carousel Bootstrap modified, xbox incoming games
+
+// Sec-5 Ultimate Benefits
+.ultimate {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+
+  &__text {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: clamp(5px, 3.1vw, 2rem);
+    line-height: clamp(5px, 6vw, 7.4rem);
+    letter-spacing: clamp(5px, 2.8vw, 4rem);
+    text-align: center;
+    color: white;
+    text-shadow: rgb(255, 255, 255) 0px 0px 10px;
+    padding: 17vw 5vw 7vw;
+  }
+
+  &__logo {
+    width: min(340px, 80%);
+    height: auto;
+    padding: 7vw 0;
+    filter: drop-shadow(0px 0px 10px #00f018);
+    -webkit-filter: drop-shadow(0px 0px 10px #00f018);
+  }
+}
+
+.benefits {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    margin-top: 7vw;
+  }
+
+  &__header {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__header img {
+    height: auto;
+    width: min(70px, 10.3vw);
+    align-self: center;
+    filter: drop-shadow(rgb(255, 255, 255) 0px 0px 9px);
+    -webkit-filter: drop-shadow(rgb(255, 255, 255) 0px 0px 9px);
+  }
+
+  &__header h3 {
+    padding-top: 2.7vw;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: clamp(2%, 4vw, 19px);
+    letter-spacing: clamp(2px, 1vw, 0.8rem);
+    line-height: clamp(2px, 5vw, 1.5rem);
+    text-align: center;
+    color: white;
+    text-shadow: rgb(255, 255, 255) 0px 0px 15px;
+  }
+
+  &__body {
+    position: relative;
+    width: min(500px, 90vw);
+    display: flex;
+    margin-top: 1.7vw;
+    border-radius: 5.9%;
+    -webkit-border-radius: 5.9%;
+    -moz-border-radius: 5.9%;
+    -ms-border-radius: 5.9%;
+    -o-border-radius: 5.9%;
+    padding: 3.2px 3.2px;
+    text-align: center;
+    vertical-align: middle;
+    height: auto;
+  }
+
+  &__body::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 3vw;
+    padding: 1.6px;
+    background: radial-gradient(
+      361.44% 100% at 50% 0%,
+      #ff0000 0%,
+      #faa500 16.15%,
+      #faff00 33.85%,
+      #38f527 50.52%,
+      #4ecaca 66.67%,
+      #8c00fa 83.33%,
+      #db00ff 100%
+    );
+    mask: linear-gradient(#ffffff 0 0) content-box, linear-gradient(#ffffff 0 0);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box,
+      linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    -webkit-border-radius: 3vw;
+    -moz-border-radius: 3vw;
+    -ms-border-radius: 3vw;
+    -o-border-radius: 3vw;
+  }
+
+  &__body img {
+    height: auto;
+    width: 100%;
+    border-radius: 5vw;
+    -webkit-border-radius: 2.02vw;
+    -moz-border-radius: 5vw;
+    -ms-border-radius: 5vw;
+    -o-border-radius: 5vw;
+    margin: auto auto;
+  }
+
+  &__body::after {
+    position: absolute;
+    content: "";
+    top: 0.5%;
+    left: 0.5%;
+    width: calc(100% - (2 * 0.7%));
+    height: calc(0% - (2 * 0.7%));
+    transition: all 0.9s ease-in-out;
+    -webkit-transition: all 0.9s ease-in-out;
+    -moz-transition: all 0.9s ease-in-out;
+    -ms-transition: all 0.9s ease-in-out;
+    -o-transition: all 0.9s ease-in-out;
+    border-radius: 2.5vw;
+    -webkit-border-radius: 2.5vw;
+    -moz-border-radius: 2.5vw;
+    -ms-border-radius: 2.5vw;
+    -o-border-radius: 2.5vw;
+    opacity: 1;
+    background: linear-gradient(
+      to top,
+      #039600 0%,
+      rgba(3, 150, 0, 0.92159) 7.84%,
+      rgba(3, 150, 0, 0.862793) 13.72%,
+      rgba(3, 150, 0, 0.779846) 22.02%,
+      rgba(3, 150, 0, 0.667501) 33.25%,
+      rgba(3, 150, 0, 0.556205) 44.38%,
+      rgba(3, 150, 0, 0.44386) 55.61%,
+      rgba(3, 150, 0, 0.272717) 72.73%,
+      rgba(3, 150, 0, 0.161422) 83.86%,
+      rgba(3, 150, 0, 0) 100%
+    );
+    width: calc(100% - (2 * 0.7%));
+    height: calc(100% - (2 * 0.7%));
+    opacity: 0;
+  }
+
+  &__body p {
+    position: absolute;
+    bottom: 1.8%;
+    left: 1.8%;
+    width: calc(100% - (2 * 1.8%));
+    height: auto;
+    font-size: clamp(5%, 5vw, 1rem);
+    letter-spacing: clamp(2px, 1.6vw, 0.5rem);
+    line-height: clamp(8px, 6vw, 1.9rem);
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    text-shadow: 0px 0px 15px rgb(0, 0, 0);
+    opacity: 0;
+    transition: all 0.9s ease-in-out;
+    -webkit-transition: all 0.9s ease-in-out;
+    -moz-transition: all 0.9s ease-in-out;
+    -ms-transition: all 0.9s ease-in-out;
+    -o-transition: all 0.9s ease-in-out;
+    border-radius: 2.5vw;
+    -webkit-border-radius: 2.5vw;
+    -moz-border-radius: 2.5vw;
+    -ms-border-radius: 2.5vw;
+    -o-border-radius: 2.5vw;
+    text-shadow: 0px 0px 9px #000000;
+    text-transform: uppercase;
+    -webkit-text-stroke: 0.282014px #000000;
+    margin-bottom: 10%;
+    padding: 0 5.1vw;
+  }
+
+  &__body:hover::after {
+    opacity: 1;
+  }
+
+  &__body:hover > p {
+    opacity: 1;
+    z-index: 3;
+  }
+}
+
+.benefits__card:nth-child(3) > .benefits__body > p {
+  margin-bottom: 4%;
+}
+
+// Sec-5 Ultimate Benefits
+
+// Sec-6 Cloud gaming
+
+.cloud {
+  width: min(643px, 100%);
+  height: auto;
+  background-color: red;
+  display: flex;
+  justify-content: center;
+  margin: 20vw auto 0;
+  position: relative;
+  box-shadow: 0px 20px 40px #000000;
+
+  &__img {
+    width: 100%;
+    height: auto;
+  }
+
+  &__img::after {
+    content: "";
+    position: absolute;
+    background: linear-gradient(
+      to top,
+      #a092fc 2.02%,
+      rgba(255, 255, 255, 0.98) 100%
+    );
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+  }
+
+  &__xcloud {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__xcloud > img {
+    width: calc(100% - 40%);
+    height: 60%;
+    mix-blend-mode: exclusion;
+    padding-top: clamp(3px, 7%, 1rem);
+    margin: 0 auto;
+  }
+
+  &__dualsense::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 50%;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(
+      360deg,
+      #a092fc 2.02%,
+      rgba(255, 255, 255, 0.98) 100%
+    );
+    box-shadow: 0px -10px 8px -6px #ffffff;
+  }
+
+  &__dualsense > img {
+    position: absolute;
+    width: calc(100% - 50%);
+    //background-color: yellow;
+    height: auto;
+    z-index: 3;
+    bottom: min(180px, 18%);
+    left: 0;
+    transform: translateX(50%);
+    -webkit-transform: translateX(50%);
+    -moz-transform: translateX(50%);
+    -ms-transform: translateX(50%);
+    -o-transform: translateX(50%);
+  }
+
+  &__dualsense > h2 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: min(90px, 6vw);
+    text-transform: uppercase;
+    line-height: clamp(4px, 3.6vw, 22px);
+
+    padding: 0 7vw 10vw;
+    overflow-wrap: break-word;
+
+    font-weight: 600;
+    /* or 15px */
+    color: #fff;
+    text-align: center;
+    letter-spacing: clamp(2px, 1.3vw, 7px);
+    z-index: 1;
+
+    //
+
+    vertical-align: middle;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: clamp(3px, 2.2vw, 22px);
+    text-transform: uppercase;
+
+    text-shadow: 0px 1px 10px rgba(102, 255, 200, 0.77);
+  }
+}
+
+.cloud::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  box-shadow: inset 0px -44px 35px -13px rgba(0, 0, 0, 0.77),
+    inset 0px 26px 20px -13px #2d1933;
+}
+
+.cloud::before {
+  content: "";
+  position: absolute;
+  transform: translateY(-6vw);
+  width: 100%;
+  height: 6vw;
+  background: radial-gradient(
+    37% 0.5vw at 50% 50%,
+    #ffffff 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  background-blend-mode: hard-light;
+  margin-top: 0;
+  z-index: 4;
+  background-color: transparent;
+  -webkit-transform: translateY(-6vw);
+  -moz-transform: translateY(-6vw);
+  -ms-transform: translateY(-6vw);
+  -o-transform: translateY(-6vw);
+}
+
+// Sec-6 Cloud gaming

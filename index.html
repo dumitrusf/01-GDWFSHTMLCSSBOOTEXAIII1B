@@ -13,7 +13,8 @@
     <meta name="keywords" content="" />
     <meta
       name="viewport"
-      content="width=device-width, initial-scale=1.0, viewport-fit=contain">
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
     <title>X-Station</title>
     <!-- #2  structuration html with metas and grid css -->
 
@@ -212,19 +213,22 @@
       <!-- Sec-4 carousel Bootstrap modified, xbox incoming games  -->
       <div
         id="carouselExampleInterval"
-        class="carousel carousel-fade slide"
+        class="carousel carousel-1 carousel-fade slide"
         data-bs-ride="carousel"
       >
         <!-- the carousel itself with its images -->
         <div class="carousel-inner">
-          <div class="carousel-item relative" data-bs-interval="5700">
+          <div
+            class="carousel-item carousel-item-1 relative"
+            data-bs-interval="5700"
+          >
             <img
               src="src/assets/img/sec-4carousel-xbox/Fable/Fable-mobile.jpg"
               class="d-block w-100 img-fluid"
               alt="Fable X|S"
             />
             <div
-              class="carousel-caption position-absolute d-flex flex-column justify-content-around"
+              class="carousel-caption carousel-caption-1 position-absolute d-flex flex-column justify-content-around"
             >
               <img
                 src="src/assets/img/sec-4carousel-xbox/microsoft-store.svg"
@@ -237,14 +241,17 @@
             </div>
           </div>
 
-          <div class="carousel-item relative" data-bs-interval="5700">
+          <div
+            class="carousel-item carousel-item-1 relative"
+            data-bs-interval="5700"
+          >
             <img
               src="src/assets/img/sec-4carousel-xbox/Starfield/starfield-mobile.jpg"
               class="d-block w-100 img-fluid"
               alt="..."
             />
             <div
-              class="carousel-caption position-absolute bottom-5 d-flex flex-column justify-content-around"
+              class="carousel-caption carousel-caption-1 position-absolute bottom-5 d-flex flex-column justify-content-around"
             >
               <img
                 src="src/assets/img/sec-4carousel-xbox/microsoft-store.svg"
@@ -257,14 +264,17 @@
             </div>
           </div>
 
-          <div class="carousel-item relative active" data-bs-interval="6000">
+          <div
+            class="carousel-item carousel-item-1 relative active"
+            data-bs-interval="6000"
+          >
             <img
               src="src/assets/img/sec-4carousel-xbox/Forza/FM8-mobile.jpg"
               class="d-block w-100 img-fluid"
               alt="..."
             />
             <div
-              class="carousel-caption position-absolute bottom-5 d-flex flex-column justify-content-around"
+              class="carousel-caption carousel-caption-1 position-absolute bottom-5 d-flex flex-column justify-content-around"
             >
               <img
                 src="src/assets/img/sec-4carousel-xbox/microsoft-store.svg"
@@ -277,14 +287,17 @@
             </div>
           </div>
 
-          <div class="carousel-item relative" data-bs-interval="5700">
+          <div
+            class="carousel-item carousel-item-1 relative"
+            data-bs-interval="5700"
+          >
             <img
               src="src/assets/img/sec-4carousel-xbox/stalker/stalker2-mobile.jpg"
               class="d-block w-100 img-fluid"
               alt="..."
             />
             <div
-              class="carousel-caption position-absolute bottom-5 d-flex flex-column justify-content-around"
+              class="carousel-caption carousel-caption-1 position-absolute bottom-5 d-flex flex-column justify-content-around"
             >
               <img
                 src="src/assets/img/sec-4carousel-xbox/microsoft-store.svg"
@@ -297,14 +310,17 @@
             </div>
           </div>
 
-          <div class="carousel-item relative" data-bs-interval="5700">
+          <div
+            class="carousel-item carousel-item-1 relative"
+            data-bs-interval="5700"
+          >
             <img
               src="src/assets/img/sec-4carousel-xbox/Everwild/Everwild-mobile.jpg"
               class="d-block w-100 img-fluid"
               alt="..."
             />
             <div
-              class="carousel-caption position-absolute bottom-5 d-flex flex-column justify-content-around"
+              class="carousel-caption carousel-caption-1 position-absolute bottom-5 d-flex flex-column justify-content-around"
             >
               <img
                 src="src/assets/img/sec-4carousel-xbox/microsoft-store.svg"
@@ -346,12 +362,12 @@
         <!-- Indicator lines that tell us where we are in the photo if, we are in the 2nd img or not, etc... -->
 
         <div
-          class="image-indicators d-flex justify-content-between"
+          class="image-indicators-1 d-flex justify-content-between"
           data-bs-target="#carouselExampleInterval"
         >
           <a
             href="#Slide1"
-            class="indicator"
+            class="indicator-1"
             data-bs-target="#carouselExampleInterval"
             data-bs-slide-to="0"
             aria-label="Slide 1"
@@ -364,7 +380,7 @@
 
           <a
             href="#Slide2"
-            class="indicator"
+            class="indicator-1"
             data-bs-target="#carouselExampleInterval"
             data-bs-slide-to="1"
             aria-label="Slide 2"
@@ -377,7 +393,7 @@
 
           <a
             href="#Slide3"
-            class="indicator active"
+            class="indicator-1 active"
             data-bs-target="#carouselExampleInterval"
             data-bs-slide-to="2"
             aria-current="true"
@@ -391,7 +407,7 @@
 
           <a
             href="#Slide4"
-            class="indicator"
+            class="indicator-1"
             data-bs-target="#carouselExampleInterval"
             data-bs-slide-to="3"
             aria-label="Slide 4"
@@ -404,7 +420,7 @@
 
           <a
             href="#Slide5"
-            class="indicator"
+            class="indicator-1"
             data-bs-target="#carouselExampleInterval"
             data-bs-slide-to="4"
             aria-label="Slide 5"
@@ -534,23 +550,349 @@
 
       <!-- Sec-6 Cloud-gaming -->
       <section class="cloud">
-
-        <img class="cloud__img" src="src/assets/img/sec-6Cloud-gaming/cloud-gaming-mobile.png" alt="">
-
-        
+        <img
+          class="cloud__img"
+          src="src/assets/img/sec-6Cloud-gaming/cloud-gaming-mobile.png"
+          alt=""
+        />
 
         <div class="cloud__xcloud">
-          <img src="src/assets/img/sec-6Cloud-gaming/xcloud.svg" alt="">
+          <img src="src/assets/img/sec-6Cloud-gaming/xcloud.svg" alt="" />
         </div>
-
 
         <div class="cloud__dualsense">
-          <img src="src/assets/img/sec-6Cloud-gaming/Sony-Playstation-Project-Q-Handheld-0-Hero copia 9999.png" alt="">
+          <img
+            src="src/assets/img/sec-6Cloud-gaming/Sony-Playstation-Project-Q-Handheld-0-Hero copia 9999.png"
+            alt=""
+          />
           <h2>with the best cloud gaming service at the moment</h2>
         </div>
-        
       </section>
       <!-- Sec-6 Cloud-gaming -->
+
+      <!-- Sec-7 Shopping carousel -->
+      <div
+        id="carouselExampleIndicators"
+        class="carousel carousel-2 carousel-fade slide"
+        data-bs-ride="carousel"
+      >
+        <!-- the carousel itself with its images -->
+        <div class="carousel-inner relative">
+          <div class="carousel-item-2 carousel-item" data-bs-interval="8700">
+
+            <img
+              src="src/assets/img/sec-7carousel to buy products/01-accesories-mobile.png"
+              class="d-block w-100 img-fluid"
+              alt="Fable X|S"
+            />
+
+            <!-- button to buy product -->
+            <div
+              class="carousel-caption carousel-caption-2 position-absolute d-flex flex-row justify-content-between"
+            >
+              <button
+                type="button"
+                class="btn"
+                style="
+                  --bs-btn-padding-y: 0.25rem;
+                  --bs-btn-padding-x: 0.5rem;
+                  --bs-btn-font-size: 0.75rem;
+                "
+              >
+                <a href="#">BUY</a>
+                <img
+                  src="src/assets/img/sec-7carousel to buy products/mini-logo-xbox.svg"
+                  alt=""
+                />
+              </button>
+              <button
+                type="button"
+                class="btn"
+                style="
+                  --bs-btn-padding-y: 0.25rem;
+                  --bs-btn-padding-x: 0.5rem;
+                  --bs-btn-font-size: 0.75rem;
+                "
+              >
+                <a href="#">BUY</a>
+                <img
+                  src="src/assets/img/sec-7carousel to buy products/mini-logo-ps.svg"
+                  alt=""
+                />
+              </button>
+            </div>
+            <!-- button to buy product -->
+          </div>
+
+          <div
+            class="carousel-item-2 carousel-item relative"
+            data-bs-interval="8700"
+          >
+            <img
+              src="src/assets/img/sec-7carousel to buy products/02-games-mobile.png"
+              class="d-block w-100 img-fluid"
+              alt="..."
+            />
+            <!-- button to buy product -->
+            <div
+              class="carousel-caption carousel-caption-2 position-absolute d-flex flex-row justify-content-between"
+            >
+              <button
+                type="button"
+                class="btn"
+                style="
+                  --bs-btn-padding-y: 0.25rem;
+                  --bs-btn-padding-x: 0.5rem;
+                  --bs-btn-font-size: 0.75rem;
+                "
+              >
+                <a href="#">BUY</a>
+                <img
+                  src="src/assets/img/sec-7carousel to buy products/mini-logo-xbox.svg"
+                  alt=""
+                />
+              </button>
+              <button
+                type="button"
+                class="btn"
+                style="
+                  --bs-btn-padding-y: 0.25rem;
+                  --bs-btn-padding-x: 0.5rem;
+                  --bs-btn-font-size: 0.75rem;
+                "
+              >
+                <a href="#">BUY</a>
+                <img
+                  src="src/assets/img/sec-7carousel to buy products/mini-logo-ps.svg"
+                  alt=""
+                />
+              </button>
+            </div>
+            <!-- button to buy product -->
+          </div>
+
+          <div
+            class="carousel-item-2 carousel-item relative active"
+            data-bs-interval="9000"
+          >
+            <img
+              src="src/assets/img/sec-7carousel to buy products/03-psxb-mobile.png"
+              class="d-block w-100 img-fluid"
+              alt="..."
+            />
+            <!-- button to buy product -->
+            <div
+              class="carousel-caption carousel-caption-2 position-absolute d-flex flex-row justify-content-between"
+            >
+              <button
+                type="button"
+                class="btn"
+                style="
+                  --bs-btn-padding-y: 0.25rem;
+                  --bs-btn-padding-x: 0.5rem;
+                  --bs-btn-font-size: 0.75rem;
+                "
+              >
+                <a href="#">BUY</a>
+                <img
+                  src="src/assets/img/sec-7carousel to buy products/mini-logo-xbox.svg"
+                  alt=""
+                />
+              </button>
+              <button
+                type="button"
+                class="btn"
+                style="
+                  --bs-btn-padding-y: 0.25rem;
+                  --bs-btn-padding-x: 0.5rem;
+                  --bs-btn-font-size: 0.75rem;
+                "
+              >
+                <a href="#">BUY</a>
+                <img
+                  src="src/assets/img/sec-7carousel to buy products/mini-logo-ps.svg"
+                  alt=""
+                />
+              </button>
+            </div>
+            <!-- button to buy product -->
+          </div>
+
+          <div
+            class="carousel-item-2 carousel-item relative"
+            data-bs-interval="8700"
+          >
+            <img
+              src="src/assets/img/sec-7carousel to buy products/04-merchandising-mobile.png"
+              class="d-block w-100 img-fluid"
+              alt="..."
+            />
+            <!-- button to buy product -->
+            <div
+              class="carousel-caption carousel-caption-2 position-absolute d-flex flex-row justify-content-between"
+            >
+              <button
+                type="button"
+                class="btn"
+                style="
+                  --bs-btn-padding-y: 0.25rem;
+                  --bs-btn-padding-x: 0.5rem;
+                  --bs-btn-font-size: 0.75rem;
+                "
+              >
+                <a href="#">BUY</a>
+                <img
+                  src="src/assets/img/sec-7carousel to buy products/mini-logo-xbox.svg"
+                  alt=""
+                />
+              </button>
+              <button
+                type="button"
+                class="btn"
+                style="
+                  --bs-btn-padding-y: 0.25rem;
+                  --bs-btn-padding-x: 0.5rem;
+                  --bs-btn-font-size: 0.75rem;
+                "
+              >
+                <a href="#">BUY</a>
+                <img
+                  src="src/assets/img/sec-7carousel to buy products/mini-logo-ps.svg"
+                  alt=""
+                />
+              </button>
+            </div>
+            <!-- button to buy product -->
+          </div>
+
+          <div
+            class="carousel-item-2 carousel-item relative"
+            data-bs-interval="8700"
+          >
+            <img
+              src="src/assets/img/sec-7carousel to buy products/05-services-mobile.png"
+              class="d-block w-100 img-fluid"
+              alt="..."
+            />
+            <!-- button to buy product -->
+            <div
+              class="carousel-caption carousel-caption-2 position-absolute d-flex flex-row justify-content-between"
+            >
+              <button
+                type="button"
+                class="btn"
+                style="
+                  --bs-btn-padding-y: 0.25rem;
+                  --bs-btn-padding-x: 0.5rem;
+                  --bs-btn-font-size: 0.75rem;
+                "
+              >
+                <a href="#">BUY</a>
+                <img
+                  src="src/assets/img/sec-7carousel to buy products/mini-logo-xbox.svg"
+                  alt=""
+                />
+              </button>
+              <button
+                type="button"
+                class="btn"
+                style="
+                  --bs-btn-padding-y: 0.25rem;
+                  --bs-btn-padding-x: 0.5rem;
+                  --bs-btn-font-size: 0.75rem;
+                "
+              >
+                <a href="#">BUY</a>
+                <img
+                  src="src/assets/img/sec-7carousel to buy products/mini-logo-ps.svg"
+                  alt=""
+                />
+              </button>
+            </div>
+            <!-- button to buy product -->
+          </div>
+          <div class="logohead">
+            <img
+              src="src/assets/img/sec-7carousel to buy products/logo-XB-mobile.svg"
+              alt=""
+            />
+            <img
+              src="src/assets/img/sec-7carousel to buy products/logo-PS5-mobile.svg"
+              alt=""
+            />
+          </div>
+          <p class="text-carousel">
+            You are always welcome, no matter what device you use
+          </p>
+        </div>
+        <!-- the carousel itself with its images -->
+
+        <!-- left button (previous img) -->
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <!-- left button (previous img) -->
+
+        <!-- right button (next img) -->
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+        <!-- right button (next img) -->
+
+        <!-- Indicators lines -->
+        <div class="carousel-indicators">
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="0"
+            aria-current="true"
+            aria-label="Slide 1"
+          ></button>
+
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="1"
+            aria-label="Slide 2"
+          ></button>
+
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="2"
+            class="active"
+            aria-label="Slide 3"
+          ></button>
+
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="3"
+            aria-label="Slide 4"
+          ></button>
+
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="4"
+            aria-label="Slide 5"
+          ></button>
+        </div>
+        <!-- Indicators lines -->
+      </div>
+      <!-- Sec-7 Shopping carousel  -->
     </main>
     <!-- main content -->
 
