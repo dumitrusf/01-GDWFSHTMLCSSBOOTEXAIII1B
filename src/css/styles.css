@@ -125,6 +125,7 @@
 html {
   background: url(../assets/img/stars-1.png) center center repeat;
   background-size: 38vw;
+  overflow-x: hidden;
 }
 
 header {
@@ -310,10 +311,10 @@ h1 {
   padding-top: clamp(1.7vw, 0.7rem, 17px);
   width: 100vw;
   height: auto;
-  overflow: hidden;
   justify-content: center;
   align-items: center;
   position: relative;
+  overflow-x: hidden;
 }
 .playstation__h2 {
   position: relative;
@@ -341,13 +342,13 @@ h1 {
 }
 .playstation__wrapper {
   padding-top: 20vw;
-  margin-left: 0%;
-  width: min(643px, 140vw);
+  width: min(643px, 170vw);
 }
 .playstation__wrapper > img {
-  height: 160%;
+  height: auto;
   width: 114%;
   mix-blend-mode: color-dodge;
+  margin-left: max(-6.5rem, -80%);
 }
 .playstation__joel {
   position: absolute;
@@ -419,13 +420,13 @@ h1 {
 }
 .xbox__wrapper {
   padding-top: 20vw;
-  margin-right: 0%;
-  width: min(643px, 100vw);
+  width: min(643px, 170vw);
 }
 .xbox__wrapper > img {
-  height: 160%;
+  height: auto;
   width: 114%;
   mix-blend-mode: color-dodge;
+  margin-right: max(-6.5rem, -80%);
 }
 .xbox__marcus {
   position: absolute;
@@ -746,9 +747,8 @@ h1 {
 }
 
 .cloud {
-  width: min(643px, 100%);
+  width: min(643px, 100vw);
   height: auto;
-  background-color: red;
   display: flex;
   justify-content: center;
   margin: 20vw auto 0;
@@ -756,7 +756,7 @@ h1 {
   box-shadow: 0px 20px 40px #000000;
 }
 .cloud__img {
-  width: 100%;
+  width: 100vw;
   height: auto;
 }
 .cloud__img::after {
@@ -764,7 +764,7 @@ h1 {
   position: absolute;
   background: linear-gradient(to top, #a092fc 2.02%, rgba(255, 255, 255, 0.98) 100%);
   height: 100%;
-  width: 100%;
+  width: 100vw;
   top: 0;
   left: 0;
 }
@@ -772,7 +772,7 @@ h1 {
   position: absolute;
   left: 0;
   top: 0;
-  width: 100%;
+  width: 100vw;
   height: 100%;
 }
 .cloud__xcloud > img {
@@ -856,6 +856,7 @@ h1 {
 }
 
 .carousel-2 {
+  width: 100vw;
   height: auto;
   position: relative;
   padding-top: 7vw;
@@ -865,7 +866,7 @@ h1 {
   position: absolute;
   content: "";
   top: 0;
-  width: 100vw;
+  width: 100%;
   height: 5vw;
   background: radial-gradient(19% 6% at 50% 50%, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
   background-blend-mode: hard-light;
@@ -879,8 +880,8 @@ h1 {
   bottom: 0;
   width: 100vw;
   height: 33.3%;
-  background-color: rgba(0, 0, 0, 0);
-  box-shadow: inset 0px -292px 302px -261px #000000;
+  background-color: rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0px -292px 122px -161px #000000;
 }
 
 .carousel-caption-2 {
@@ -898,8 +899,8 @@ h1 {
 
 .carousel-caption-2 > button {
   height: max(7.5vw, 0.2rem);
-  width: max(1.5vw, 0.4rem);
-  padding: max(1vw, 0.1rem) max(6vw, 0.6rem);
+  flex-basis: max(1.5vw, 0.4rem);
+  padding: max(1vw, 0.1rem) max(3vw, 0.6rem);
   font-size: clamp(2.5px, 2vw, 34px);
   border-radius: 50px;
   -webkit-border-radius: 50px;
@@ -944,8 +945,8 @@ h1 {
   width: 100%;
   height: max(26vw, 1rem);
   display: inline-flex;
-  top: max(1vw, 2rem);
-  left: 0;
+  z-index: -1;
+  top: max(1rem, 1vw);
 }
 
 .logohead > img {
@@ -956,13 +957,13 @@ h1 {
 
 .text-carousel {
   position: absolute;
-  bottom: max(12vw, 2rem);
+  bottom: max(7vw, 0.7rem);
   left: 0;
   width: 100%;
   height: min(100px, 22vw);
   text-transform: uppercase;
-  line-height: clamp(4px, 6.6vw, 33.3px);
-  padding: 0 7vw 10vw;
+  line-height: clamp(1.5%, 6.6vw, 33.3px);
+  padding: 0 7vw 8vw;
   overflow-wrap: break-word;
   font-weight: 600;
   /* or 15px */
@@ -975,4 +976,13 @@ h1 {
   font-size: clamp(3px, 3vw, 22px);
   text-transform: uppercase;
   text-shadow: 0px 1px 10px rgba(102, 255, 200, 0.77);
+}
+
+.carousel-indicators {
+  margin-bottom: max(0%, 1.8vw);
+}
+
+.carousel-indicators [data-bs-target] {
+  flex: 1 1 auto;
+  height: max(1vw, 1px);
 }
