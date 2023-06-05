@@ -493,8 +493,8 @@ h1 {
   height: 33.3%;
   display: flex;
   margin: 7vmin auto;
-  filter: drop-shadow(0px 0px 1rem #00f018);
-  -webkit-filter: drop-shadow(0px 0px 1rem #00f018);
+  filter: drop-shadow(0rem 0rem 10px #2ac03e) drop-shadow(0rem 0rem 16px #12ff1e);
+  -webkit-filter: drop-shadow(0rem 0rem 10px #2ac03e) drop-shadow(0rem 0rem 16px #12ff1e);
 }
 
 .carousel-caption-1 img:nth-child(1) {
@@ -574,7 +574,7 @@ h1 {
   -moz-transform: scale(1.5) translateY(0.2rem);
   -ms-transform: scale(1.5) translateY(0.2rem);
   -o-transform: scale(1.5) translateY(0.2rem);
-  box-shadow: 0rem 0rem 0.03rem #45be19, 0rem 0rem 1.125rem #45dd0e;
+  box-shadow: 0rem 0rem 10px #2ac03e, 0rem 0rem 22px #12ff1e;
   opacity: 1;
   outline: 0.0625rem solid white;
   background-color: transparent;
@@ -978,11 +978,132 @@ h1 {
   text-shadow: 0px 1px 10px rgba(102, 255, 200, 0.77);
 }
 
-.carousel-indicators {
+.carousel-2 > .carousel-indicators {
   margin-bottom: max(0%, 1.8vw);
 }
 
-.carousel-indicators [data-bs-target] {
+.carousel-2 > .carousel-indicators [data-bs-target] {
   flex: 1 1 auto;
   height: max(1vw, 1px);
+}
+
+.carousel-3 {
+  height: auto;
+  position: relative;
+  padding-top: 6vw;
+}
+
+.carousel-3::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  width: 100vw;
+  height: 5vw;
+  background: radial-gradient(19% 6% at 50% 50%, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
+  background-blend-mode: hard-light;
+  background-color: black;
+  padding-bottom: 7vw;
+}
+
+.carousel-item-3::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, #000000 0%, rgba(0, 0, 0, 0.808108) 15.28%, rgba(0, 0, 0, 0.557881) 22.23%, rgba(0, 0, 0, 0.24) 33.26%, rgba(0, 0, 0, 0) 62.6%, rgba(0, 0, 0, 0) 100%), linear-gradient(to bottom, #000000 0%, rgba(0, 0, 0, 0.435443) 14.15%, rgba(0, 0, 0, 0) 24.75%, rgba(0, 0, 0, 0) 100%);
+}
+
+.carousel-caption-3 {
+  z-index: 5;
+  width: clamp(40vw, 5rem, 50%);
+  height: 33.3%;
+  display: flex;
+  margin: 7vmin auto;
+  filter: drop-shadow(0rem 0rem 10px #5aa2ff) drop-shadow(0rem 0rem 16px #0077ff);
+  -webkit-filter: drop-shadow(0rem 0rem 10px #5aa2ff) drop-shadow(0rem 0rem 16px #0077ff);
+}
+
+.carousel-caption-3 img:nth-child(1) {
+  width: min(100px, 20%);
+  height: auto;
+  margin: 2vmin auto;
+}
+
+.carousel-caption-3 img:nth-child(2) {
+  margin-bottom: 7vmin;
+}
+
+.carousel-item-3:nth-child(1) > .carousel-caption > img:nth-child(2) {
+  width: min(200px, 78%);
+  margin: 0 auto;
+}
+
+.carousel-item-3:nth-child(2) > .carousel-caption > img:nth-child(2) {
+  width: min(170px, 98%);
+  margin: 0 auto;
+}
+
+.carousel-item-3:nth-child(3) > .carousel-caption > img:nth-child(2) {
+  width: min(200px, 88%);
+  margin: 0 auto;
+}
+
+.carousel-item-3:nth-child(4) > .carousel-caption > img:nth-child(2) {
+  width: min(200px, 89%);
+  margin: 0 auto;
+}
+
+.carousel-item-3:nth-child(5) > .carousel-caption > img:nth-child(2) {
+  width: min(200px, 90%);
+  margin: 0 auto;
+}
+
+.image-indicators-3 {
+  padding: 10vw max(10vw, 10%);
+  width: 100vw;
+  margin: 0 auto;
+  background: rgba(0, 0, 0, 0.01);
+  box-shadow: inset 0px 293px 150px -229px #000000;
+}
+
+.image-indicators-3 .indicator-3 {
+  display: inline-flex;
+  align-items: center;
+  border: none;
+  justify-content: center;
+  margin: 0 1.6vw;
+}
+
+.image-indicators-3 .indicator-3 > img {
+  height: auto;
+  width: min(60px, 67%);
+  margin: 0px clamp(4px, 0.8vw, 1.7rem);
+  border-radius: 10%;
+  -webkit-border-radius: 10%;
+  -moz-border-radius: 10%;
+  -ms-border-radius: 10%;
+  -o-border-radius: 10%;
+  box-shadow: 0rem 0rem 0.5rem #ffffff;
+  transition: all 0.9s ease-in-out;
+  -webkit-transition: all 0.9s ease-in-out;
+  -moz-transition: all 0.9s ease-in-out;
+  -ms-transition: all 0.9s ease-in-out;
+  -o-transition: all 0.9s ease-in-out;
+  opacity: 0.63;
+  outline: 0.1px solid rgba(255, 255, 255, 0);
+  background-color: white;
+}
+
+.indicator-3:hover > img {
+  transform: scale(1.5) translateY(0.2rem);
+  -webkit-transform: scale(1.5) translateY(0.2rem);
+  -moz-transform: scale(1.5) translateY(0.2rem);
+  -ms-transform: scale(1.5) translateY(0.2rem);
+  -o-transform: scale(1.5) translateY(0.2rem);
+  box-shadow: 0rem 0rem 10px #5aa2ff, 0rem 0rem 22px #0077ff;
+  opacity: 1;
+  outline: 0.0625rem solid white;
+  background-color: transparent;
 }
