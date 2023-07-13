@@ -152,7 +152,7 @@ body {
 
 h1 {
   color: white;
-  font-size: clamp(6%, 3vw, 2.1rem);
+  font-size: min(26px, 3vw);
   margin-bottom: 0.2rem;
 }
 
@@ -175,7 +175,7 @@ h1 {
   background: linear-gradient(165deg, #1860bd 0%, rgba(24, 150, 204, 0.1) 23.87%, rgba(24, 204, 204, 0.03) 39.48%, rgba(24, 204, 204, 0.03) 42.98%, rgba(24, 204, 128, 0.1) 48.8%, rgba(24, 204, 128, 0.1) 53.25%, #1b7a18 71.65%, rgba(24, 204, 128, 0.1) 85.4%, rgba(24, 204, 204, 0.03) 95.38%, rgba(24, 204, 204, 0.01) 98.93%);
   text-align: center;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 575px) {
   .navbar__div {
     justify-content: space-between;
   }
@@ -191,7 +191,7 @@ h1 {
   margin: auto;
   padding: 0;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 575px) {
   .navbar__ul {
     justify-content: start;
     margin-top: auto;
@@ -233,6 +233,12 @@ h1 {
   justify-content: center;
   background: radial-gradient(60% 1% at 50% 100%, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
 }
+@media screen and (min-width: 992px) {
+  .menus {
+    width: 50vw;
+    margin-left: auto;
+  }
+}
 .menus__list {
   position: absolute;
   display: flex;
@@ -241,8 +247,19 @@ h1 {
   background: radial-gradient(20% 1% at 50% 100%, #ffffff 0%, rgba(255, 255, 255, 0) 100%), radial-gradient(10% 1% at 50% 0%, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
   padding: min(16px, 5%) 0;
 }
+@media screen and (min-width: 992px) {
+  .menus__list {
+    position: unset;
+    width: auto;
+  }
+}
 .menus__svg {
   margin: clamp(5vw, 2.2rem, 140px) 0;
+}
+@media screen and (min-width: 992px) {
+  .menus__svg {
+    display: none;
+  }
 }
 .menus__svg--ps {
   width: clamp(18vw, 45%, 280px);
@@ -266,9 +283,24 @@ h1 {
   padding-top: clamp(2vw, 4px, 0.8rem);
   letter-spacing: clamp(1px, 0.5vw, 0.2rem);
 }
+@media screen and (min-width: 992px) {
+  .menus__list a {
+    font-family: "hnt-medium";
+    letter-spacing: clamp(1px, 0.5vw, 0.2rem);
+    padding-top: 2px;
+  }
+}
 .menus__list .nav-item {
-  font-size: clamp(3vw, 4.95%, 1rem);
+  font-size: min(22px, 3vw);
   margin-bottom: min(10px, 0%);
+}
+@media screen and (min-width: 992px) {
+  .menus__list .nav-item {
+    font-size: min(16px, 2vw);
+    margin-bottom: unset;
+    text-align: center;
+    margin-right: min(10px, 2vw);
+  }
 }
 .menus__list a:hover {
   color: rgb(0, 0, 0);
@@ -372,6 +404,7 @@ h1 {
 .navbar-nav .nav-link.active,
 .navbar-nav .show > .nav-link {
   color: rgb(219, 255, 0);
+  background: linear-gradient(270deg, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 49.65%, rgba(0, 0, 0, 0) 100%);
 }
 
 .playstation {

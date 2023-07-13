@@ -34,7 +34,7 @@ body {
 
 h1 {
   color: white;
-  font-size: clamp(6%, 3vw, 2.1rem);
+  font-size: min(26px, 3vw);
   margin-bottom: 0.2rem;
 }
 
@@ -44,7 +44,7 @@ h1 {
 }
 
 .navbar {
-  background-color:transparent;
+  background-color: transparent;
   width: 100%;
   padding: 0;
 
@@ -118,7 +118,6 @@ h1 {
           linear-gradient(#fff 0 0);
         -webkit-mask-composite: xor;
         mask-composite: exclude;
-        
       }
     }
   }
@@ -149,6 +148,11 @@ h1 {
     rgba(255, 255, 255, 0) 100%
   );
 
+  @include responsive(laptop) {
+    width: 50vw;
+    margin-left: auto;
+  }
+
   &__list {
     position: absolute;
     display: flex;
@@ -161,10 +165,19 @@ h1 {
       ),
       radial-gradient(10% 1% at 50% 0%, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
     padding: min(16px, 5%) 0;
+
+    @include responsive(laptop) {
+      position: unset;
+      width: auto;
+    }
   }
 
   &__svg {
     margin: clamp(5vw, 2.2rem, 140px) 0;
+
+    @include responsive(laptop) {
+      display: none;
+    }
   }
 
   &__svg--ps {
@@ -190,11 +203,26 @@ h1 {
     font-family: "hnt-medium";
     padding-top: clamp(2vw, 4px, 0.8rem);
     letter-spacing: clamp(1px, 0.5vw, 0.2rem);
+
+    @include responsive(laptop) {
+      font-family: "hnt-medium";
+      letter-spacing: clamp(1px, 0.5vw, 0.2rem);
+      padding-top: 2px;
+    }
   }
 
   &__list .nav-item {
-    font-size: clamp(3vw, 4.95%, 1rem);
+    font-size: min(22px, 3vw);
     margin-bottom: min(10px, 0%);
+
+    @include responsive(laptop) {
+      font-size: min(16px, 2vw);
+      margin-bottom: unset;
+      text-align: center;
+      margin-right: min(10px, 2vw);
+      
+
+    }
   }
 
   &__list a:hover {
@@ -337,6 +365,7 @@ h1 {
 .navbar-nav .nav-link.active,
 .navbar-nav .show > .nav-link {
   color: rgb(219, 255, 0);
+  background: linear-gradient(270deg, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 49.65%, rgba(0, 0, 0, 0) 100%);
 }
 // the interaction and aspect with menu navbar
 

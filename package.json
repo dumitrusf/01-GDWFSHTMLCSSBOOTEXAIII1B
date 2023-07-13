@@ -19,6 +19,7 @@
   "dependencies": {
     "bootstrap": "^5.2.3",
     "bootstrap-icons": "^1.10.5",
+    "node-sass": "^9.0.0",
     "normalize.css": "^8.0.1"
   }
 }
