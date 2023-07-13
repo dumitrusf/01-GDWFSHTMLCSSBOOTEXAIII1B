@@ -44,7 +44,7 @@ h1 {
 }
 
 .navbar {
-  background-color: black;
+  background-color:transparent;
   width: 100%;
   padding: 0;
 
@@ -93,6 +93,33 @@ h1 {
       justify-content: start;
       margin-top: auto;
       margin-bottom: auto;
+      position: relative;
+      padding: auto clamp(20%, 5vw, 1.6rem);
+      background: none;
+
+      &::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        padding: 1.6px;
+        background: linear-gradient(
+          90.04deg,
+          transparent 0%,
+          transparent 0.5%,
+          transparent 2.13%,
+          rgba(0, 0, 0, 0.237) 35.09%,
+          rgba(255, 255, 255, 0.357) 57.01%,
+          rgba(255, 255, 255, 0.674) 75.11%,
+          rgba(255, 255, 255, 0.895) 80.43%,
+          rgb(255, 255, 255) 100%
+        );
+        mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+        -webkit-mask: linear-gradient(#fff 0 0) content-box,
+          linear-gradient(#fff 0 0);
+        -webkit-mask-composite: xor;
+        mask-composite: exclude;
+        
+      }
     }
   }
 
@@ -134,7 +161,6 @@ h1 {
       ),
       radial-gradient(10% 1% at 50% 0%, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
     padding: min(16px, 5%) 0;
-    
   }
 
   &__svg {
@@ -168,7 +194,7 @@ h1 {
 
   &__list .nav-item {
     font-size: clamp(3vw, 4.95%, 1rem);
-    margin-bottom: min(10px, 0%);;
+    margin-bottom: min(10px, 0%);
   }
 
   &__list a:hover {
