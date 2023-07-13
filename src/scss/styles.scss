@@ -34,7 +34,8 @@ body {
 
 h1 {
   color: white;
-  font-size: clamp(6%, 3.5vw, 2.1rem);
+  font-size: clamp(6%, 3vw, 2.1rem);
+  margin-bottom: 0.2rem;
 }
 
 .navbar-toggler {
@@ -54,18 +55,23 @@ h1 {
     align-items: center;
     list-style-type: none;
     background: linear-gradient(
-        120deg,
-        #1860bd 13.53%,
-        rgba(24, 150, 204, 0.1) 35.84%,
-        rgba(24, 204, 204, 0.025) 43.81%
-      ),
-      linear-gradient(
-        60deg,
-        rgba(24, 204, 204, 0.025) 60.5%,
-        rgba(18, 218, 135, 0.1) 67.34%,
-        #0a9205 92.72%
-      );
+      165deg,
+      #1860bd 0%,
+      rgba(24, 150, 204, 0.1) 23.87%,
+      rgba(24, 204, 204, 0.03) 39.48%,
+      rgba(24, 204, 204, 0.03) 42.98%,
+      rgba(24, 204, 128, 0.1) 48.8%,
+      rgba(24, 204, 128, 0.1) 53.25%,
+      #1b7a18 71.65%,
+      rgba(24, 204, 128, 0.1) 85.4%,
+      rgba(24, 204, 204, 0.03) 95.38%,
+      rgba(24, 204, 204, 0.01) 98.93%
+    );
     text-align: center;
+
+    @include responsive(tablet) {
+      justify-content: space-between;
+    }
   }
 
   &__ul {
@@ -80,6 +86,14 @@ h1 {
       #ffffff 0%,
       rgba(255, 255, 255, 0) 100%
     );
+    margin: auto;
+    padding: 0;
+
+    @include responsive(tablet) {
+      justify-content: start;
+      margin-top: auto;
+      margin-bottom: auto;
+    }
   }
 
   &__svg {
@@ -119,7 +133,8 @@ h1 {
         rgba(255, 255, 255, 0) 100%
       ),
       radial-gradient(10% 1% at 50% 0%, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
-    padding: clamp(1.3vw, 0.4rem, 11px) 0;
+    padding: min(16px, 5%) 0;
+    
   }
 
   &__svg {
@@ -153,7 +168,7 @@ h1 {
 
   &__list .nav-item {
     font-size: clamp(3vw, 4.95%, 1rem);
-    margin-bottom: clamp(2vw, 4px, 0.8rem);
+    margin-bottom: min(10px, 0%);;
   }
 
   &__list a:hover {
@@ -174,6 +189,47 @@ h1 {
   }
 }
 
+.hamburguer {
+  margin-left: auto;
+  margin-right: 40px;
+  margin-top: auto;
+  margin-bottom: auto;
+  position: relative;
+  box-shadow: 0px 0px 6px 0px rgb(255, 255, 255),
+    inset 0px 0px 2.5px 0px rgba(255, 255, 255, 0.845);
+
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+    padding: 1.6px;
+    background-color: white;
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box,
+      linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+  }
+
+  &__div {
+    width: 40px;
+    height: 40px;
+    padding-top: 2.5px;
+    padding-bottom: 0px;
+  }
+}
 // button dropdown mobile
 
 .but {
@@ -1764,7 +1820,6 @@ h1 {
       );
       background-blend-mode: hard-light;
       padding-top: 3%;
-      
     }
   }
 
@@ -1792,9 +1847,26 @@ h1 {
     position: absolute;
     inset: 0;
     padding: 4px;
-    background: radial-gradient(        100% 330.61% at 0% 100%,        #185fbd,        rgba(0, 0, 0, 0),        #1b7a18      ),      linear-gradient(        270.05deg,        rgba(255, 255, 255, 0) 23.44%,        rgba(255, 255, 255, 0) 29.88%,        rgba(255, 255, 255, 0.35) 39.13%,        #ffffff 46.09%,        #ffffff 57.01%,        rgba(255, 255, 255, 0.35) 65.11%,        rgba(255, 255, 255, 0) 72.43%,        rgba(255, 255, 255, 0) 80.23%      );
+    background: radial-gradient(
+        100% 330.61% at 0% 100%,
+        #185fbd,
+        rgba(0, 0, 0, 0),
+        #1b7a18
+      ),
+      linear-gradient(
+        270.05deg,
+        rgba(255, 255, 255, 0) 23.44%,
+        rgba(255, 255, 255, 0) 29.88%,
+        rgba(255, 255, 255, 0.35) 39.13%,
+        #ffffff 46.09%,
+        #ffffff 57.01%,
+        rgba(255, 255, 255, 0.35) 65.11%,
+        rgba(255, 255, 255, 0) 72.43%,
+        rgba(255, 255, 255, 0) 80.23%
+      );
     mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-    -webkit-mask: linear-gradient(#fff 0 0) content-box,      linear-gradient(#fff 0 0);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box,
+      linear-gradient(#fff 0 0);
     -webkit-mask-composite: xor;
     mask-composite: exclude;
     border-radius: 10vw 10vw 0 0/ 10vw 10vw 0 0;
@@ -1803,7 +1875,7 @@ h1 {
     -ms-border-radius: 10vw 10vw 0 0/ 10vw 10vw 0 0;
     -o-border-radius: 10vw 10vw 0 0/ 10vw 10vw 0 0;
     margin-bottom: 9px;
-}
+  }
 
   &::after {
     content: "";
@@ -1813,11 +1885,11 @@ h1 {
     box-shadow: -2.42px 0px 4.85px 0px #006fff, -5.66px 0px 9.71px 0px #006fff,
       -8.9px 0.8px 12.95px 0px #006fff, 2.42px 0px 4.85px 0px #1ea319,
       5.66px 0px 9.71px 0px #1ea319, 8.9px 0px 12.95px 0px #1ea319;
-      border-radius: 10vw 10vw 0 0/ 10vw 10vw 0 0;
-      -webkit-border-radius: 10vw 10vw 0 0/ 10vw 10vw 0 0;
-      -moz-border-radius: 10vw 10vw 0 0/ 10vw 10vw 0 0;
-      -ms-border-radius: 10vw 10vw 0 0/ 10vw 10vw 0 0;
-      -o-border-radius: 10vw 10vw 0 0/ 10vw 10vw 0 0;
+    border-radius: 10vw 10vw 0 0/ 10vw 10vw 0 0;
+    -webkit-border-radius: 10vw 10vw 0 0/ 10vw 10vw 0 0;
+    -moz-border-radius: 10vw 10vw 0 0/ 10vw 10vw 0 0;
+    -ms-border-radius: 10vw 10vw 0 0/ 10vw 10vw 0 0;
+    -o-border-radius: 10vw 10vw 0 0/ 10vw 10vw 0 0;
     margin-bottom: 9px;
   }
 
@@ -1838,7 +1910,6 @@ h1 {
   &__ps > img:nth-child(2) {
     width: 198px;
   }
-  
 }
 
 .logo-footer {
@@ -1950,7 +2021,6 @@ h1 {
   }
 }
 
-
 .char-xb {
   width: 100%;
   margin-top: clamp(6vw, 3rem, 20%);
@@ -1959,8 +2029,7 @@ h1 {
     height: auto;
     width: min(1024px, 100%);
     margin: 0 auto 7px;
-}
-  
+  }
 }
 
 // Footer

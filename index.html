@@ -53,16 +53,16 @@
 
     <!-- #4 installation of Reset, Normalize, Bootstrap and our Styles  -->
 
+    <!-- Normalize CSS -->
+    <link rel="stylesheet" href="/node_modules/Normalize-css/normalize.css" />
+    <!-- Normalize CSS -->
+
     <!-- Bootstrap CSS -->
     <link
       rel="stylesheet"
       href="/node_modules/bootstrap/dist/css/bootstrap.css"
     />
     <!-- Bootstrap CSS -->
-
-    <!-- Normalize CSS -->
-    <link rel="stylesheet" href="/node_modules/Normalize-css/normalize.css" />
-    <!-- Normalize CSS -->
 
     <!-- reset installed -->
     <link rel="stylesheet" href="node_modules/Reset-css/reset.css" />
@@ -80,7 +80,7 @@
     <header>
       <nav class="navbar navbar-expand-lg">
         <div class="navbar__div container-xs d-flex">
-          <ul class="navbar__ul">
+          <ul class="d-md-none navbar__ul">
             <li>
               <a
                 href="https://www.playstation.com/en-us/"
@@ -124,6 +124,66 @@
               </a>
             </li>
           </ul>
+
+          <!-- new design header with menu for tablet responsive #18 -->
+          <ul class="d-none d-md-inline-flex navbar__ul">
+            <li>
+              <a
+                href="https://www.playstation.com/en-us/"
+                target="_blank"
+                rel="noopener"
+              >
+                <img
+                  class="navbar__svg"
+                  src="/src/assets/img/svg/ps-svg-logo.svg"
+                />
+              </a>
+            </li>
+
+            <li>
+              <div
+                class="but button-nav navbar-toggler"
+              >
+                <div class="logo-x-station">
+                  <h1>X - STATION</h1>
+                </div>
+                <!-- <img class="navbar__svg navbar__svg--big" src="/src/assets/img/svg/xstationlogoheader.svg" alt="New logo x-station"> -->
+              </div>
+            </li>
+
+            <li>
+              <a
+                href="https://www.xbox.com/en-US/"
+                target="_blank"
+                rel="noopener"
+              >
+                <img
+                  class="navbar__svg"
+                  src="/src/assets/img/svg/xbox-svg-logo.svg"
+                />
+              </a>
+            </li>
+
+            <button
+                class="hamburguer d-none d-md-inline-flex but-tab button-nav navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+              >
+                <div class="hamburguer__div">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="white" class="hamburguer__i bi bi-list" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+                  </svg>
+                </div>
+                <!-- <img class="navbar__svg navbar__svg--big" src="/src/assets/img/svg/xstationlogoheader.svg" alt="New logo x-station"> -->
+              </button>
+            
+          </ul>
+          <!-- new design header with menu for tablet responsive #18 -->
+          
 
           <div class="menus collapse navbar" id="navbarSupportedContent">
             <img
@@ -222,11 +282,19 @@
             class="carousel-item carousel-item-1 relative"
             data-bs-interval="5700"
           >
+
+          <picture>
+            <source srcset="src/assets/img/sec-4carousel-xbox/Fable/Fable-tablet.jpg" media="(min-width: 768px)" />
+            <source srcset="src/assets/img/sec-4carousel-xbox/Fable/Fable-laptop.jpg" media="(min-width: 1024px)" />
+            <source srcset="src/assets/img/sec-4carousel-xbox/Fable/Fable-desk.jpg" media="(min-width: 1440px)" />
             <img
               src="src/assets/img/sec-4carousel-xbox/Fable/Fable-mobile.jpg"
               class="d-block w-100 img-fluid"
               alt="Fable X|S"
             />
+          </picture>
+          
+            
             <div
               class="carousel-caption carousel-caption-1 position-absolute d-flex flex-column justify-content-around"
             >
@@ -245,11 +313,17 @@
             class="carousel-item carousel-item-1 relative"
             data-bs-interval="5700"
           >
+          <picture>
+            <source srcset="src/assets/img/sec-4carousel-xbox/Starfield/starfield-tablet.jpg" media="(min-width: 768px)" />
+            <source srcset="src/assets/img/sec-4carousel-xbox/Starfield/starfield-laptop.jpg" media="(min-width: 1024px)" />
+            <source srcset="src/assets/img/sec-4carousel-xbox/Starfield/starfield-desk.jpg" media="(min-width: 1440px)" />
             <img
               src="src/assets/img/sec-4carousel-xbox/Starfield/starfield-mobile.jpg"
               class="d-block w-100 img-fluid"
-              alt="..."
+              alt="Starfield X|S"
             />
+          </picture>
+
             <div
               class="carousel-caption carousel-caption-1 position-absolute bottom-5 d-flex flex-column justify-content-around"
             >
@@ -268,11 +342,16 @@
             class="carousel-item carousel-item-1 relative active"
             data-bs-interval="6000"
           >
+          <picture>
+            <source srcset="src/assets/img/sec-4carousel-xbox/Forza/FM8-tablet.jpg" media="(min-width: 768px)" />
+            <source srcset="src/assets/img/sec-4carousel-xbox/Forza/FM8-laptop.jpg" media="(min-width: 1024px)" />
+            <source srcset="src/assets/img/sec-4carousel-xbox/Forza/FM8-desk.jpg" media="(min-width: 1440px)" />
             <img
               src="src/assets/img/sec-4carousel-xbox/Forza/FM8-mobile.jpg"
               class="d-block w-100 img-fluid"
-              alt="..."
+              alt="Starfield X|S"
             />
+          </picture>
             <div
               class="carousel-caption carousel-caption-1 position-absolute bottom-5 d-flex flex-column justify-content-around"
             >
@@ -291,11 +370,17 @@
             class="carousel-item carousel-item-1 relative"
             data-bs-interval="5700"
           >
+          <picture>
+            <source srcset="src/assets/img/sec-4carousel-xbox/stalker/Stalker2-tablet.jpg" media="(min-width: 768px)" />
+            <source srcset="src/assets/img/sec-4carousel-xbox/stalker/Stalker2-laptop.jpg" media="(min-width: 1024px)" />
+            <source srcset="src/assets/img/sec-4carousel-xbox/stalker/Stalker2-desk.jpg" media="(min-width: 1440px)" />
             <img
               src="src/assets/img/sec-4carousel-xbox/stalker/Stalker2-mobile.jpg"
               class="d-block w-100 img-fluid"
-              alt="..."
+              alt="Starfield X|S"
             />
+          </picture>
+
             <div
               class="carousel-caption carousel-caption-1 position-absolute bottom-5 d-flex flex-column justify-content-around"
             >
@@ -314,11 +399,17 @@
             class="carousel-item carousel-item-1 relative"
             data-bs-interval="5700"
           >
+          <picture>
+            <source srcset="src/assets/img/sec-4carousel-xbox/Everwild/Everwild-tablet.jpg" media="(min-width: 768px)" />
+            <source srcset="src/assets/img/sec-4carousel-xbox/Everwild/Everwild-laptop.jpg" media="(min-width: 1024px)" />
+            <source srcset="src/assets/img/sec-4carousel-xbox/Everwild/Everwild-desk.jpg" media="(min-width: 1440px)" />
             <img
               src="src/assets/img/sec-4carousel-xbox/Everwild/Everwild-mobile.jpg"
               class="d-block w-100 img-fluid"
-              alt="..."
+              alt="Starfield X|S"
             />
+          </picture>
+
             <div
               class="carousel-caption carousel-caption-1 position-absolute bottom-5 d-flex flex-column justify-content-around"
             >
@@ -577,13 +668,21 @@
         data-bs-ride="carousel"
       >
         <!-- the carousel itself with its images -->
-        <div class="carousel-inner relative">
+        <div class="carousel-inner relative carousel-fade">
           <div class="carousel-item-2 carousel-item" data-bs-interval="8700">
-            <img
+
+            <picture>
+              <source srcset="src/assets/img/sec-7carousel-market/01-accesories-tablet.png" media="(min-width: 768px)" />
+              <source srcset="src/assets/img/sec-7carousel-market/01-accesories-laptop.png" media="(min-width: 1024px)" />
+              <source srcset="src/assets/img/sec-7carousel-market/01-accesories-desk.png" media="(min-width: 1440px)" />
+              <img
               src="src/assets/img/sec-7carousel-market/01-accesories-mobile.png"
               class="d-block w-100 img-fluid"
-              alt="Fable X|S"
+              alt="accesories"
             />
+            </picture>
+            
+            
 
             <!-- button to buy product -->
             <div
@@ -627,11 +726,16 @@
             class="carousel-item-2 carousel-item relative"
             data-bs-interval="8700"
           >
+          <picture>
+            <source srcset="src/assets/img/sec-7carousel-market/02-games-tablet.png" media="(min-width: 768px)" />
+            <source srcset="src/assets/img/sec-7carousel-market/02-games-laptop.png" media="(min-width: 1024px)" />
+            <source srcset="src/assets/img/sec-7carousel-market/02-games-desk.png" media="(min-width: 1440px)" />
             <img
-              src="src/assets/img/sec-7carousel-market/02-games-mobile.png"
-              class="d-block w-100 img-fluid"
-              alt="..."
-            />
+            src="src/assets/img/sec-7carousel-market/02-games-mobile.png"
+            class="d-block w-100 img-fluid"
+            alt="games"
+          />
+          </picture>
             <!-- button to buy product -->
             <div
               class="carousel-caption carousel-caption-2 position-absolute d-flex flex-row justify-content-between"
@@ -674,11 +778,16 @@
             class="carousel-item-2 carousel-item relative active"
             data-bs-interval="9000"
           >
+          <picture>
+            <source srcset="src/assets/img/sec-7carousel-market/03-psxb-tablet.png" media="(min-width: 768px)" />
+            <source srcset="src/assets/img/sec-7carousel-market/03-psxb-laptop.png" media="(min-width: 1024px)" />
+            <source srcset="src/assets/img/sec-7carousel-market/03-psxb-desk.png" media="(min-width: 1440px)" />
             <img
-              src="src/assets/img/sec-7carousel-market/03-psxb-mobile.png"
-              class="d-block w-100 img-fluid"
-              alt="..."
-            />
+            src="src/assets/img/sec-7carousel-market/03-psxb-mobile.png"
+            class="d-block w-100 img-fluid"
+            alt="accesories"
+          />
+          </picture>
             <!-- button to buy product -->
             <div
               class="carousel-caption carousel-caption-2 position-absolute d-flex flex-row justify-content-between"
@@ -721,11 +830,16 @@
             class="carousel-item-2 carousel-item relative"
             data-bs-interval="8700"
           >
+          <picture>
+            <source srcset="src/assets/img/sec-7carousel-market/04-merchandising-tablet.png" media="(min-width: 768px)" />
+            <source srcset="src/assets/img/sec-7carousel-market/04-merchandising-laptop.png" media="(min-width: 1024px)" />
+            <source srcset="src/assets/img/sec-7carousel-market/04-merchandising-desk.png" media="(min-width: 1440px)" />
             <img
-              src="src/assets/img/sec-7carousel-market/04-merchandising-mobile.png"
-              class="d-block w-100 img-fluid"
-              alt="..."
-            />
+            src="src/assets/img/sec-7carousel-market/04-merchandising-mobile.png"
+            class="d-block w-100 img-fluid"
+            alt="merchandising"
+          />
+          </picture>
             <!-- button to buy product -->
             <div
               class="carousel-caption carousel-caption-2 position-absolute d-flex flex-row justify-content-between"
@@ -768,11 +882,16 @@
             class="carousel-item-2 carousel-item relative"
             data-bs-interval="8700"
           >
+          <picture>
+            <source srcset="src/assets/img/sec-7carousel-market/05-services-tablet.png" media="(min-width: 768px)" />
+            <source srcset="src/assets/img/sec-7carousel-market/05-services-laptop.png" media="(min-width: 1024px)" />
+            <source srcset="src/assets/img/sec-7carousel-market/05-services-desk.png" media="(min-width: 1440px)" />
             <img
-              src="src/assets/img/sec-7carousel-market/05-services-mobile.png"
-              class="d-block w-100 img-fluid"
-              alt="..."
-            />
+            src="src/assets/img/sec-7carousel-market/05-services-mobile.png"
+            class="d-block w-100 img-fluid"
+            alt="merchandising"
+          />
+          </picture>
             <!-- button to buy product -->
             <div
               class="carousel-caption carousel-caption-2 position-absolute d-flex flex-row justify-content-between"
@@ -893,7 +1012,7 @@
       </div>
       <!-- Sec-7 Shopping carousel  -->
 
-      <!-- Sec-8 carousel Bootstrap modified, xbox incoming games  -->
+      <!-- Sec-8 carousel Bootstrap modified, ps incoming games  -->
       <div
         id="carouselExampleCaptions"
         class="carousel carousel-3 carousel-fade slide"
@@ -905,11 +1024,17 @@
             class="carousel-item carousel-item-3 relative"
             data-bs-interval="5700"
           >
+          <picture>
+            <source srcset="src/assets/img/sec-8carousel-playstation/kotor/kotor-tablet.jpg" media="(min-width: 768px)" />
+            <source srcset="src/assets/img/sec-8carousel-playstation/kotor/kotor-laptop.jpg" media="(min-width: 1024px)" />
+            <source srcset="src/assets/img/sec-8carousel-playstation/kotor/kotor-desk.jpg" media="(min-width: 1440px)" />
             <img
               src="src/assets/img/sec-8carousel-playstation/kotor/kotor-mobile.jpg"
               class="d-block w-100 img-fluid"
-              alt="Kotor PS5"
+              alt="kotor PS"
             />
+          </picture>
+
             <div
               class="carousel-caption carousel-caption-3 position-absolute d-flex flex-column justify-content-around"
             >
@@ -928,11 +1053,17 @@
             class="carousel-item carousel-item-3 relative"
             data-bs-interval="5700"
           >
+          <picture>
+            <source srcset="src/assets/img/sec-8carousel-playstation/horizon/Horizon-tablet.jpg" media="(min-width: 768px)" />
+            <source srcset="src/assets/img/sec-8carousel-playstation/horizon/Horizon-laptop.jpg" media="(min-width: 1024px)" />
+            <source srcset="src/assets/img/sec-8carousel-playstation/horizon/Horizon-desk.jpg" media="(min-width: 1440px)" />
             <img
               src="src/assets/img/sec-8carousel-playstation/horizon/Horizon-mobile.jpg"
               class="d-block w-100 img-fluid"
-              alt="..."
+              alt="HZD PS"
             />
+          </picture>
+
             <div
               class="carousel-caption carousel-caption-3 position-absolute bottom-5 d-flex flex-column justify-content-around"
             >
@@ -951,11 +1082,17 @@
             class="carousel-item carousel-item-3 relative active"
             data-bs-interval="6000"
           >
+          <picture>
+            <source srcset="src/assets/img/sec-8carousel-playstation/Spider/Spider2-tablet.jpg" media="(min-width: 768px)" />
+            <source srcset="src/assets/img/sec-8carousel-playstation/Spider/Spider2-laptop.jpg" media="(min-width: 1024px)" />
+            <source srcset="src/assets/img/sec-8carousel-playstation/Spider/Spider2-desk.jpg" media="(min-width: 1440px)" />
             <img
               src="src/assets/img/sec-8carousel-playstation/Spider/Spider2-mobile.jpg"
               class="d-block w-100 img-fluid"
-              alt="..."
+              alt="spidey PS"
             />
+          </picture>
+
             <div
               class="carousel-caption carousel-caption-3 position-absolute bottom-5 d-flex flex-column justify-content-around"
             >
@@ -974,11 +1111,17 @@
             class="carousel-item carousel-item-3 relative"
             data-bs-interval="5700"
           >
+          <picture>
+            <source srcset="src/assets/img/sec-8carousel-playstation/GoW/GoW-tablet.jpg" media="(min-width: 768px)" />
+            <source srcset="src/assets/img/sec-8carousel-playstation/GoW/GoW-laptop.jpg" media="(min-width: 1024px)" />
+            <source srcset="src/assets/img/sec-8carousel-playstation/GoW/GoW-desk.jpg" media="(min-width: 1440px)" />
             <img
               src="src/assets/img/sec-8carousel-playstation/GoW/GoW-mobile.jpg"
               class="d-block w-100 img-fluid"
-              alt="..."
+              alt="GoW PS"
             />
+          </picture>
+
             <div
               class="carousel-caption carousel-caption-3 position-absolute bottom-5 d-flex flex-column justify-content-around"
             >
@@ -997,11 +1140,16 @@
             class="carousel-item carousel-item-3 relative"
             data-bs-interval="5700"
           >
+          <picture>
+            <source srcset="src/assets/img/sec-8carousel-playstation/gt7/GT7-tablet.jpg" media="(min-width: 768px)" />
+            <source srcset="src/assets/img/sec-8carousel-playstation/gt7/GT7-laptop.jpg" media="(min-width: 1024px)" />
+            <source srcset="src/assets/img/sec-8carousel-playstation/gt7/GT7-desk.jpg" media="(min-width: 1440px)" />
             <img
               src="src/assets/img/sec-8carousel-playstation/gt7/GT7-mobile.jpg"
               class="d-block w-100 img-fluid"
-              alt="..."
+              alt="GT7 PS"
             />
+          </picture>
             <div
               class="carousel-caption carousel-caption-3 position-absolute bottom-5 d-flex flex-column justify-content-around"
             >

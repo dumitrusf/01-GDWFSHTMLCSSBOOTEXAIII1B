@@ -10,7 +10,7 @@ $breakpoints: (
 
 
 @mixin responsive($key) {
-  @if mas-has-key($breakpoints, $key) {
+  @if map-has-key($breakpoints, $key) {
     @media screen and (min-width: map-get($breakpoints, $key)) {
       @content;
     }
