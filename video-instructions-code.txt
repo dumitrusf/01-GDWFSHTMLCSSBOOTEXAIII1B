@@ -1,12 +1,32 @@
+
+      <!-- Sec-1 video -->
+      <section class="video-wrapper">
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/Motc0Iu40NI"
+          frameborder="0"
+          allowfullscreen
+        ></iframe>
+      </section>
+      <!-- Sec-1 video -->
+
+
+
 // Video created by myself added
 
-.video-wrapper {
+/* option-1 but takes in just 16:9,
+ so its too big for a large screen 
+
+
+ .video-wrapper {
   background-color: transparent;
   position: relative;
   padding-bottom: 56.25%;
-  /*proportion 16:9*/
+  proportion 16:9
   height: auto;
   overflow: hidden;
+
 }
 
 .video-wrapper iframe {
@@ -16,9 +36,62 @@
   width: 100vw;
   height: 100%;
 }
+
+*/
+
+/*We will take the option-2 👇*/
+
+.video-wrapper {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  background-color: transparent;
+  position: relative;
+  width: 100vw; // Establece el ancho máximo deseado
+  margin: 0 auto;
+
+  @include responsive(laptop) {
+    max-width: 992px;
+  }
+
+  @include responsive(desk) {
+    max-width: 1200px;
+  }
+  
+}
+
+.video-wrapper::before {
+  position: absolute;
+  content: "";
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100vw; /* Cambiado de min-width a width */
+  height: 100%;
+  background-color: rgb(0, 0, 0);
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.741) 15%,
+    rgb(0, 0, 0) 50%,
+    rgba(0, 0, 0, 0.741) 85%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+
+.video-wrapper::after {
+  content: "";
+  display: block;
+  padding-top: 56.25%; // Proportion 16:9
+}
+
+.video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/*This is the opt-2 correctly, now the user can enjoy better*/
+
 // Video created by myself added
-
-
-
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/Motc0Iu40NI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
