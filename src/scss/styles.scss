@@ -220,8 +220,6 @@ h1 {
       margin-bottom: unset;
       text-align: center;
       margin-right: min(10px, 2vw);
-      
-
     }
   }
 
@@ -291,7 +289,6 @@ h1 {
   box-shadow: 0px 0px 6px 0px rgba(255, 255, 255, 0.669),
     inset 0px 0px 2.5px 0px rgba(255, 255, 255, 0.64);
   border-radius: 73.5px;
-  padding: auto clamp(20%, 5vw, 1.6rem);
 }
 
 .but::before {
@@ -331,13 +328,18 @@ h1 {
 
 // Video created by myself added
 
-.video-wrapper {
+/* option-1 but takes in just 16:9,
+ so its too big for a large screen 
+
+
+ .video-wrapper {
   background-color: transparent;
   position: relative;
   padding-bottom: 56.25%;
-  /*proportion 16:9*/
+  proportion 16:9
   height: auto;
   overflow: hidden;
+
 }
 
 .video-wrapper iframe {
@@ -347,6 +349,64 @@ h1 {
   width: 100vw;
   height: 100%;
 }
+
+*/
+
+/*We will take the option-2 👇*/
+
+.video-wrapper {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  background-color: transparent;
+  position: relative;
+  width: 100vw; // Establece el ancho máximo deseado
+  margin: 0 auto;
+
+  @include responsive(laptop) {
+    max-width: 992px;
+  }
+
+  @include responsive(desk) {
+    max-width: 1200px;
+  }
+  
+}
+
+.video-wrapper::before {
+  position: absolute;
+  content: "";
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100vw; /* Cambiado de min-width a width */
+  height: 100%;
+  background-color: rgb(0, 0, 0);
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.741) 15%,
+    rgb(0, 0, 0) 50%,
+    rgba(0, 0, 0, 0.741) 85%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+
+.video-wrapper::after {
+  content: "";
+  display: block;
+  padding-top: 56.25%; // Proportion 16:9
+}
+
+.video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/*This is the opt-2 correctly, now the user can enjoy better*/
+
 // Video created by myself added
 
 // the interaction and aspect with menu navbar
@@ -365,7 +425,12 @@ h1 {
 .navbar-nav .nav-link.active,
 .navbar-nav .show > .nav-link {
   color: rgb(219, 255, 0);
-  background: linear-gradient(270deg, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 49.65%, rgba(0, 0, 0, 0) 100%);
+  background: linear-gradient(
+    270deg,
+    rgba(0, 0, 0, 0) 0%,
+    rgb(0, 0, 0) 49.65%,
+    rgba(0, 0, 0, 0) 100%
+  );
 }
 // the interaction and aspect with menu navbar
 
@@ -380,14 +445,15 @@ h1 {
   align-items: center;
   position: relative;
   overflow-x: hidden;
+  margin: 0 auto;
 
   &__h2 {
     position: relative;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
-    font-size: clamp(5px, 3.4vw, 2.3rem);
+    font-size: min(18px, 3.2vw);
     line-height: clamp(5px, 6vw, 7.4rem);
-    letter-spacing: clamp(5px, 3.3vw, 4.5rem);
+    letter-spacing: min(30px, 3vw);
     text-align: center;
     color: white;
     text-shadow: 0px 0px 15px rgb(255, 255, 255);
@@ -403,7 +469,7 @@ h1 {
     width: 100%;
     height: 100%;
     background: radial-gradient(
-      37% 0.5vw at 50% 95%,
+      37% 0.2vw at 50% 95%,
       #ffffff 0%,
       rgba(255, 255, 255, 0) 100%
     );
@@ -466,9 +532,10 @@ h1 {
     ),
     linear-gradient(
       to bottom,
-      #000000 0%,
-      rgba(0, 0, 0, 0.435443) 8.15%,
-      rgba(0, 0, 0, 0) 15.75%,
+      rgba(0, 0, 0, 0.659) 0%,
+      rgba(0, 0, 0, 0.766) 8.15%,
+      rgba(0, 0, 0, 0.799) 13.15%,
+      rgba(0, 0, 0, 0) 20.75%,
       rgba(0, 0, 0, 0) 100%
     );
 }
@@ -490,9 +557,9 @@ h1 {
     position: relative;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
-    font-size: clamp(5px, 3.4vw, 2.3rem);
+    font-size: min(18px, 3.2vw);
     line-height: clamp(5px, 6vw, 7.4rem);
-    letter-spacing: clamp(5px, 3.3vw, 4.5rem);
+    letter-spacing: min(30px, 3vw);
     text-align: center;
     color: white;
     text-shadow: 0px 0px 15px rgb(255, 255, 255);
@@ -508,7 +575,7 @@ h1 {
     width: 100%;
     height: 100%;
     background: radial-gradient(
-      37% 0.5vw at 50% 95%,
+      37% 0.2vw at 50% 95%,
       #ffffff 0%,
       rgba(255, 255, 255, 0) 100%
     );
@@ -743,12 +810,12 @@ h1 {
   &__text {
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
-    font-size: clamp(10%, 3vw, 2.5rem);
-    line-height: clamp(4%, 6vw, 5.4rem);
-    letter-spacing: clamp(5px, 2.8vw, 4rem);
+    font-size: min(26px, 3.2vw);
+    line-height: clamp(5px, 6vw, 7.4rem);
+    letter-spacing: min(30px, 3vw);
     text-align: center;
     color: white;
-    text-shadow: rgb(255, 255, 255) 0px 0px 10px;
+    text-shadow: 0px 0px 15px rgb(255, 255, 255);
     padding: 17vw 5vw 7vw;
   }
 
@@ -1391,12 +1458,12 @@ h1 {
   &__text {
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
-    font-size: clamp(10%, 3vw, 2.5rem);
-    line-height: clamp(4%, 6vw, 5.4rem);
-    letter-spacing: clamp(5px, 2.8vw, 4rem);
+    font-size: min(26px, 3.2vw);
+    line-height: clamp(5px, 6vw, 7.4rem);
+    letter-spacing: min(30px, 3vw);
     text-align: center;
     color: white;
-    text-shadow: rgb(255, 255, 255) 0px 0px 10px;
+    text-shadow: 0px 0px 15px rgb(255, 255, 255);
     padding: 17vw 5vw 7vw;
   }
 

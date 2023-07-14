@@ -1,0 +1,24 @@
+// Video created by myself added
+
+.video-wrapper {
+  background-color: transparent;
+  position: relative;
+  padding-bottom: 56.25%;
+  /*proportion 16:9*/
+  height: auto;
+  overflow: hidden;
+}
+
+.video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100%;
+}
+// Video created by myself added
+
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Motc0Iu40NI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: arial-black;
   src: url("../assets/fonts/Arial/ariblk.ttf") format("truetype");
@@ -175,7 +176,7 @@ h1 {
   background: linear-gradient(165deg, #1860bd 0%, rgba(24, 150, 204, 0.1) 23.87%, rgba(24, 204, 204, 0.03) 39.48%, rgba(24, 204, 204, 0.03) 42.98%, rgba(24, 204, 128, 0.1) 48.8%, rgba(24, 204, 128, 0.1) 53.25%, #1b7a18 71.65%, rgba(24, 204, 128, 0.1) 85.4%, rgba(24, 204, 204, 0.03) 95.38%, rgba(24, 204, 204, 0.01) 98.93%);
   text-align: center;
 }
-@media screen and (min-width: 575px) {
+@media screen and (min-width: 576px) {
   .navbar__div {
     justify-content: space-between;
   }
@@ -191,7 +192,7 @@ h1 {
   margin: auto;
   padding: 0;
 }
-@media screen and (min-width: 575px) {
+@media screen and (min-width: 576px) {
   .navbar__ul {
     justify-content: start;
     margin-top: auto;
@@ -352,7 +353,6 @@ h1 {
   position: relative;
   box-shadow: 0px 0px 6px 0px rgba(255, 255, 255, 0.669), inset 0px 0px 2.5px 0px rgba(255, 255, 255, 0.64);
   border-radius: 73.5px;
-  padding: auto clamp(20%, 5vw, 1.6rem);
 }
 
 .but::before {
@@ -372,13 +372,18 @@ h1 {
   -o-border-radius: 73.5px;
 }
 
-.video-wrapper {
+/* option-1 but takes in just 16:9,
+ so its too big for a large screen 
+
+
+ .video-wrapper {
   background-color: transparent;
   position: relative;
   padding-bottom: 56.25%;
-  /*proportion 16:9*/
+  proportion 16:9
   height: auto;
   overflow: hidden;
+
 }
 
 .video-wrapper iframe {
@@ -389,6 +394,54 @@ h1 {
   height: 100%;
 }
 
+*/
+/*We will take the option-2 👇*/
+.video-wrapper {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  background-color: transparent;
+  position: relative;
+  width: 100vw;
+  margin: 0 auto;
+}
+@media screen and (min-width: 992px) {
+  .video-wrapper {
+    max-width: 992px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .video-wrapper {
+    max-width: 1200px;
+  }
+}
+
+.video-wrapper::before {
+  position: absolute;
+  content: "";
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100vw; /* Cambiado de min-width a width */
+  height: 100%;
+  background-color: rgb(0, 0, 0);
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.741) 15%, rgb(0, 0, 0) 50%, rgba(0, 0, 0, 0.741) 85%, rgba(0, 0, 0, 0) 100%);
+}
+
+.video-wrapper::after {
+  content: "";
+  display: block;
+  padding-top: 56.25%;
+}
+
+.video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/*This is the opt-2 correctly, now the user can enjoy better*/
 .nav-link:focus,
 .nav-link:hover {
   color: rgba(255, 255, 255, 0.9);
@@ -417,14 +470,15 @@ h1 {
   align-items: center;
   position: relative;
   overflow-x: hidden;
+  margin: 0 auto;
 }
 .playstation__h2 {
   position: relative;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: bold;
-  font-size: clamp(5px, 3.4vw, 2.3rem);
+  font-size: min(18px, 3.2vw);
   line-height: clamp(5px, 6vw, 7.4rem);
-  letter-spacing: clamp(5px, 3.3vw, 4.5rem);
+  letter-spacing: min(30px, 3vw);
   text-align: center;
   color: white;
   text-shadow: 0px 0px 15px rgb(255, 255, 255);
@@ -438,7 +492,7 @@ h1 {
   left: 0;
   width: 100%;
   height: 100%;
-  background: radial-gradient(37% 0.5vw at 50% 95%, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
+  background: radial-gradient(37% 0.2vw at 50% 95%, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
   background-blend-mode: hard-light;
   margin-top: clamp(5px, 3vw, 2rem);
 }
@@ -482,7 +536,7 @@ h1 {
   width: 100%;
   height: 100%;
   background-color: transparent;
-  background: linear-gradient(to top, #000000 0%, rgba(0, 0, 0, 0.808108) 6.28%, rgba(0, 0, 0, 0.557881) 10.3%, rgba(0, 0, 0, 0.24) 17.46%, rgba(0, 0, 0, 0) 30.6%, rgba(0, 0, 0, 0) 100%), linear-gradient(to bottom, #000000 0%, rgba(0, 0, 0, 0.435443) 8.15%, rgba(0, 0, 0, 0) 15.75%, rgba(0, 0, 0, 0) 100%);
+  background: linear-gradient(to top, #000000 0%, rgba(0, 0, 0, 0.808108) 6.28%, rgba(0, 0, 0, 0.557881) 10.3%, rgba(0, 0, 0, 0.24) 17.46%, rgba(0, 0, 0, 0) 30.6%, rgba(0, 0, 0, 0) 100%), linear-gradient(to bottom, rgba(0, 0, 0, 0.659) 0%, rgba(0, 0, 0, 0.766) 8.15%, rgba(0, 0, 0, 0.799) 13.15%, rgba(0, 0, 0, 0) 20.75%, rgba(0, 0, 0, 0) 100%);
 }
 
 .xbox {
@@ -500,9 +554,9 @@ h1 {
   position: relative;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: bold;
-  font-size: clamp(5px, 3.4vw, 2.3rem);
+  font-size: min(18px, 3.2vw);
   line-height: clamp(5px, 6vw, 7.4rem);
-  letter-spacing: clamp(5px, 3.3vw, 4.5rem);
+  letter-spacing: min(30px, 3vw);
   text-align: center;
   color: white;
   text-shadow: 0px 0px 15px rgb(255, 255, 255);
@@ -516,7 +570,7 @@ h1 {
   left: 0;
   width: 100%;
   height: 100%;
-  background: radial-gradient(37% 0.5vw at 50% 95%, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
+  background: radial-gradient(37% 0.2vw at 50% 95%, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
   background-blend-mode: hard-light;
   margin-top: clamp(5px, 3vw, 2rem);
 }
@@ -696,12 +750,12 @@ h1 {
 .ultimate__text {
   font-family: Arial, Helvetica, sans-serif;
   font-weight: bold;
-  font-size: clamp(10%, 3vw, 2.5rem);
-  line-height: clamp(4%, 6vw, 5.4rem);
-  letter-spacing: clamp(5px, 2.8vw, 4rem);
+  font-size: min(26px, 3.2vw);
+  line-height: clamp(5px, 6vw, 7.4rem);
+  letter-spacing: min(30px, 3vw);
   text-align: center;
   color: white;
-  text-shadow: rgb(255, 255, 255) 0px 0px 10px;
+  text-shadow: 0px 0px 15px rgb(255, 255, 255);
   padding: 17vw 5vw 7vw;
 }
 .ultimate__logo {
@@ -1224,12 +1278,12 @@ h1 {
 .premium__text {
   font-family: Arial, Helvetica, sans-serif;
   font-weight: bold;
-  font-size: clamp(10%, 3vw, 2.5rem);
-  line-height: clamp(4%, 6vw, 5.4rem);
-  letter-spacing: clamp(5px, 2.8vw, 4rem);
+  font-size: min(26px, 3.2vw);
+  line-height: clamp(5px, 6vw, 7.4rem);
+  letter-spacing: min(30px, 3vw);
   text-align: center;
   color: white;
-  text-shadow: rgb(255, 255, 255) 0px 0px 10px;
+  text-shadow: 0px 0px 15px rgb(255, 255, 255);
   padding: 17vw 5vw 7vw;
 }
 .premium__logo {
