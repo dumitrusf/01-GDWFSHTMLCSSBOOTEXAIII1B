@@ -365,12 +365,11 @@ h1 {
 
   @include responsive(laptop) {
     max-width: 960px;
-}
+  }
 
   @include responsive(desk) {
     max-width: 1140px;
   }
-  
 }
 
 .video-wrapper::before {
@@ -381,14 +380,6 @@ h1 {
   width: 100vw; /* Cambiado de min-width a width */
   height: 100%;
   background-color: rgb(0, 0, 0);
-  background: linear-gradient(
-    90deg,
-    rgba(0, 0, 0, 0) 0%,
-    rgba(0, 0, 0, 0.852) 15%,
-    rgb(0, 0, 0) 50%,
-    rgba(0, 0, 0, 0.852) 85%,
-    rgba(0, 0, 0, 0) 100%
-  );
 }
 
 .video-wrapper::after {
@@ -434,11 +425,212 @@ h1 {
 }
 // the interaction and aspect with menu navbar
 
+/*
+sec joel marcus
+for lap-desk design responsive
+*/
+
+.secjoelmarcus {
+  display: flex;
+  flex-direction: row;
+  padding-top: min(17px, 1.7vw);
+  width: 100vw;
+  height: max(672.45px, 5vw);
+  position: relative;
+
+  &__titles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: max(672.45px, 5vw);
+    display: flex;
+    flex-direction: column;
+    height: min(224.29px, 50%);
+    justify-content: center;
+    align-items: center;
+    margin-top: min(50px, 1vw);
+
+    & > h2:first-child {
+      position: relative;
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: bold;
+      font-size: min(18px, 3.2vw);
+      line-height: min(18px, 3.2vw);
+      letter-spacing: min(20px, 3vw);
+      text-align: center;
+      color: white;
+      text-shadow: 0px 0px 15px rgb(255, 255, 255);
+      padding: 0 2vw;
+      z-index: 1;
+    }
+
+    & > h2:first-child:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(
+        42% 0.1vw at 50% 95%,
+        #ffffff 0%,
+        rgba(255, 255, 255, 0) 100%
+      );
+      background-blend-mode: hard-light;
+      margin-top: min(17px, 2.2vw);
+    }
+
+    & > h2:nth-child(2) {
+      position: relative;
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: bold;
+      font-size: min(18px, 3.2vw);
+      line-height: min(32px, 4.2vw);
+      letter-spacing: min(12px, 2.1vw);
+      text-align: center;
+      color: white;
+      text-shadow: 0px 0px 15px rgb(255, 255, 255);
+      padding: 0 2vw;
+      z-index: 1;
+      margin-top: min(100px, 7vw);
+      width: min(603px, 100%);
+    }
+
+    & > h2:nth-child(2):after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(
+        30% 0.1vw at 50% 95%,
+        #ffffff 0%,
+        rgba(255, 255, 255, 0) 100%
+      );
+      background-blend-mode: hard-light;
+      margin-top: min(17px, 2.2vw);
+    }
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: transparent;
+    background: linear-gradient(
+        to top,
+        #000000 0%,
+        rgba(0, 0, 0, 0.808108) 6.28%,
+        rgba(0, 0, 0, 0.557881) 10.3%,
+        rgba(0, 0, 0, 0.24) 17.46%,
+        rgba(0, 0, 0, 0) 30.6%,
+        rgba(0, 0, 0, 0) 100%
+      ),
+      linear-gradient(
+        to bottom,
+        rgb(0, 0, 0) 0%,
+        rgba(0, 0, 0, 0.902) 8.15%,
+        rgba(0, 0, 0, 0.519) 13.15%,
+        rgba(0, 0, 0, 0.261) 20.75%,
+        rgba(0, 0, 0, 0) 100%
+      );
+  }
+
+  &__logos {
+    display: flex;
+    justify-content: space-between;
+    height: auto;
+  }
+
+  &__ps {
+    position: relative;
+    display: flex;
+    height: auto;
+    width: 50vw;
+    margin-left: max(-250px, -34.33vw);
+  }
+
+  &__ps > img:first-child {
+    width: auto;
+    filter: drop-shadow(0px 0px 10px #5aa2ff);
+    -webkit-filter: drop-shadow(0px 0px 10px #5aa2ff);
+  }
+
+  &__ps > div {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: end;
+
+    & > img {
+      align-self: end;
+      filter: saturate(170%);
+      -webkit-filter: saturate(170%);
+      width: min(200px, 57%);
+      transform: scaleX(-1);
+      -webkit-transform: scaleX(-1);
+      -moz-transform: scaleX(-1);
+      -ms-transform: scaleX(-1);
+      -o-transform: scaleX(-1);
+    }
+  }
+
+  &__xb {
+    position: relative;
+    display: flex;
+    flex-direction: row-reverse;
+    height: auto;
+    width: 50vw;
+    margin-right: max(-200px, -33.33vw);
+  }
+
+  &__xb > img:first-child {
+    width: auto;
+    filter: drop-shadow(0px 0px 10px #00f018);
+    -webkit-filter: drop-shadow(0px 0px 10px #00f018);
+  }
+
+  &__xb > div {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: start;
+
+    & > img {
+      align-self: end;
+      filter: saturate(90%);
+      -webkit-filter: saturate(90%);
+      width: min(290px, 57%);
+      transform: scaleX(-1);
+      -webkit-transform: scaleX(-1);
+      -moz-transform: scaleX(-1);
+      -ms-transform: scaleX(-1);
+      -o-transform: scaleX(-1);
+    }
+  }
+}
+
+/* 
+} */
+
+/*
+sec joel marcus
+for lap-desk design responsive
+*/
+
 // sec-2 playstation with Joel
 .playstation {
   display: flex;
   flex-direction: column;
-  padding-top: clamp(1.7vw, 0.7rem, 17px);
+  padding-top: min(17px, 1.7vw);
   width: 100vw;
   height: auto;
   justify-content: center;
