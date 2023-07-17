@@ -18,7 +18,8 @@ html::after {
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: -1;
+  z-index: -50;
+  overflow-x: hidden;
 }
 
 header {
@@ -544,6 +545,7 @@ for lap-desk design responsive
     display: flex;
     justify-content: space-between;
     height: auto;
+    overflow-x: hidden;
   }
 
   &__ps {
@@ -637,6 +639,7 @@ for lap-desk design responsive
   align-items: center;
   position: relative;
   overflow-x: hidden;
+  overflow-y: hidden;
   margin: 0 auto;
 
   &__h2 {
@@ -856,13 +859,17 @@ for lap-desk design responsive
   width: 100vw;
   height: 5vw;
   background: radial-gradient(
-    19% 0.2vw at 50% 50%,
+    19% 0.1vw at 50% 50%,
     #ffffff 0%,
     rgba(255, 255, 255, 0) 100%
   );
   background-blend-mode: hard-light;
   background-color: black;
   padding-bottom: 7vw;
+}
+
+.carousel-inner-1 {
+  background-color: black;
 }
 
 .carousel-item-1::after {
@@ -887,19 +894,135 @@ for lap-desk design responsive
       rgba(0, 0, 0, 0.435443) 14.15%,
       rgba(0, 0, 0, 0) 24.75%,
       rgba(0, 0, 0, 0) 100%
+    ),
+    linear-gradient(
+      to left,
+      #000000 0%,
+      rgba(0, 0, 0, 0.435443) 14.15%,
+      rgba(0, 0, 0, 0) 24.75%,
+      rgba(0, 0, 0, 0) 100%
+    ),
+    linear-gradient(
+      to right,
+      #000000 0%,
+      rgba(0, 0, 0, 0.435443) 14.15%,
+      rgba(0, 0, 0, 0) 24.75%,
+      rgba(0, 0, 0, 0) 100%
     );
+
+  @include responsive(tablet) {
+    background: linear-gradient(
+        to top,
+        #000000 0%,
+        rgba(0, 0, 0, 0.808108) 15.28%,
+        rgba(0, 0, 0, 0.557881) 22.23%,
+        rgba(0, 0, 0, 0.24) 33.26%,
+        rgba(0, 0, 0, 0) 62.6%,
+        rgba(0, 0, 0, 0) 100%
+      ),
+      linear-gradient(
+        to bottom,
+        #000000 0%,
+        rgba(0, 0, 0, 0.435443) 14.15%,
+        rgba(0, 0, 0, 0) 24.75%,
+        rgba(0, 0, 0, 0) 100%
+      ),
+      linear-gradient(
+        to left,
+        #000000 0%,
+        rgba(0, 0, 0, 0.435443) 14.15%,
+        rgba(0, 0, 0, 0) 24.75%,
+        rgba(0, 0, 0, 0) 100%
+      ),
+      linear-gradient(
+        to right,
+        #000000 0%,
+        rgba(0, 0, 0, 0.435443) 14.15%,
+        rgba(0, 0, 0, 0) 24.75%,
+        rgba(0, 0, 0, 0) 100%
+      );
+  }
+  @include responsive(laptop) {
+    background: linear-gradient(
+        to top,
+        #000000 0%,
+        rgba(0, 0, 0, 0.808108) 15.28%,
+        rgba(0, 0, 0, 0.557881) 22.23%,
+        rgba(0, 0, 0, 0.24) 33.26%,
+        rgba(0, 0, 0, 0) 62.6%,
+        rgba(0, 0, 0, 0) 100%
+      ),
+      linear-gradient(
+        to bottom,
+        #000000 0%,
+        rgba(0, 0, 0, 0.435443) 14.15%,
+        rgba(0, 0, 0, 0) 24.75%,
+        rgba(0, 0, 0, 0) 100%
+      ),
+      linear-gradient(
+        to left,
+        #000000 0%,
+        rgba(0, 0, 0, 0.435443) 20.15%,
+        rgba(0, 0, 0, 0) 30.75%,
+        rgba(0, 0, 0, 0) 100%
+      ),
+      linear-gradient(
+        to right,
+        #000000 0%,
+        rgba(0, 0, 0, 0.435443) 20.15%,
+        rgba(0, 0, 0, 0) 30.75%,
+        rgba(0, 0, 0, 0) 100%
+      );
+  }
+  @include responsive(desk) {
+    background: linear-gradient(
+        to top,
+        #000000 0%,
+        rgba(0, 0, 0, 0.808108) 15.28%,
+        rgba(0, 0, 0, 0.557881) 22.23%,
+        rgba(0, 0, 0, 0.24) 33.26%,
+        rgba(0, 0, 0, 0) 62.6%,
+        rgba(0, 0, 0, 0) 100%
+      ),
+      linear-gradient(
+        to bottom,
+        #000000 0%,
+        rgba(0, 0, 0, 0.435443) 14.15%,
+        rgba(0, 0, 0, 0) 24.75%,
+        rgba(0, 0, 0, 0) 100%
+      ),
+      linear-gradient(
+        to left,
+        #000000 0%,
+        rgba(0, 0, 0, 0.435443) 20.15%,
+        rgba(0, 0, 0, 0) 30.75%,
+        rgba(0, 0, 0, 0) 100%
+      ),
+      linear-gradient(
+        to right,
+        #000000 0%,
+        rgba(0, 0, 0, 0.435443) 20.15%,
+        rgba(0, 0, 0, 0) 30.75%,
+        rgba(0, 0, 0, 0) 100%
+      );
+  }
 }
 
 .carousel-caption-1 {
+  padding-bottom: min(5px, 5%);
   z-index: 5;
-  width: clamp(40vw, 5rem, 50%);
-  height: 33.3%;
-  display: flex;
-  margin: 7vmin auto;
+  width: min(150px, 44%);
+  height: min(160px, 45.3%);
+  margin: 3vmin auto;
   filter: drop-shadow(0rem 0rem 10px #2ac03e)
     drop-shadow(0rem 0rem 16px #12ff1e);
-  -webkit-filter: drop-shadow(0rem 0rem 10px #2ac03e)
-    drop-shadow(0rem 0rem 16px #12ff1e);
+  -webkit-filter: drop-shadow(0rem 0rem 10px #2ac03e);
+
+  @include responsive(laptop) {
+    padding-bottom: min(5px, 5%);
+    width: min(200px, 44%);
+    height: min(210px, 45.3%);
+  }
 }
 
 .carousel-caption-1 img:nth-child(1) {
@@ -942,11 +1065,23 @@ for lap-desk design responsive
 // fixing indicator lines from carousel to replace lines by images
 
 .image-indicators-1 {
-  padding: 10vw max(10vw, 10%);
+  padding: min(38px, 7vw) max(16.6%, 50px);
   width: 100vw;
   margin: 0 auto;
   background: rgba(0, 0, 0, 0.01);
   box-shadow: inset 0px 293px 150px -229px #000000;
+
+  @include responsive(tablet) {
+    padding: min(40px, 7.6vw) max(20.2%, 70px);
+  }
+
+  @include responsive(laptop) {
+    padding: min(47px, 8vw) max(26.2%, 100px);
+  }
+
+  @include responsive(desk) {
+    padding: min(54px, 8.3vw) max(33.3%, 120px);
+  }
 }
 
 .image-indicators-1 .indicator-1 {
@@ -954,13 +1089,12 @@ for lap-desk design responsive
   align-items: center;
   border: none;
   justify-content: center;
-  margin: 0 1.6vw;
+  margin: 0 min(10px, 1vw);
 }
 
 .image-indicators-1 .indicator-1 > img {
   height: auto;
   width: min(60px, 67%);
-  margin: 0px clamp(4px, 0.8vw, 1.7rem);
   border-radius: 10%;
   -webkit-border-radius: 10%;
   -moz-border-radius: 10%;
@@ -1501,13 +1635,17 @@ for lap-desk design responsive
   width: 100vw;
   height: 5vw;
   background: radial-gradient(
-    19% 0.2vw at 50% 50%,
+    19% 0.1vw at 50% 50%,
     #ffffff 0%,
     rgba(255, 255, 255, 0) 100%
   );
   background-blend-mode: hard-light;
   background-color: black;
   padding-bottom: 7vw;
+}
+
+.carousel-inner-3 {
+  background-color: black;
 }
 
 .carousel-item-3::after {
@@ -1532,18 +1670,135 @@ for lap-desk design responsive
       rgba(0, 0, 0, 0.435443) 14.15%,
       rgba(0, 0, 0, 0) 24.75%,
       rgba(0, 0, 0, 0) 100%
+    ),
+    linear-gradient(
+      to left,
+      #000000 0%,
+      rgba(0, 0, 0, 0.435443) 14.15%,
+      rgba(0, 0, 0, 0) 24.75%,
+      rgba(0, 0, 0, 0) 100%
+    ),
+    linear-gradient(
+      to right,
+      #000000 0%,
+      rgba(0, 0, 0, 0.435443) 14.15%,
+      rgba(0, 0, 0, 0) 24.75%,
+      rgba(0, 0, 0, 0) 100%
     );
+
+  @include responsive(tablet) {
+    background: linear-gradient(
+        to top,
+        #000000 0%,
+        rgba(0, 0, 0, 0.808108) 15.28%,
+        rgba(0, 0, 0, 0.557881) 22.23%,
+        rgba(0, 0, 0, 0.24) 33.26%,
+        rgba(0, 0, 0, 0) 62.6%,
+        rgba(0, 0, 0, 0) 100%
+      ),
+      linear-gradient(
+        to bottom,
+        #000000 0%,
+        rgba(0, 0, 0, 0.435443) 14.15%,
+        rgba(0, 0, 0, 0) 24.75%,
+        rgba(0, 0, 0, 0) 100%
+      ),
+      linear-gradient(
+        to left,
+        #000000 0%,
+        rgba(0, 0, 0, 0.435443) 14.15%,
+        rgba(0, 0, 0, 0) 24.75%,
+        rgba(0, 0, 0, 0) 100%
+      ),
+      linear-gradient(
+        to right,
+        #000000 0%,
+        rgba(0, 0, 0, 0.435443) 14.15%,
+        rgba(0, 0, 0, 0) 24.75%,
+        rgba(0, 0, 0, 0) 100%
+      );
+  }
+  @include responsive(laptop) {
+    background: linear-gradient(
+        to top,
+        #000000 0%,
+        rgba(0, 0, 0, 0.808108) 15.28%,
+        rgba(0, 0, 0, 0.557881) 22.23%,
+        rgba(0, 0, 0, 0.24) 33.26%,
+        rgba(0, 0, 0, 0) 62.6%,
+        rgba(0, 0, 0, 0) 100%
+      ),
+      linear-gradient(
+        to bottom,
+        #000000 0%,
+        rgba(0, 0, 0, 0.435443) 14.15%,
+        rgba(0, 0, 0, 0) 24.75%,
+        rgba(0, 0, 0, 0) 100%
+      ),
+      linear-gradient(
+        to left,
+        #000000 0%,
+        rgba(0, 0, 0, 0.435443) 20.15%,
+        rgba(0, 0, 0, 0) 30.75%,
+        rgba(0, 0, 0, 0) 100%
+      ),
+      linear-gradient(
+        to right,
+        #000000 0%,
+        rgba(0, 0, 0, 0.435443) 20.15%,
+        rgba(0, 0, 0, 0) 30.75%,
+        rgba(0, 0, 0, 0) 100%
+      );
+  }
+  @include responsive(desk) {
+    background: linear-gradient(
+        to top,
+        #000000 0%,
+        rgba(0, 0, 0, 0.808108) 15.28%,
+        rgba(0, 0, 0, 0.557881) 22.23%,
+        rgba(0, 0, 0, 0.24) 33.26%,
+        rgba(0, 0, 0, 0) 62.6%,
+        rgba(0, 0, 0, 0) 100%
+      ),
+      linear-gradient(
+        to bottom,
+        #000000 0%,
+        rgba(0, 0, 0, 0.435443) 14.15%,
+        rgba(0, 0, 0, 0) 24.75%,
+        rgba(0, 0, 0, 0) 100%
+      ),
+      linear-gradient(
+        to left,
+        #000000 0%,
+        rgba(0, 0, 0, 0.435443) 20.15%,
+        rgba(0, 0, 0, 0) 30.75%,
+        rgba(0, 0, 0, 0) 100%
+      ),
+      linear-gradient(
+        to right,
+        #000000 0%,
+        rgba(0, 0, 0, 0.435443) 20.15%,
+        rgba(0, 0, 0, 0) 30.75%,
+        rgba(0, 0, 0, 0) 100%
+      );
+  }
 }
 
 .carousel-caption-3 {
+  padding-bottom: min(5px, 5%);
   z-index: 5;
-  width: clamp(40vw, 5rem, 50%);
-  height: 33.3%;
-  display: flex;
-  margin: 7vmin auto;
+  width: min(150px, 44%);
+  height: min(160px, 45.3%);
+  margin: 3vmin auto;
   filter: drop-shadow(0rem 0rem 10px #5aa2ff)
     drop-shadow(0rem 0rem 16px #0077ff);
   -webkit-filter: drop-shadow(0rem 0rem 10px #5aa2ff);
+
+  @include responsive(laptop) {
+    padding-bottom: min(5px, 5%);
+    width: min(200px, 44%);
+    height: min(210px, 45.3%);
+  }
 }
 
 .carousel-caption-3 img:nth-child(1) {
@@ -1588,25 +1843,36 @@ for lap-desk design responsive
 // fixing indicator lines from carousel to replace lines by images
 
 .image-indicators-3 {
-  padding: 10vw max(10vw, 10%);
+  padding: min(38px, 7vw) max(16.6%, 50px);
   width: 100vw;
   margin: 0 auto;
   background: rgba(0, 0, 0, 0.01);
   box-shadow: inset 0px 293px 150px -229px #000000;
+
+  @include responsive(tablet) {
+    padding: min(40px, 7.6vw) max(20.2%, 70px);
+  }
+
+  @include responsive(laptop) {
+    padding: min(47px, 8vw) max(26.2%, 100px);
+  }
+
+  @include responsive(desk) {
+    padding: min(54px, 8.3vw) max(33.3%, 120px);
+  }
 }
 
-.image-indicators-3 .indicator-3 {
+.image-indicators-1 .indicator-3 {
   display: inline-flex;
   align-items: center;
   border: none;
   justify-content: center;
-  margin: 0 1.6vw;
+  margin: 0 min(10px, 1vw);
 }
 
 .image-indicators-3 .indicator-3 > img {
   height: auto;
   width: min(60px, 67%);
-  margin: 0px clamp(4px, 0.8vw, 1.7rem);
   border-radius: 10%;
   -webkit-border-radius: 10%;
   -moz-border-radius: 10%;
