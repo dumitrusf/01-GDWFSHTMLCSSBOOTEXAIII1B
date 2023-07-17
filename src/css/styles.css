@@ -885,7 +885,7 @@ for lap-desk design responsive
   width: 100vw;
   margin: 0 auto;
   background: rgba(0, 0, 0, 0.01);
-  box-shadow: inset 0px 293px 150px -229px #000000;
+  background: linear-gradient(to bottom, #000 0%, rgba(0, 0, 0, 0.44) 45.15%, rgba(0, 0, 0, 0) 74.75%, rgba(0, 0, 0, 0) 100%);
 }
 @media screen and (min-width: 576px) {
   .image-indicators-1 {
@@ -951,20 +951,46 @@ for lap-desk design responsive
 .ultimate__text {
   font-family: Arial, Helvetica, sans-serif;
   font-weight: bold;
-  font-size: min(26px, 3.2vw);
+  font-size: min(18px, 3.2vw);
   line-height: clamp(5px, 6vw, 7.4rem);
-  letter-spacing: min(30px, 3vw);
+  letter-spacing: min(22px, 3vw);
   text-align: center;
   color: white;
   text-shadow: 0px 0px 15px rgb(255, 255, 255);
   padding: 17vw 5vw 7vw;
 }
+@media screen and (min-width: 992px) {
+  .ultimate__text {
+    padding: min(120px, 17vw) 0 7vw;
+    margin: 0 max(12.5vw, 10%);
+  }
+}
+@media screen and (min-width: 1440px) {
+  .ultimate__text {
+    padding: min(120px, 17vw) max(12.5vw, 10%) 7vw;
+    margin: 0 max(12.5vw, 10%);
+    font-size: min(26px, 3.2vw);
+    letter-spacing: min(30px, 3vw);
+  }
+}
 .ultimate__logo {
   width: min(340px, 80%);
   height: auto;
   padding: 7vw 0;
+  /* 
+
+      padding: min(120px, 17vw) max(12.5vw, 10%) 7vw;
+  margin: 0 max(12.5vw, 10%);
+
+   */
   filter: drop-shadow(0px 0px 10px #00f018);
   -webkit-filter: drop-shadow(0px 0px 10px #00f018);
+}
+@media screen and (min-width: 1440px) {
+  .ultimate__logo {
+    width: min(540px, 80%);
+    height: auto;
+  }
 }
 
 .benefits {
@@ -1452,8 +1478,7 @@ for lap-desk design responsive
   padding: min(38px, 7vw) max(16.6%, 50px);
   width: 100vw;
   margin: 0 auto;
-  background: rgba(0, 0, 0, 0.01);
-  box-shadow: inset 0px 293px 150px -229px #000000;
+  background: linear-gradient(to bottom, #000 0%, rgba(0, 0, 0, 0.44) 45.15%, rgba(0, 0, 0, 0) 74.75%, rgba(0, 0, 0, 0) 100%);
 }
 @media screen and (min-width: 576px) {
   .image-indicators-3 {
@@ -1471,7 +1496,7 @@ for lap-desk design responsive
   }
 }
 
-.image-indicators-1 .indicator-3 {
+.image-indicators-3 .indicator-3 {
   display: inline-flex;
   align-items: center;
   border: none;
@@ -1519,20 +1544,46 @@ for lap-desk design responsive
 .premium__text {
   font-family: Arial, Helvetica, sans-serif;
   font-weight: bold;
-  font-size: min(26px, 3.2vw);
+  font-size: min(18px, 3.2vw);
   line-height: clamp(5px, 6vw, 7.4rem);
-  letter-spacing: min(30px, 3vw);
+  letter-spacing: min(22px, 3vw);
   text-align: center;
   color: white;
   text-shadow: 0px 0px 15px rgb(255, 255, 255);
   padding: 17vw 5vw 7vw;
 }
+@media screen and (min-width: 992px) {
+  .premium__text {
+    padding: min(120px, 17vw) 0 7vw;
+    margin: 0 max(12.5vw, 10%);
+  }
+}
+@media screen and (min-width: 1440px) {
+  .premium__text {
+    padding: min(120px, 17vw) max(12.5vw, 10%) 7vw;
+    margin: 0 max(12.5vw, 10%);
+    font-size: min(26px, 3.2vw);
+    letter-spacing: min(30px, 3vw);
+  }
+}
 .premium__logo {
   width: min(340px, 80%);
   height: auto;
   padding: 7vw 0;
+  /* 
+
+      padding: min(120px, 17vw) max(12.5vw, 10%) 7vw;
+  margin: 0 max(12.5vw, 10%);
+
+   */
   filter: drop-shadow(0px 0px 11px #ffba0a);
   -webkit-filter: drop-shadow(0px 0px 11px #ffba0a);
+}
+@media screen and (min-width: 1440px) {
+  .premium__logo {
+    width: min(540px, 80%);
+    height: auto;
+  }
 }
 
 .features {
