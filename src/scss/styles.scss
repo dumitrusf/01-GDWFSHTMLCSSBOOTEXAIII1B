@@ -1197,6 +1197,10 @@ for lap-desk design responsive
     align-items: center;
     width: 100vw;
     margin-top: 7vw;
+
+    @include responsive(640px) {
+      align-items: center;
+    }
   }
 
   &__header {
@@ -1204,6 +1208,10 @@ for lap-desk design responsive
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    @include responsive(laptop) {
+      flex-direction: row;
+    }
   }
 
   &__header img {
@@ -1228,56 +1236,102 @@ for lap-desk design responsive
 
   &__body {
     position: relative;
-    width: min(500px, 90vw);
+    max-width: 90vw;
+
     display: flex;
-    margin-top: 1.7vw;
+    margin: 0 auto;
+    padding: 3.2px 3.2px;
+    text-align: center;
+    vertical-align: middle;
+    height: auto;
     border-radius: 5.9%;
     -webkit-border-radius: 5.9%;
     -moz-border-radius: 5.9%;
     -ms-border-radius: 5.9%;
     -o-border-radius: 5.9%;
-    padding: 3.2px 3.2px;
-    text-align: center;
-    vertical-align: middle;
-    height: auto;
+
+    @include responsive(640px) {
+      max-width: min(640px, 90vw);
+      display: flex;
+      margin: 0 auto;
+      background: linear-gradient(
+        to bottom,
+        #218e0000 0%,
+        #10721ac7 16.15%,
+        #00000093 33.85%,
+        #06502b 73.33%,
+        #218e0000 100%
+      );
+      align-content: center;
+      max-width: min(640px, 90vw);
+    }
+
+    @include responsive(laptop) {
+      max-width: min(992px, 100vw);
+    }
+
+    @include responsive(desk) {
+      max-width: min(1200px, 90vw);
+    }
   }
 
   &__body::before {
     content: "";
     position: absolute;
     inset: 0;
-    border-radius: 3vw;
     padding: 1.6px;
     background: radial-gradient(
       361.44% 100% at 50% 0%,
-      #ff0000 0%,
-      #faa500 16.15%,
-      #faff00 33.85%,
-      #38f527 50.52%,
-      #4ecaca 66.67%,
-      #8c00fa 83.33%,
-      #db00ff 100%
+      #218e00 0%,
+      #107219 16.15%,
+      #000000 33.85%,
+      #06502b 73.33%,
+      #218e00 100%
     );
     mask: linear-gradient(#ffffff 0 0) content-box, linear-gradient(#ffffff 0 0);
     -webkit-mask: linear-gradient(#fff 0 0) content-box,
       linear-gradient(#fff 0 0);
     -webkit-mask-composite: xor;
     mask-composite: exclude;
-    -webkit-border-radius: 3vw;
-    -moz-border-radius: 3vw;
-    -ms-border-radius: 3vw;
-    -o-border-radius: 3vw;
+    width: 100%;
+    border-radius: 5.9%;
+    -webkit-border-radius: 5.9%;
+    -moz-border-radius: 5.9%;
+    -ms-border-radius: 5.9%;
+    -o-border-radius: 5.9%;
   }
 
   &__body img {
     height: auto;
     width: 100%;
-    border-radius: 5vw;
-    -webkit-border-radius: 2.02vw;
-    -moz-border-radius: 5vw;
-    -ms-border-radius: 5vw;
-    -o-border-radius: 5vw;
-    margin: auto auto;
+    margin: 0 auto;
+    border-radius: 5.9%;
+    -webkit-border-radius: 5.9%;
+    -moz-border-radius: 5.9%;
+    -ms-border-radius: 5.9%;
+    -o-border-radius: 5.9%;
+
+    @include responsive(640px) {
+      height: auto;
+      width: 50%;
+      margin-right: auto;
+      border-radius: 5.9% 0 0 5.9%;
+      -webkit-border-radius: 5.9% 0 0 5.9%;
+      -moz-border-radius: 5.9% 0 0 5.9%;
+      -ms-border-radius: 5.9% 0 0 5.9%;
+      -o-border-radius: 5.9% 0 0 5.9%;
+    }
+
+    @include responsive(laptop) {
+      height: auto;
+      width: min(600px, 50%);
+      margin-right: auto;
+      border-radius: 5.9% 0 0 5.9%;
+      -webkit-border-radius: 5.9% 0 0 5.9%;
+      -moz-border-radius: 5.9% 0 0 5.9%;
+      -ms-border-radius: 5.9% 0 0 5.9%;
+      -o-border-radius: 5.9% 0 0 5.9%;
+    }
   }
 
   &__body::after {
@@ -1299,34 +1353,34 @@ for lap-desk design responsive
     -o-border-radius: 2.5vw;
     opacity: 1;
     background: linear-gradient(
-      to top,
-      #039600 0%,
-      rgba(3, 150, 0, 0.92159) 7.84%,
-      rgba(3, 150, 0, 0.862793) 13.72%,
-      rgba(3, 150, 0, 0.779846) 22.02%,
-      rgba(3, 150, 0, 0.667501) 33.25%,
-      rgba(3, 150, 0, 0.556205) 44.38%,
-      rgba(3, 150, 0, 0.44386) 55.61%,
-      rgba(3, 150, 0, 0.272717) 72.73%,
-      rgba(3, 150, 0, 0.161422) 83.86%,
-      rgba(3, 150, 0, 0) 100%
+      to bottom,
+      #218e0000 0%,
+      #10721ac7 16.15%,
+      #00000093 33.85%,
+      #06502b 73.33%,
+      #218e0000 100%
     );
     width: calc(100% - (2 * 0.7%));
     height: calc(100% - (2 * 0.7%));
     opacity: 0;
+
+    @include responsive(640px) {
+      position: fixed;
+      display: none;
+    }
   }
 
   &__body p {
     position: absolute;
-    bottom: 1.8%;
-    left: 1.8%;
+    top: 30%;
+    bottom: 20%;
     width: calc(100% - (2 * 1.8%));
     height: auto;
-    font-size: clamp(5%, 5vw, 1rem);
-    letter-spacing: clamp(2px, 1.6vw, 0.5rem);
-    line-height: clamp(8px, 6vw, 1.9rem);
+    font-size: min(14px, 2.7vw);
+    letter-spacing: min(4px, 1.5vw);
+    line-height: min(20px, 4vw);
     font-family: Arial, Helvetica, sans-serif;
-    color: white;
+    color: rgb(255, 255, 255);
     text-shadow: 0px 0px 15px rgb(0, 0, 0);
     opacity: 0;
     transition: all 0.9s ease-in-out;
@@ -1342,22 +1396,193 @@ for lap-desk design responsive
     text-shadow: 0px 0px 9px #000000;
     text-transform: uppercase;
     -webkit-text-stroke: 0.282014px #000000;
-    margin-bottom: 10%;
     padding: 0 5.1vw;
+
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+      1px 1px 0 #000;
+
+    @include responsive(640px) {
+      position: unset;
+      display: flex;
+      transition: none;
+      -webkit-transition: none;
+      -moz-transition: none;
+      -ms-transition: none;
+      -o-transition: none;
+      opacity: 1;
+      margin: auto auto;
+
+      padding: 0 2.1vw;
+    }
   }
 
   &__body:hover::after {
     opacity: 1;
+
+    @include responsive(640px) {
+      display: none;
+      content: "";
+      opacity: 0;
+    }
   }
 
   &__body:hover > p {
     opacity: 1;
     z-index: 3;
+
+    @include responsive(640px) {
+      &__body:not(:hover) > p {
+        display: block;
+      }
+    }
   }
 }
 
-.benefits__card:nth-child(3) > .benefits__body > p {
-  margin-bottom: 4%;
+.benefits__card:first-child > .benefits__header {
+  @include responsive(laptop) {
+    max-width: min(992px, 100%);
+  }
+
+  @include responsive(desk) {
+    max-width: min(1200px, 100%);
+  }
+
+  & > img {
+    @include responsive(laptop) {
+      margin: 0 min(30px, 3vw);
+    }
+  }
+}
+
+.benefits__card:nth-child(2) > .benefits__header {
+  @include responsive(laptop) {
+    margin: 0 auto;
+    max-width: min(992px, 100%);
+    flex-direction: row-reverse;
+  }
+
+  @include responsive(desk) {
+    margin: 0 auto;
+    max-width: min(1200px, 100%);
+  }
+
+  & > img {
+    @include responsive(laptop) {
+      margin: 0 min(30px, 3vw);
+    }
+  }
+}
+
+
+.benefits__card:nth-child(2) > .benefits__body > img {
+  @include responsive(640px) {
+    order: 2;
+    border-radius: 0 5.9% 5.9% 0;
+    -webkit-border-radius: 0 5.9% 5.9% 0;
+    -moz-border-radius: 0 5.9% 5.9% 0;
+    -ms-border-radius: 0 5.9% 5.9% 0;
+    -o-border-radius: 0 5.9% 5.9% 0;
+  }
+}
+
+.benefits__card:nth-child(3) > .benefits__header {
+  @include responsive(laptop) {
+    margin: 0 auto;
+    max-width: min(992px, 100%);
+    justify-content: center;
+  }
+
+  @include responsive(desk) {
+    margin: 0 auto;
+    max-width: min(1200px, 100%);
+  }
+
+  & > img {
+    @include responsive(laptop) {
+      margin: 0 min(30px, 3vw);
+    }
+  }
+}
+
+.benefits__card:nth-child(3) > .benefits__body {
+  padding: min(15px, 5vw);
+
+  @include responsive(640px) {
+    padding: min(15px, 5vw) 0 min(15px, 5vw) min(15px, 5vw);
+    flex-direction: column;
+  }
+
+  @include responsive(laptop) {
+    max-width: min(992px, 100%);
+  }
+
+  @include responsive(desk) {
+    max-width: min(1200px, 100%);
+  }
+  
+}
+
+.benefits__card:nth-child(3) > .benefits__body > img {
+  padding: min(15px, 5vw) 0;
+
+  @include responsive(640px) {
+    flex-direction: column;
+    border-radius: none;
+    -webkit-border-radius: none;
+    -moz-border-radius: none;
+    -ms-border-radius: none;
+    -o-border-radius: none;
+
+    order: 1;
+    width: auto;
+    height: min(120px, 80%);
+  }
+}
+
+.benefits__card:nth-child(4) > .benefits__header {
+  @include responsive(laptop) {
+    max-width: min(992px, 100%);
+  }
+
+  @include responsive(desk) {
+    margin: 0 auto;
+    max-width: min(1200px, 100%);
+  }
+
+  & > img {
+    @include responsive(laptop) {
+      margin: 0 min(30px, 3vw);
+    }
+  }
+}
+
+.benefits__card:nth-child(5) > .benefits__body > img {
+  @include responsive(640px) {
+    order: 2;
+    border-radius: 0 5.9% 5.9% 0;
+    -webkit-border-radius: 0 5.9% 5.9% 0;
+    -moz-border-radius: 0 5.9% 5.9% 0;
+    -ms-border-radius: 0 5.9% 5.9% 0;
+    -o-border-radius: 0 5.9% 5.9% 0;
+  }
+}
+
+.benefits__card:nth-child(5) > .benefits__header {
+  @include responsive(laptop) {
+    max-width: min(992px, 100%);
+    flex-direction: row-reverse;
+  }
+
+  @include responsive(desk) {
+    margin: 0 auto;
+    max-width: min(1200px, 100%);
+  }
+
+  & > img {
+    @include responsive(laptop) {
+      margin: 0 min(30px, 3vw);
+    }
+  }
 }
 
 // Sec-5 Ultimate Benefits
@@ -1943,7 +2168,7 @@ for lap-desk design responsive
 
 // Sec-8 carousel playstation
 
-// Sec-9 iNTRO AND BENEFITS PLAYSTATION
+// Sec-9 iNTRO AND FEATURES PLAYSTATION
 
 .premium {
   display: flex;
@@ -2009,16 +2234,11 @@ for lap-desk design responsive
     align-items: center;
     width: 100vw;
     margin-top: 7vw;
-  }
 
-  &__card:first-child > &__body > img {
-    filter: drop-shadow(#ffba0a 0px 0px 6px);
-    -webkit-filter: drop-shadow(#ffba0a 0px 0px 6px);
-  }
-
-  &__card:nth-child(3) > &__body > img {
-    filter: drop-shadow(#ffffff 0px 0px 2px);
-    -webkit-filter: drop-shadow(#ffffff 0px 0px 2px);
+    @include responsive(640px) {
+      align-items: center;
+      align-content: center;
+    }
   }
 
   &__header {
@@ -2026,11 +2246,15 @@ for lap-desk design responsive
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    @include responsive(laptop) {
+      flex-direction: row;
+    }
   }
 
   &__header img {
     height: auto;
-    width: min(70px, 12.3vw);
+    width: min(70px, 10.3vw);
     align-self: center;
     filter: drop-shadow(#ffba0a 0px 0px 9px);
     -webkit-filter: drop-shadow(#ffba0a 0px 0px 9px);
@@ -2050,54 +2274,81 @@ for lap-desk design responsive
 
   &__body {
     position: relative;
-    width: min(500px, 90vw);
+    max-width: min(500px, 90vw);
     display: flex;
-    margin-top: 1.7vw;
+    margin: 0 auto;
+    padding: 3.2px 3.2px;
+    text-align: center;
+    vertical-align: middle;
+    height: auto;
     border-radius: 5.9%;
     -webkit-border-radius: 5.9%;
     -moz-border-radius: 5.9%;
     -ms-border-radius: 5.9%;
     -o-border-radius: 5.9%;
-    padding: 3.2px 3.2px;
-    text-align: center;
-    vertical-align: middle;
-    height: auto;
+
+    @include responsive(640px) {
+      display: flex;
+      margin: 0 auto;
+      background: linear-gradient(
+        to top,
+        rgba(6, 118, 249, 0.5) 0%,
+        rgba(6, 118, 249, 0.75) 10.7%,
+        rgba(6, 119, 249, 0.174) 70.5%,
+        rgba(6, 118, 249, 0) 100%
+      );
+
+      align-content: center;
+      max-width: min(743px, 90vw);
+    }
   }
 
   &__body::before {
     content: "";
     position: absolute;
     inset: 0;
-    border-radius: 3vw;
     padding: 1.6px;
     background: radial-gradient(
       361.44% 100% at 50% 0%,
-      #1100ff 0%,
-      #0081fa 16.15%,
-      #ffffff 33.85%,
-      #00abfa 73.33%,
-      #001aff 100%
+      #00028e 0%,
+      #308fe3 16.15%,
+      #000000 33.85%,
+      #2774b8 73.33%,
+      #00028e 100%
     );
     mask: linear-gradient(#ffffff 0 0) content-box, linear-gradient(#ffffff 0 0);
     -webkit-mask: linear-gradient(#fff 0 0) content-box,
       linear-gradient(#fff 0 0);
     -webkit-mask-composite: xor;
     mask-composite: exclude;
-    -webkit-border-radius: 3vw;
-    -moz-border-radius: 3vw;
-    -ms-border-radius: 3vw;
-    -o-border-radius: 3vw;
+    width: 100%;
+    border-radius: 5.9%;
+    -webkit-border-radius: 5.9%;
+    -moz-border-radius: 5.9%;
+    -ms-border-radius: 5.9%;
+    -o-border-radius: 5.9%;
   }
 
   &__body img {
     height: auto;
     width: 100%;
-    border-radius: 5vw;
-    -webkit-border-radius: 2.02vw;
-    -moz-border-radius: 5vw;
-    -ms-border-radius: 5vw;
-    -o-border-radius: 5vw;
-    margin: auto auto;
+    margin: 0 auto;
+    border-radius: 5.9%;
+    -webkit-border-radius: 5.9%;
+    -moz-border-radius: 5.9%;
+    -ms-border-radius: 5.9%;
+    -o-border-radius: 5.9%;
+
+    @include responsive(640px) {
+      height: auto;
+      width: 50%;
+      margin-right: auto;
+      border-radius: 5.9% 0 0 5.9%;
+      -webkit-border-radius: 5.9% 0 0 5.9%;
+      -moz-border-radius: 5.9% 0 0 5.9%;
+      -ms-border-radius: 5.9% 0 0 5.9%;
+      -o-border-radius: 5.9% 0 0 5.9%;
+    }
   }
 
   &__body::after {
@@ -2105,6 +2356,8 @@ for lap-desk design responsive
     content: "";
     top: 0.5%;
     left: 0.5%;
+    width: calc(100% - (2 * 0.7%));
+    height: calc(0% - (2 * 0.7%));
     transition: all 0.9s ease-in-out;
     -webkit-transition: all 0.9s ease-in-out;
     -moz-transition: all 0.9s ease-in-out;
@@ -2118,33 +2371,32 @@ for lap-desk design responsive
     opacity: 1;
     background: linear-gradient(
       to top,
-      #0676f9 0%,
-      #0676f9eb 7.84%,
-      #0676f9dc 13.72%,
-      #0676f9c7 22.02%,
-      #0676f9aa 33.25%,
-      #0676f98e 44.38%,
-      #0676f971 55.61%,
-      #0676f946 72.73%,
-      #0676f929 83.86%,
-      #0676f900 100%
+      rgba(6, 118, 249, 0.5) 0%,
+      rgba(6, 118, 249, 0.75) 10.7%,
+      rgba(6, 119, 249, 0.174) 70.5%,
+      rgba(6, 118, 249, 0) 100%
     );
     width: calc(100% - (2 * 0.7%));
     height: calc(100% - (2 * 0.7%));
     opacity: 0;
+
+    @include responsive(640px) {
+      position: fixed;
+      display: none;
+    }
   }
 
   &__body p {
     position: absolute;
-    bottom: 1.8%;
-    left: 1.8%;
+    top: 30%;
+    bottom: 20%;
     width: calc(100% - (2 * 1.8%));
     height: auto;
-    font-size: clamp(5%, 5vw, 1rem);
-    letter-spacing: clamp(2px, 1.6vw, 0.5rem);
-    line-height: clamp(8px, 6vw, 1.9rem);
+    font-size: min(14px, 2.7vw);
+    letter-spacing: min(4px, 1.5vw);
+    line-height: min(20px, 4vw);
     font-family: Arial, Helvetica, sans-serif;
-    color: white;
+    color: rgb(255, 255, 255);
     text-shadow: 0px 0px 15px rgb(0, 0, 0);
     opacity: 0;
     transition: all 0.9s ease-in-out;
@@ -2157,25 +2409,209 @@ for lap-desk design responsive
     -moz-border-radius: 2.5vw;
     -ms-border-radius: 2.5vw;
     -o-border-radius: 2.5vw;
-    text-shadow: 0px 0px 9px #000000;
     text-transform: uppercase;
     -webkit-text-stroke: 0.282014px #000000;
-    margin-bottom: 10%;
     padding: 0 5.1vw;
+
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+      1px 1px 0 #000;
+
+    @include responsive(640px) {
+      position: unset;
+      display: flex;
+      transition: none;
+      -webkit-transition: none;
+      -moz-transition: none;
+      -ms-transition: none;
+      -o-transition: none;
+      opacity: 1;
+      margin: auto auto;
+      padding: 0 2.1vw;
+    }
   }
 
   &__body:hover::after {
     opacity: 1;
+
+    @include responsive(640px) {
+      display: none;
+      content: "";
+      opacity: 0;
+    }
   }
 
   &__body:hover > p {
     opacity: 1;
     z-index: 3;
+
+    @include responsive(640px) {
+      &__body:not(:hover) > p {
+        display: block;
+      }
+    }
   }
 }
 
-.features__card:nth-child(3) > .benefits__body > p {
-  margin-bottom: 4%;
+.features__card:first-child > .features__header {
+
+  @include responsive(640px) {
+    justify-content: center;
+  }
+  
+  @include responsive(laptop) {
+    max-width: min(992px, 100%);
+  }
+
+  @include responsive(desk) {
+    max-width: min(1200px, 100%);
+  }
+
+  & > img {
+    @include responsive(laptop) {
+      margin: 0 min(30px, 3vw);
+    }
+  }
+}
+
+.features__card:first-child > .features__body {
+  @include responsive(640px) {
+    flex-direction: column;
+  }
+
+  @include responsive(laptop) {
+    max-width: min(992px, 100%);
+    flex-direction: column;
+  }
+
+  @include responsive(desk) {
+    max-width: min(1200px, 100%);
+  }
+}
+
+.features__card:first-child > .features__body > img {
+  @include responsive(640px) {
+    order: 2;
+    width: 100%;
+
+    filter: drop-shadow(#ffba0a 0px 0px 9px);
+    -webkit-filter: drop-shadow(#ffba0a 0px 0px 9px);
+  }
+
+  @include responsive(laptop) {
+    width: 50%;
+    flex-direction: column;
+    border-radius: unset;
+    -webkit-border-radius: unset;
+    -moz-border-radius: unset;
+    -ms-border-radius: unset;
+    -o-border-radius: unset;
+  }
+
+  @include responsive(desk) {
+    max-width: 37%;
+    flex-direction: column;
+    border-radius: unset;
+    -webkit-border-radius: unset;
+    -moz-border-radius: unset;
+    -ms-border-radius: unset;
+    -o-border-radius: unset;
+  }
+}
+
+.features__card:first-child > .features__body > p {
+  @include responsive(640px) {
+    margin: min(30px, 5vw) auto;
+  }
+}
+
+// 2
+
+.features__card:nth-child(2) > .features__header {
+  @include responsive(laptop) {
+    max-width: min(992px, 100%);
+  }
+
+  @include responsive(desk) {
+    max-width: min(1200px, 100%);
+  }
+
+  & > img {
+    @include responsive(laptop) {
+      margin: 0 min(30px, 3vw);
+    }
+  }
+}
+
+.features__card:nth-child(2) > .features__body {
+  @include responsive(640px) {
+    max-width: min(640px, 100%);
+  }
+
+  @include responsive(laptop) {
+    max-width: min(992px, 100%);
+  }
+
+  @include responsive(desk) {
+    max-width: min(1200px, 100%);
+  }
+}
+
+.features__card:nth-child(2) > .features__body > img {
+  @include responsive(640px) {
+    border-radius: 5.9% 0 0 5.9%;
+    -webkit-border-radius: 5.9% 0 0 5.9%;
+    -moz-border-radius: 5.9% 0 0 5.9%;
+    -ms-border-radius: 5.9% 0 0 5.9%;
+    -o-border-radius: 5.9% 0 0 5.9%;
+  }
+}
+
+// 3
+
+.features__card:nth-child(3) > .features__header {
+  
+  @include responsive(laptop) {
+    max-width: min(992px, 100%);
+    flex-direction: row-reverse;
+  }
+
+  @include responsive(desk) {
+    margin: 0 auto;
+    max-width: min(1200px, 100%);
+  }
+
+  & > img {
+    @include responsive(laptop) {
+      margin: 0 min(30px, 3vw);
+    }
+  }
+}
+
+.features__card:nth-child(3) > .features__body {
+  @include responsive(640px) {
+    max-width: min(640px, 100%);
+  }
+
+  @include responsive(laptop) {
+    max-width: min(992px, 100%);
+  }
+
+  @include responsive(desk) {
+    max-width: min(1200px, 100%);
+  }
+}
+
+.features__card:nth-child(3) > .features__body > img {
+  padding: min(15px, 5vw) 0;
+  
+  @include responsive(640px) {
+    order: 2;
+    border-radius: 0 5.9% 5.9% 0;
+    -webkit-border-radius: 0 5.9% 5.9% 0;
+    -moz-border-radius: 0 5.9% 5.9% 0;
+    -ms-border-radius: 0 5.9% 5.9% 0;
+    -o-border-radius: 0 5.9% 5.9% 0;
+  }
 }
 
 // Sec-9 iNTRO AND BENEFITS PLAYSTATION

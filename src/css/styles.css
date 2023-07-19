@@ -1006,11 +1006,21 @@ for lap-desk design responsive
   width: 100vw;
   margin-top: 7vw;
 }
+@media screen and (min-width: 640px) {
+  .benefits__card {
+    align-items: center;
+  }
+}
 .benefits__header {
   width: 100vw;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+@media screen and (min-width: 992px) {
+  .benefits__header {
+    flex-direction: row;
+  }
 }
 .benefits__header img {
   height: auto;
@@ -1032,44 +1042,89 @@ for lap-desk design responsive
 }
 .benefits__body {
   position: relative;
-  width: min(500px, 90vw);
+  max-width: 90vw;
   display: flex;
-  margin-top: 1.7vw;
+  margin: 0 auto;
+  padding: 3.2px 3.2px;
+  text-align: center;
+  vertical-align: middle;
+  height: auto;
   border-radius: 5.9%;
   -webkit-border-radius: 5.9%;
   -moz-border-radius: 5.9%;
   -ms-border-radius: 5.9%;
   -o-border-radius: 5.9%;
-  padding: 3.2px 3.2px;
-  text-align: center;
-  vertical-align: middle;
-  height: auto;
+}
+@media screen and (min-width: 640px) {
+  .benefits__body {
+    max-width: min(640px, 90vw);
+    display: flex;
+    margin: 0 auto;
+    background: linear-gradient(to bottom, rgba(33, 142, 0, 0) 0%, rgba(16, 114, 26, 0.7803921569) 16.15%, rgba(0, 0, 0, 0.5764705882) 33.85%, #06502b 73.33%, rgba(33, 142, 0, 0) 100%);
+    align-content: center;
+    max-width: min(640px, 90vw);
+  }
+}
+@media screen and (min-width: 992px) {
+  .benefits__body {
+    max-width: min(992px, 100vw);
+  }
+}
+@media screen and (min-width: 1440px) {
+  .benefits__body {
+    max-width: min(1200px, 90vw);
+  }
 }
 .benefits__body::before {
   content: "";
   position: absolute;
   inset: 0;
-  border-radius: 3vw;
   padding: 1.6px;
-  background: radial-gradient(361.44% 100% at 50% 0%, #ff0000 0%, #faa500 16.15%, #faff00 33.85%, #38f527 50.52%, #4ecaca 66.67%, #8c00fa 83.33%, #db00ff 100%);
+  background: radial-gradient(361.44% 100% at 50% 0%, #218e00 0%, #107219 16.15%, #000000 33.85%, #06502b 73.33%, #218e00 100%);
   mask: linear-gradient(#ffffff 0 0) content-box, linear-gradient(#ffffff 0 0);
   -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
   mask-composite: exclude;
-  -webkit-border-radius: 3vw;
-  -moz-border-radius: 3vw;
-  -ms-border-radius: 3vw;
-  -o-border-radius: 3vw;
+  width: 100%;
+  border-radius: 5.9%;
+  -webkit-border-radius: 5.9%;
+  -moz-border-radius: 5.9%;
+  -ms-border-radius: 5.9%;
+  -o-border-radius: 5.9%;
 }
 .benefits__body img {
   height: auto;
   width: 100%;
-  border-radius: 5vw;
-  -webkit-border-radius: 2.02vw;
-  -moz-border-radius: 5vw;
-  -ms-border-radius: 5vw;
-  -o-border-radius: 5vw;
-  margin: auto auto;
+  margin: 0 auto;
+  border-radius: 5.9%;
+  -webkit-border-radius: 5.9%;
+  -moz-border-radius: 5.9%;
+  -ms-border-radius: 5.9%;
+  -o-border-radius: 5.9%;
+}
+@media screen and (min-width: 640px) {
+  .benefits__body img {
+    height: auto;
+    width: 50%;
+    margin-right: auto;
+    border-radius: 5.9% 0 0 5.9%;
+    -webkit-border-radius: 5.9% 0 0 5.9%;
+    -moz-border-radius: 5.9% 0 0 5.9%;
+    -ms-border-radius: 5.9% 0 0 5.9%;
+    -o-border-radius: 5.9% 0 0 5.9%;
+  }
+}
+@media screen and (min-width: 992px) {
+  .benefits__body img {
+    height: auto;
+    width: min(600px, 50%);
+    margin-right: auto;
+    border-radius: 5.9% 0 0 5.9%;
+    -webkit-border-radius: 5.9% 0 0 5.9%;
+    -moz-border-radius: 5.9% 0 0 5.9%;
+    -ms-border-radius: 5.9% 0 0 5.9%;
+    -o-border-radius: 5.9% 0 0 5.9%;
+  }
 }
 .benefits__body::after {
   position: absolute;
@@ -1089,22 +1144,28 @@ for lap-desk design responsive
   -ms-border-radius: 2.5vw;
   -o-border-radius: 2.5vw;
   opacity: 1;
-  background: linear-gradient(to top, #039600 0%, rgba(3, 150, 0, 0.92159) 7.84%, rgba(3, 150, 0, 0.862793) 13.72%, rgba(3, 150, 0, 0.779846) 22.02%, rgba(3, 150, 0, 0.667501) 33.25%, rgba(3, 150, 0, 0.556205) 44.38%, rgba(3, 150, 0, 0.44386) 55.61%, rgba(3, 150, 0, 0.272717) 72.73%, rgba(3, 150, 0, 0.161422) 83.86%, rgba(3, 150, 0, 0) 100%);
+  background: linear-gradient(to bottom, rgba(33, 142, 0, 0) 0%, rgba(16, 114, 26, 0.7803921569) 16.15%, rgba(0, 0, 0, 0.5764705882) 33.85%, #06502b 73.33%, rgba(33, 142, 0, 0) 100%);
   width: 98.6%;
   height: 98.6%;
   opacity: 0;
 }
+@media screen and (min-width: 640px) {
+  .benefits__body::after {
+    position: fixed;
+    display: none;
+  }
+}
 .benefits__body p {
   position: absolute;
-  bottom: 1.8%;
-  left: 1.8%;
+  top: 30%;
+  bottom: 20%;
   width: 96.4%;
   height: auto;
-  font-size: clamp(5%, 5vw, 1rem);
-  letter-spacing: clamp(2px, 1.6vw, 0.5rem);
-  line-height: clamp(8px, 6vw, 1.9rem);
+  font-size: min(14px, 2.7vw);
+  letter-spacing: min(4px, 1.5vw);
+  line-height: min(20px, 4vw);
   font-family: Arial, Helvetica, sans-serif;
-  color: white;
+  color: rgb(255, 255, 255);
   text-shadow: 0px 0px 15px rgb(0, 0, 0);
   opacity: 0;
   transition: all 0.9s ease-in-out;
@@ -1120,19 +1181,189 @@ for lap-desk design responsive
   text-shadow: 0px 0px 9px #000000;
   text-transform: uppercase;
   -webkit-text-stroke: 0.282014px #000000;
-  margin-bottom: 10%;
   padding: 0 5.1vw;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+@media screen and (min-width: 640px) {
+  .benefits__body p {
+    position: unset;
+    display: flex;
+    transition: none;
+    -webkit-transition: none;
+    -moz-transition: none;
+    -ms-transition: none;
+    -o-transition: none;
+    opacity: 1;
+    margin: auto auto;
+    padding: 0 2.1vw;
+  }
 }
 .benefits__body:hover::after {
   opacity: 1;
+}
+@media screen and (min-width: 640px) {
+  .benefits__body:hover::after {
+    display: none;
+    content: "";
+    opacity: 0;
+  }
 }
 .benefits__body:hover > p {
   opacity: 1;
   z-index: 3;
 }
+@media screen and (min-width: 640px) {
+  .benefits__body:hover > p__body:not(:hover) > p {
+    display: block;
+  }
+}
 
-.benefits__card:nth-child(3) > .benefits__body > p {
-  margin-bottom: 4%;
+@media screen and (min-width: 992px) {
+  .benefits__card:first-child > .benefits__header {
+    max-width: min(992px, 100%);
+  }
+}
+@media screen and (min-width: 1440px) {
+  .benefits__card:first-child > .benefits__header {
+    max-width: min(1200px, 100%);
+  }
+}
+@media screen and (min-width: 992px) {
+  .benefits__card:first-child > .benefits__header > img {
+    margin: 0 min(30px, 3vw);
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .benefits__card:nth-child(2) > .benefits__header {
+    margin: 0 auto;
+    max-width: min(992px, 100%);
+    flex-direction: row-reverse;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .benefits__card:nth-child(2) > .benefits__header {
+    margin: 0 auto;
+    max-width: min(1200px, 100%);
+  }
+}
+@media screen and (min-width: 992px) {
+  .benefits__card:nth-child(2) > .benefits__header > img {
+    margin: 0 min(30px, 3vw);
+  }
+}
+
+@media screen and (min-width: 640px) {
+  .benefits__card:nth-child(2) > .benefits__body > img {
+    order: 2;
+    border-radius: 0 5.9% 5.9% 0;
+    -webkit-border-radius: 0 5.9% 5.9% 0;
+    -moz-border-radius: 0 5.9% 5.9% 0;
+    -ms-border-radius: 0 5.9% 5.9% 0;
+    -o-border-radius: 0 5.9% 5.9% 0;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .benefits__card:nth-child(3) > .benefits__header {
+    margin: 0 auto;
+    max-width: min(992px, 100%);
+    justify-content: center;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .benefits__card:nth-child(3) > .benefits__header {
+    margin: 0 auto;
+    max-width: min(1200px, 100%);
+  }
+}
+@media screen and (min-width: 992px) {
+  .benefits__card:nth-child(3) > .benefits__header > img {
+    margin: 0 min(30px, 3vw);
+  }
+}
+
+.benefits__card:nth-child(3) > .benefits__body {
+  padding: min(15px, 5vw);
+}
+@media screen and (min-width: 640px) {
+  .benefits__card:nth-child(3) > .benefits__body {
+    padding: min(15px, 5vw) 0 min(15px, 5vw) min(15px, 5vw);
+    flex-direction: column;
+  }
+}
+@media screen and (min-width: 992px) {
+  .benefits__card:nth-child(3) > .benefits__body {
+    max-width: min(992px, 100%);
+  }
+}
+@media screen and (min-width: 1440px) {
+  .benefits__card:nth-child(3) > .benefits__body {
+    max-width: min(1200px, 100%);
+  }
+}
+
+.benefits__card:nth-child(3) > .benefits__body > img {
+  padding: min(15px, 5vw) 0;
+}
+@media screen and (min-width: 640px) {
+  .benefits__card:nth-child(3) > .benefits__body > img {
+    flex-direction: column;
+    border-radius: none;
+    -webkit-border-radius: none;
+    -moz-border-radius: none;
+    -ms-border-radius: none;
+    -o-border-radius: none;
+    order: 1;
+    width: auto;
+    height: min(120px, 80%);
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .benefits__card:nth-child(4) > .benefits__header {
+    max-width: min(992px, 100%);
+  }
+}
+@media screen and (min-width: 1440px) {
+  .benefits__card:nth-child(4) > .benefits__header {
+    margin: 0 auto;
+    max-width: min(1200px, 100%);
+  }
+}
+@media screen and (min-width: 992px) {
+  .benefits__card:nth-child(4) > .benefits__header > img {
+    margin: 0 min(30px, 3vw);
+  }
+}
+
+@media screen and (min-width: 640px) {
+  .benefits__card:nth-child(5) > .benefits__body > img {
+    order: 2;
+    border-radius: 0 5.9% 5.9% 0;
+    -webkit-border-radius: 0 5.9% 5.9% 0;
+    -moz-border-radius: 0 5.9% 5.9% 0;
+    -ms-border-radius: 0 5.9% 5.9% 0;
+    -o-border-radius: 0 5.9% 5.9% 0;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .benefits__card:nth-child(5) > .benefits__header {
+    max-width: min(992px, 100%);
+    flex-direction: row-reverse;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .benefits__card:nth-child(5) > .benefits__header {
+    margin: 0 auto;
+    max-width: min(1200px, 100%);
+  }
+}
+@media screen and (min-width: 992px) {
+  .benefits__card:nth-child(5) > .benefits__header > img {
+    margin: 0 min(30px, 3vw);
+  }
 }
 
 .cloud {
@@ -1601,13 +1832,11 @@ for lap-desk design responsive
   width: 100vw;
   margin-top: 7vw;
 }
-.features__card:first-child > .features__body > img {
-  filter: drop-shadow(#ffba0a 0px 0px 6px);
-  -webkit-filter: drop-shadow(#ffba0a 0px 0px 6px);
-}
-.features__card:nth-child(3) > .features__body > img {
-  filter: drop-shadow(#ffffff 0px 0px 2px);
-  -webkit-filter: drop-shadow(#ffffff 0px 0px 2px);
+@media screen and (min-width: 640px) {
+  .features__card {
+    align-items: center;
+    align-content: center;
+  }
 }
 .features__header {
   width: 100vw;
@@ -1615,9 +1844,14 @@ for lap-desk design responsive
   flex-direction: column;
   align-items: center;
 }
+@media screen and (min-width: 992px) {
+  .features__header {
+    flex-direction: row;
+  }
+}
 .features__header img {
   height: auto;
-  width: min(70px, 12.3vw);
+  width: min(70px, 10.3vw);
   align-self: center;
   filter: drop-shadow(#ffba0a 0px 0px 9px);
   -webkit-filter: drop-shadow(#ffba0a 0px 0px 9px);
@@ -1635,50 +1869,74 @@ for lap-desk design responsive
 }
 .features__body {
   position: relative;
-  width: min(500px, 90vw);
+  max-width: min(500px, 90vw);
   display: flex;
-  margin-top: 1.7vw;
+  margin: 0 auto;
+  padding: 3.2px 3.2px;
+  text-align: center;
+  vertical-align: middle;
+  height: auto;
   border-radius: 5.9%;
   -webkit-border-radius: 5.9%;
   -moz-border-radius: 5.9%;
   -ms-border-radius: 5.9%;
   -o-border-radius: 5.9%;
-  padding: 3.2px 3.2px;
-  text-align: center;
-  vertical-align: middle;
-  height: auto;
+}
+@media screen and (min-width: 640px) {
+  .features__body {
+    display: flex;
+    margin: 0 auto;
+    background: linear-gradient(to top, rgba(6, 118, 249, 0.5) 0%, rgba(6, 118, 249, 0.75) 10.7%, rgba(6, 119, 249, 0.174) 70.5%, rgba(6, 118, 249, 0) 100%);
+    align-content: center;
+    max-width: min(743px, 90vw);
+  }
 }
 .features__body::before {
   content: "";
   position: absolute;
   inset: 0;
-  border-radius: 3vw;
   padding: 1.6px;
-  background: radial-gradient(361.44% 100% at 50% 0%, #1100ff 0%, #0081fa 16.15%, #ffffff 33.85%, #00abfa 73.33%, #001aff 100%);
+  background: radial-gradient(361.44% 100% at 50% 0%, #00028e 0%, #308fe3 16.15%, #000000 33.85%, #2774b8 73.33%, #00028e 100%);
   mask: linear-gradient(#ffffff 0 0) content-box, linear-gradient(#ffffff 0 0);
   -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
   mask-composite: exclude;
-  -webkit-border-radius: 3vw;
-  -moz-border-radius: 3vw;
-  -ms-border-radius: 3vw;
-  -o-border-radius: 3vw;
+  width: 100%;
+  border-radius: 5.9%;
+  -webkit-border-radius: 5.9%;
+  -moz-border-radius: 5.9%;
+  -ms-border-radius: 5.9%;
+  -o-border-radius: 5.9%;
 }
 .features__body img {
   height: auto;
   width: 100%;
-  border-radius: 5vw;
-  -webkit-border-radius: 2.02vw;
-  -moz-border-radius: 5vw;
-  -ms-border-radius: 5vw;
-  -o-border-radius: 5vw;
-  margin: auto auto;
+  margin: 0 auto;
+  border-radius: 5.9%;
+  -webkit-border-radius: 5.9%;
+  -moz-border-radius: 5.9%;
+  -ms-border-radius: 5.9%;
+  -o-border-radius: 5.9%;
+}
+@media screen and (min-width: 640px) {
+  .features__body img {
+    height: auto;
+    width: 50%;
+    margin-right: auto;
+    border-radius: 5.9% 0 0 5.9%;
+    -webkit-border-radius: 5.9% 0 0 5.9%;
+    -moz-border-radius: 5.9% 0 0 5.9%;
+    -ms-border-radius: 5.9% 0 0 5.9%;
+    -o-border-radius: 5.9% 0 0 5.9%;
+  }
 }
 .features__body::after {
   position: absolute;
   content: "";
   top: 0.5%;
   left: 0.5%;
+  width: 98.6%;
+  height: -1.4%;
   transition: all 0.9s ease-in-out;
   -webkit-transition: all 0.9s ease-in-out;
   -moz-transition: all 0.9s ease-in-out;
@@ -1690,22 +1948,28 @@ for lap-desk design responsive
   -ms-border-radius: 2.5vw;
   -o-border-radius: 2.5vw;
   opacity: 1;
-  background: linear-gradient(to top, #0676f9 0%, rgba(6, 118, 249, 0.9215686275) 7.84%, rgba(6, 118, 249, 0.862745098) 13.72%, rgba(6, 118, 249, 0.7803921569) 22.02%, rgba(6, 118, 249, 0.6666666667) 33.25%, rgba(6, 118, 249, 0.5568627451) 44.38%, rgba(6, 118, 249, 0.4431372549) 55.61%, rgba(6, 118, 249, 0.2745098039) 72.73%, rgba(6, 118, 249, 0.1607843137) 83.86%, rgba(6, 118, 249, 0) 100%);
+  background: linear-gradient(to top, rgba(6, 118, 249, 0.5) 0%, rgba(6, 118, 249, 0.75) 10.7%, rgba(6, 119, 249, 0.174) 70.5%, rgba(6, 118, 249, 0) 100%);
   width: 98.6%;
   height: 98.6%;
   opacity: 0;
 }
+@media screen and (min-width: 640px) {
+  .features__body::after {
+    position: fixed;
+    display: none;
+  }
+}
 .features__body p {
   position: absolute;
-  bottom: 1.8%;
-  left: 1.8%;
+  top: 30%;
+  bottom: 20%;
   width: 96.4%;
   height: auto;
-  font-size: clamp(5%, 5vw, 1rem);
-  letter-spacing: clamp(2px, 1.6vw, 0.5rem);
-  line-height: clamp(8px, 6vw, 1.9rem);
+  font-size: min(14px, 2.7vw);
+  letter-spacing: min(4px, 1.5vw);
+  line-height: min(20px, 4vw);
   font-family: Arial, Helvetica, sans-serif;
-  color: white;
+  color: rgb(255, 255, 255);
   text-shadow: 0px 0px 15px rgb(0, 0, 0);
   opacity: 0;
   transition: all 0.9s ease-in-out;
@@ -1718,22 +1982,208 @@ for lap-desk design responsive
   -moz-border-radius: 2.5vw;
   -ms-border-radius: 2.5vw;
   -o-border-radius: 2.5vw;
-  text-shadow: 0px 0px 9px #000000;
   text-transform: uppercase;
   -webkit-text-stroke: 0.282014px #000000;
-  margin-bottom: 10%;
   padding: 0 5.1vw;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+@media screen and (min-width: 640px) {
+  .features__body p {
+    position: unset;
+    display: flex;
+    transition: none;
+    -webkit-transition: none;
+    -moz-transition: none;
+    -ms-transition: none;
+    -o-transition: none;
+    opacity: 1;
+    margin: auto auto;
+    padding: 0 2.1vw;
+  }
 }
 .features__body:hover::after {
   opacity: 1;
+}
+@media screen and (min-width: 640px) {
+  .features__body:hover::after {
+    display: none;
+    content: "";
+    opacity: 0;
+  }
 }
 .features__body:hover > p {
   opacity: 1;
   z-index: 3;
 }
+@media screen and (min-width: 640px) {
+  .features__body:hover > p__body:not(:hover) > p {
+    display: block;
+  }
+}
 
-.features__card:nth-child(3) > .benefits__body > p {
-  margin-bottom: 4%;
+@media screen and (min-width: 640px) {
+  .features__card:first-child > .features__header {
+    justify-content: center;
+  }
+}
+@media screen and (min-width: 992px) {
+  .features__card:first-child > .features__header {
+    max-width: min(992px, 100%);
+  }
+}
+@media screen and (min-width: 1440px) {
+  .features__card:first-child > .features__header {
+    max-width: min(1200px, 100%);
+  }
+}
+@media screen and (min-width: 992px) {
+  .features__card:first-child > .features__header > img {
+    margin: 0 min(30px, 3vw);
+  }
+}
+
+@media screen and (min-width: 640px) {
+  .features__card:first-child > .features__body {
+    flex-direction: column;
+  }
+}
+@media screen and (min-width: 992px) {
+  .features__card:first-child > .features__body {
+    max-width: min(992px, 100%);
+    flex-direction: column;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .features__card:first-child > .features__body {
+    max-width: min(1200px, 100%);
+  }
+}
+
+@media screen and (min-width: 640px) {
+  .features__card:first-child > .features__body > img {
+    order: 2;
+    width: 100%;
+    filter: drop-shadow(#ffba0a 0px 0px 9px);
+    -webkit-filter: drop-shadow(#ffba0a 0px 0px 9px);
+  }
+}
+@media screen and (min-width: 992px) {
+  .features__card:first-child > .features__body > img {
+    width: 50%;
+    flex-direction: column;
+    border-radius: unset;
+    -webkit-border-radius: unset;
+    -moz-border-radius: unset;
+    -ms-border-radius: unset;
+    -o-border-radius: unset;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .features__card:first-child > .features__body > img {
+    max-width: 37%;
+    flex-direction: column;
+    border-radius: unset;
+    -webkit-border-radius: unset;
+    -moz-border-radius: unset;
+    -ms-border-radius: unset;
+    -o-border-radius: unset;
+  }
+}
+
+@media screen and (min-width: 640px) {
+  .features__card:first-child > .features__body > p {
+    margin: min(30px, 5vw) auto;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .features__card:nth-child(2) > .features__header {
+    max-width: min(992px, 100%);
+  }
+}
+@media screen and (min-width: 1440px) {
+  .features__card:nth-child(2) > .features__header {
+    max-width: min(1200px, 100%);
+  }
+}
+@media screen and (min-width: 992px) {
+  .features__card:nth-child(2) > .features__header > img {
+    margin: 0 min(30px, 3vw);
+  }
+}
+
+@media screen and (min-width: 640px) {
+  .features__card:nth-child(2) > .features__body {
+    max-width: min(640px, 100%);
+  }
+}
+@media screen and (min-width: 992px) {
+  .features__card:nth-child(2) > .features__body {
+    max-width: min(992px, 100%);
+  }
+}
+@media screen and (min-width: 1440px) {
+  .features__card:nth-child(2) > .features__body {
+    max-width: min(1200px, 100%);
+  }
+}
+
+@media screen and (min-width: 640px) {
+  .features__card:nth-child(2) > .features__body > img {
+    border-radius: 5.9% 0 0 5.9%;
+    -webkit-border-radius: 5.9% 0 0 5.9%;
+    -moz-border-radius: 5.9% 0 0 5.9%;
+    -ms-border-radius: 5.9% 0 0 5.9%;
+    -o-border-radius: 5.9% 0 0 5.9%;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .features__card:nth-child(3) > .features__header {
+    max-width: min(992px, 100%);
+    flex-direction: row-reverse;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .features__card:nth-child(3) > .features__header {
+    margin: 0 auto;
+    max-width: min(1200px, 100%);
+  }
+}
+@media screen and (min-width: 992px) {
+  .features__card:nth-child(3) > .features__header > img {
+    margin: 0 min(30px, 3vw);
+  }
+}
+
+@media screen and (min-width: 640px) {
+  .features__card:nth-child(3) > .features__body {
+    max-width: min(640px, 100%);
+  }
+}
+@media screen and (min-width: 992px) {
+  .features__card:nth-child(3) > .features__body {
+    max-width: min(992px, 100%);
+  }
+}
+@media screen and (min-width: 1440px) {
+  .features__card:nth-child(3) > .features__body {
+    max-width: min(1200px, 100%);
+  }
+}
+
+.features__card:nth-child(3) > .features__body > img {
+  padding: min(15px, 5vw) 0;
+}
+@media screen and (min-width: 640px) {
+  .features__card:nth-child(3) > .features__body > img {
+    order: 2;
+    border-radius: 0 5.9% 5.9% 0;
+    -webkit-border-radius: 0 5.9% 5.9% 0;
+    -moz-border-radius: 0 5.9% 5.9% 0;
+    -ms-border-radius: 0 5.9% 5.9% 0;
+    -o-border-radius: 0 5.9% 5.9% 0;
+  }
 }
 
 .thankful {
