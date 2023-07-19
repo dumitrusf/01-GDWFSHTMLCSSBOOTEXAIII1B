@@ -1473,7 +1473,6 @@ for lap-desk design responsive
   }
 }
 
-
 .benefits__card:nth-child(2) > .benefits__body > img {
   @include responsive(640px) {
     order: 2;
@@ -1519,7 +1518,6 @@ for lap-desk design responsive
   @include responsive(desk) {
     max-width: min(1200px, 100%);
   }
-  
 }
 
 .benefits__card:nth-child(3) > .benefits__body > img {
@@ -1592,15 +1590,20 @@ for lap-desk design responsive
 .cloud {
   width: 100%;
   height: auto;
-  display: flex;
-  justify-content: center;
   margin: 20vw auto 0;
   position: relative;
   box-shadow: 0px 20px 40px #000000;
+  background-color: #f2f2f2;
+  display: flex;
+  justify-content: center;
 
   &__img {
     width: 100vw;
     height: auto;
+
+    @include responsive(640px) {
+      max-width: min(620px, 70vw);
+    }
   }
 
   &__img::after {
@@ -1611,33 +1614,59 @@ for lap-desk design responsive
       #a092fc 2.02%,
       rgba(255, 255, 255, 0.98) 100%
     );
-    height: 100%;
-    width: 100vw;
-    top: 0;
-    left: 0;
   }
 
   &__xcloud {
     position: absolute;
     left: 0;
     top: 0;
-    width: 100vw;
-    height: 100%;
+    width: 50vw;
+    height: auto;
+    display: flex;
+
+    @include responsive(640px) {
+      width: min(340px, 100vw);
+      height: 60%;
+    }
+
+    @include responsive(laptop) {
+      width: min(640px, 100vw);
+    }
+
+    @include responsive(desk) {
+      width: 33vw;
+      height: 50%;
+      transform: translateX(33.33vw);
+      -webkit-transform: translateX(33.33vw);
+      -moz-transform: translateX(33.33vw);
+      -ms-transform: translateX(33.33vw);
+      -o-transform: translateX(33.33vw);
+    }
   }
 
   &__xcloud > img {
     width: 60%;
     height: 60%;
-    mix-blend-mode: exclusion;
-    padding-top: clamp(3px, 7%, 1rem);
-    margin: 0 auto;
+    padding-top: min(16px, 3vw);
+
+    @include responsive(640px) {
+      width: min(340px, 100vw);
+      height: 100%;
+    }
+
+    @include responsive(desk) {
+      width: min(500px, 50vw);
+      max-width: min(320px, 50%);
+      margin-right: auto;
+      height: 100%;
+    }
   }
 
   &__dualsense::before {
     position: absolute;
     content: "";
     width: 100%;
-    height: 50%;
+    height: min(243px, 50%);
     bottom: 0;
     left: 0;
     background: linear-gradient(
@@ -1650,34 +1679,31 @@ for lap-desk design responsive
 
   &__dualsense > img {
     position: absolute;
-    width: 50%;
+    max-width: min(280px, 60%);
     //background-color: yellow;
     height: auto;
     z-index: 3;
-    bottom: min(180px, 18%);
     left: 0;
-    transform: translateX(50%);
-    -webkit-transform: translateX(50%);
-    -moz-transform: translateX(50%);
-    -ms-transform: translateX(50%);
-    -o-transform: translateX(50%);
+    right: 0;
+    bottom: 0;
+    margin: 0 auto min(120px, 13vw);
   }
 
   &__dualsense > h2 {
     position: absolute;
-    bottom: 0;
+    bottom: min(30px, 5.1vw);
     left: 0;
     width: 100%;
-    height: min(90px, 6vw);
+    height: min(90px, 3vw);
     text-transform: uppercase;
-    line-height: clamp(4px, 3.6vw, 22px);
+    line-height: min(22px, 5vw);
 
-    padding: 0 7vw 10vw;
+    padding: 0 7vw min(22px, 3vw);
     overflow-wrap: break-word;
 
     font-weight: 600;
     /* or 15px */
-    color: #fff;
+    color: #000000;
     text-align: center;
     letter-spacing: clamp(2px, 1.3vw, 7px);
     z-index: 1;
@@ -1686,10 +1712,10 @@ for lap-desk design responsive
 
     vertical-align: middle;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: clamp(3px, 2.2vw, 22px);
+    font-size: min(22px, 2.2vw);
     text-transform: uppercase;
 
-    text-shadow: 0px 1px 10px rgba(102, 255, 200, 0.77);
+    text-shadow: 0px 1px 10px rgba(186, 251, 227, 0.903);
   }
 }
 
@@ -2453,11 +2479,10 @@ for lap-desk design responsive
 }
 
 .features__card:first-child > .features__header {
-
   @include responsive(640px) {
     justify-content: center;
   }
-  
+
   @include responsive(laptop) {
     max-width: min(992px, 100%);
   }
@@ -2569,7 +2594,6 @@ for lap-desk design responsive
 // 3
 
 .features__card:nth-child(3) > .features__header {
-  
   @include responsive(laptop) {
     max-width: min(992px, 100%);
     flex-direction: row-reverse;
@@ -2603,7 +2627,7 @@ for lap-desk design responsive
 
 .features__card:nth-child(3) > .features__body > img {
   padding: min(15px, 5vw) 0;
-  
+
   @include responsive(640px) {
     order: 2;
     border-radius: 0 5.9% 5.9% 0;
