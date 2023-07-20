@@ -1509,11 +1509,18 @@ for lap-desk design responsive
   -o-transform: translateY(-6vw);
 }
 
+@media screen and (min-width: 1440px) {
+  .shopping {
+    max-width: min(1440px, 100%);
+    margin: 0 auto;
+  }
+}
+
 .carousel-2 {
-  width: 100vw;
+  width: 100%;
   height: auto;
-  position: relative;
   padding-top: 7vw;
+  position: relative;
 }
 
 .carousel-2::before {
@@ -1532,18 +1539,19 @@ for lap-desk design responsive
   position: absolute;
   content: "";
   bottom: 0;
-  width: 100vw;
+  left: -50vw;
+  width: 150vw;
   height: 33.3%;
   background-color: rgba(0, 0, 0, 0.1);
-  box-shadow: inset 0px -292px 122px -161px #000000;
+  background: linear-gradient(to top, #000 0%, rgba(0, 0, 0, 0.72) 54.17%, rgba(0, 0, 0, 0) 100%);
 }
 
 .carousel-caption-2 {
   z-index: 5;
-  bottom: max(1rem, 2.5%);
+  bottom: min(150px, 10vw);
   left: 0;
   width: 90%;
-  height: 30.3%;
+  height: 33.3%;
   transform: translateX(5%);
   -webkit-transform: translateX(5%);
   -moz-transform: translateX(5%);
@@ -1552,10 +1560,9 @@ for lap-desk design responsive
 }
 
 .carousel-caption-2 > button {
-  height: max(7.5vw, 0.2rem);
-  flex-basis: max(1.5vw, 0.4rem);
+  max-height: min(100px, 5vw);
+  flex-basis: min(100px, 5vw);
   padding: max(1vw, 0.1rem) max(3vw, 0.6rem);
-  font-size: clamp(2.5px, 2vw, 34px);
   border-radius: 50px;
   -webkit-border-radius: 50px;
   -moz-border-radius: 50px;
@@ -1565,9 +1572,25 @@ for lap-desk design responsive
   border: 0.67px solid white;
   display: inline-flex;
   align-items: center;
-  justify-content: space-evenly;
-  align-items: center;
   box-shadow: inset 1.84848px 1.23232px 5.54545px 0.616162px rgba(0, 0, 0, 0.74);
+}
+@media screen and (min-width: 576px) {
+  .carousel-caption-2 > button {
+    max-height: min(100px, 5vw);
+    flex-basis: min(70px, 5vw);
+  }
+}
+@media screen and (min-width: 992px) {
+  .carousel-caption-2 > button {
+    max-height: min(100px, 4.5vw);
+    flex-basis: min(20px, 2.5vw);
+  }
+}
+@media screen and (min-width: 992px) {
+  .carousel-caption-2 > button {
+    max-height: min(60px, 3.5vw);
+    flex-basis: min(30px, 3.5vw);
+  }
 }
 
 .carousel-caption-2 button > a {
@@ -1578,6 +1601,12 @@ for lap-desk design responsive
   margin: 0;
   letter-spacing: clamp(0.5px, 0.7vw, 7px);
   text-shadow: 0px 2.46px 2.46px rgba(0, 0, 0, 0.25), 1.23px 1.23px 1.23px rgba(0, 0, 0, 0.4);
+  font-size: min(12px, 1.9vw);
+}
+@media screen and (min-width: 992px) {
+  .carousel-caption-2 button > a {
+    font-size: min(16px, 1.9vw);
+  }
 }
 
 .carousel-caption-2 button > img {
@@ -1604,41 +1633,90 @@ for lap-desk design responsive
 }
 
 .logohead > img {
-  width: 35%;
+  max-width: min(120px, 30vw);
   height: auto;
-  margin: 0 auto;
+  margin: 0 auto auto;
+}
+
+@media screen and (min-width: 576px) {
+  .logohead > img:first-child {
+    max-width: min(120px, 30vw);
+    height: auto;
+    margin-left: 12.5%;
+  }
+}
+@media screen and (min-width: 992px) {
+  .logohead > img:first-child {
+    max-width: min(160px, 30vw);
+    margin-left: 9.5%;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .logohead > img:first-child {
+    max-width: min(150px, 20vw);
+    height: auto;
+    margin: 0 auto auto;
+  }
+}
+
+@media screen and (min-width: 576px) {
+  .logohead > img:nth-child(2) {
+    max-width: min(120px, 30vw);
+    margin-right: 12.5%;
+  }
+}
+@media screen and (min-width: 992px) {
+  .logohead > img:nth-child(2) {
+    max-width: min(160px, 30vw);
+    margin-right: 9.5%;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .logohead > img:nth-child(2) {
+    max-width: min(150px, 20vw);
+    height: auto;
+    margin: 0 auto auto;
+  }
 }
 
 .text-carousel {
   position: absolute;
-  bottom: max(7vw, 0.7rem);
+  bottom: 0%;
   left: 0;
-  width: 100%;
-  height: min(100px, 22vw);
-  text-transform: uppercase;
-  line-height: clamp(1.5%, 6.6vw, 33.3px);
-  padding: 0 7vw 8vw;
-  overflow-wrap: break-word;
-  font-weight: 600;
-  /* or 15px */
-  color: #fff;
+  width: 68%;
+  height: auto;
+  /*margin-bottom: min(98px, 24vw);
+    */
   text-align: center;
-  letter-spacing: clamp(2px, 1.3vw, 7px);
+  line-height: min(30px, 4.5vw);
+  font-weight: 600;
+  color: rgb(255, 255, 255);
   z-index: 1;
-  vertical-align: middle;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: clamp(3px, 3vw, 22px);
+  font-size: min(16px, 3.7vw);
   text-transform: uppercase;
-  text-shadow: 0px 1px 10px rgba(102, 255, 200, 0.77);
+  text-shadow: rgb(255, 255, 255) 0px 1px 10px;
+  letter-spacing: min(4px, 3vw);
+  transform: translateX(22.6666666667%);
+  -webkit-transform: translateX(22.6666666667%);
+  -moz-transform: translateX(22.6666666667%);
+  -ms-transform: translateX(22.6666666667%);
+  -o-transform: translateX(22.6666666667%);
+  margin-bottom: min(100px, 14vw);
 }
-
-.carousel-2 > .carousel-indicators {
-  margin-bottom: max(0%, 1.8vw);
+@media screen and (min-width: 576px) {
+  .text-carousel {
+    margin-bottom: min(160px, 6vw);
+    font-size: min(14px, 2.6vw);
+    line-height: min(26px, 3.5vw);
+  }
 }
-
-.carousel-2 > .carousel-indicators [data-bs-target] {
-  flex: 1 1 auto;
-  height: max(1vw, 1px);
+@media screen and (min-width: 992px) {
+  .text-carousel {
+    margin-bottom: min(160px, 6vw);
+    font-size: min(18px, 3.1vw);
+    line-height: min(26px, 3.5vw);
+  }
 }
 
 .carousel-3 {
