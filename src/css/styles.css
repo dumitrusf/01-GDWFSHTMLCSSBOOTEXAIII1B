@@ -1539,11 +1539,16 @@ for lap-desk design responsive
   position: absolute;
   content: "";
   bottom: 0;
-  left: -50vw;
-  width: 150vw;
+  left: 50%;
+  width: 100vw;
   height: 33.3%;
   background-color: rgba(0, 0, 0, 0.1);
   background: linear-gradient(to top, #000 0%, rgba(0, 0, 0, 0.72) 54.17%, rgba(0, 0, 0, 0) 100%);
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
 }
 
 .carousel-caption-2 {
@@ -2597,11 +2602,9 @@ for lap-desk design responsive
   position: relative;
   width: 97vw;
   height: auto;
-  margin-top: min(100px, 10vw);
-  letter-spacing: clamp(1px, 0.8vw, 0.2rem);
-  margin-left: auto;
-  margin-right: auto;
-  z-index: 1;
+  margin: min(100px, 10vw) auto;
+  letter-spacing: min(2px, 1vw);
+  z-index: 2;
 }
 .footer::before {
   content: "";
@@ -2618,7 +2621,8 @@ for lap-desk design responsive
   -moz-border-radius: 10vw 10vw 0 0/10vw 10vw 0 0;
   -ms-border-radius: 10vw 10vw 0 0/10vw 10vw 0 0;
   -o-border-radius: 10vw 10vw 0 0/10vw 10vw 0 0;
-  margin-bottom: 9px;
+  margin: 0 auto min(9px, 3vw);
+  z-index: 2;
 }
 .footer::after {
   content: "";
@@ -2631,48 +2635,47 @@ for lap-desk design responsive
   -moz-border-radius: 10vw 10vw 0 0/10vw 10vw 0 0;
   -ms-border-radius: 10vw 10vw 0 0/10vw 10vw 0 0;
   -o-border-radius: 10vw 10vw 0 0/10vw 10vw 0 0;
-  margin-bottom: 9px;
+  margin: 0 auto min(9px, 3vw);
+  z-index: 2;
 }
 .footer__ps {
   display: flex;
   flex-direction: column;
-  margin-top: 90px;
+  margin-top: min(90px, 7vw);
   align-items: center;
   width: 100%;
-  height: 92px;
 }
 .footer__ps > img:first-child {
-  width: 33px;
-  margin-bottom: -27px;
+  width: min(32px, 10vw);
   z-index: 2;
 }
 .footer__ps > img:nth-child(2) {
-  width: 198px;
+  width: min(182px, 60vw);
 }
 
 .logo-footer {
   display: flex;
+  width: min(200px, 60vw);
+  margin: 0 auto;
+  z-index: 2;
 }
 .logo-footer__x-station {
   position: relative;
-  box-shadow: 0px 0px 6px 0px rgba(255, 255, 255, 0.669), inset 0px 0px 2.5px 0px rgba(255, 255, 255, 0.64);
+  box-shadow: rgba(255, 255, 255, 0.67) 0px 0px 6px 0px, rgba(255, 255, 255, 0.64) 0px 0px 2.5px 0px inset;
   border-radius: 73.5px;
-  padding: auto clamp(20%, 5vw, 1.6rem);
-  font-family: "inter-regular";
-  text-align: center;
+  font-family: inter-regular;
+  /* text-align: center; */
   display: flex;
   flex-direction: row;
-  height: 42px;
-  flex: 218px 0 1;
-  margin: 0 auto;
-  justify-content: center;
-  vertical-align: middle;
+  padding: min(10px, 3vw);
+  flex-basis: min(218px, 100%);
+  /* justify-content: center;*/
 }
 .logo-footer__x-station > h2 {
-  height: 50%;
-  align-self: center;
-  font-size: clamp(2vw, 23.92px, 3rem);
+  height: auto;
+  font-size: min(23px, 6vw);
   color: white;
+  margin: auto;
 }
 .logo-footer__x-station > h2 > span:first-child {
   color: #1860bd;
@@ -2693,6 +2696,7 @@ for lap-desk design responsive
   -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
   mask-composite: exclude;
+  z-index: 2;
 }
 .logo-footer__x-station::after {
   content: "";
@@ -2700,6 +2704,7 @@ for lap-desk design responsive
   inset: 0;
   box-shadow: -2.42px 0px 4.85px #006fff, -5.66px 0px 9.71px #006fff, -8.9px 0.8px 12.95px #006fff, 2.42px 0px 8.85px #1ea319, 5.66px 0px 13.71px #1ea319, 8.9px 0px 16.95px #1ea319;
   border-radius: 73.5px;
+  z-index: 2;
 }
 
 .text {
@@ -2707,24 +2712,23 @@ for lap-desk design responsive
   text-shadow: 0px 0px 8.66px #ffffff;
   text-transform: uppercase;
   font-family: "hnt-medium";
-  font-size: 11px;
-  letter-spacing: 1.265px;
+  font-size: min(16px, 3vw);
+  letter-spacing: min(10px, 0.5vw);
   line-height: 211%;
   width: 80%;
   margin: 30px auto 0;
   text-align: center;
 }
 .text--about {
-  font-size: 16px;
   width: 70%;
   text-shadow: none;
   line-height: 215.5%;
-  letter-spacing: 3.12px;
+  letter-spacing: min(3.12px, 0.3vw);
   color: #ffba0a;
 }
 .text--new {
   text-decoration: underline;
-  font-size: 16px;
+  font-size: min(19px, 4vw);
   text-shadow: none;
   color: #ffba0a;
   height: auto;
@@ -2732,11 +2736,36 @@ for lap-desk design responsive
 }
 
 .char-xb {
-  width: 100%;
-  margin-top: clamp(6vw, 3rem, 20%);
+  margin: min(200px, 10vw) auto min(9px, 3vw);
+  display: flex;
+  justify-content: center;
 }
-.char-xb > img {
-  height: auto;
-  width: min(1024px, 100%);
-  margin: 0 auto 7px;
+@media screen and (min-width: 1440px) {
+  .char-xb {
+    background: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, #000 20%, #000 50%, #000 80%, rgba(0, 0, 0, 0) 100%);
+  }
+}
+
+.char-xb-shadow {
+  position: relative;
+}
+
+@media screen and (min-width: 1440px) {
+  .char-xb-shadow::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.01);
+    box-shadow: 185px 0px 113px -134px #000 inset, -185px 0px 113px -134px #000 inset;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .char-xbox-shadow img {
+    width: min(1200px, 100%);
+    z-index: -3;
+  }
 }

@@ -2037,7 +2037,7 @@
       <!-- Sec-9 Intro and features playstation -->
 
       <!-- Sec-10 greatfull and thankful -->
-      
+
       <section class="greatfull">
         <!-- slogan XB message -->
         <div class="greatfull__xb container-xl">
@@ -2085,7 +2085,9 @@
               media="(min-width: 992px)"
             />
             <source
-              srcset="src/assets/img/sec-10greatful/PS/ffxvi-background-desk.webp"
+              srcset="
+                src/assets/img/sec-10greatful/PS/ffxvi-background-desk.webp
+              "
               media="(min-width: 1440px)"
             />
             <img
@@ -2151,10 +2153,27 @@
       </div>
 
       <div class="char-xb">
-        <img
-          src="src/assets/img/footer/footer-xb/xb-char-mobile.webp"
-          alt="Imagen predeterminada"
-        />
+        <div class="char-xb-shadow">
+          <picture>
+            <source
+              srcset="src/assets/img/footer/footer-xb/xb-char-tablet.webp"
+              media="(min-width: 576px)"
+            />
+            <source
+              srcset="src/assets/img/footer/footer-xb/xb-char-laptop.webp"
+              media="(min-width: 992px)"
+            />
+            <source
+              srcset="src/assets/img/footer/footer-xb/xb-char-desk.webp"
+              media="(min-width: 1440px)"
+            />
+            <img
+              src="src/assets/img/footer/footer-xb/xb-char-mobile.webp"
+              alt="characters xbox"
+              class="img-fluid"
+            />
+          </picture>
+        </div>
       </div>
     </footer>
     <!-- footer content -->
