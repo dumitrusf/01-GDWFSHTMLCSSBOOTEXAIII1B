@@ -310,7 +310,7 @@ h1 {
 .menus__list .nav-item:hover {
   background: linear-gradient(270deg, rgba(0, 0, 0, 0) 0%, #ffffff 49.65%, rgba(0, 0, 0, 0) 100%);
 }
-.menus__list .nav-item:nth-child(2) {
+.menus__list .nav-item:nth-child(3) {
   background: transparent;
 }
 
