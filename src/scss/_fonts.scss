@@ -174,3 +174,18 @@
   font-family: Inter-black;
   src: url("../assets/fonts/inter/Inter-Black.ttf") format("truetype");
 }
+
+
+
+/* Italic font wich contains multiple weights */
+@font-face {
+  font-family: 'ExpletusSans-Italic';
+  src: url("../assets/fonts/Expletus-sans/ExpletusSans-Italic-VariableFont_wght.ttf") format('truetype');
+  font-style: italic;
+}
+
+/* Regular font wich contains multiple weights */
+@font-face {
+  font-family: 'ExpletusSans';
+  src: url("../assets/fonts/Expletus-sans/ExpletusSans-VariableFont_wght.ttf") format('truetype');
+}

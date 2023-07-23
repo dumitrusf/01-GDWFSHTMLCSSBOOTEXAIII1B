@@ -6,9 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "prepare": "husky install",
-    "sass": "rm -rf ./src/css & sass --watch --no-source-map ./src/scss/styles.scss  ./src/css/styles.css",
-    "sass-tnu": "rm -f ./src/css & sass --watch --no-source-map ./src/scss/TNU-styles.scss ./src/css/TNU-styles.css"
-  },
+    "sass": "rm -f ./src/css && sass --watch --no-source-map ./src/scss/styles.scss ./src/css/styles.css",
+    "sass-tnu": "rm -rf ./src/css-tnu && sass --watch --no-source-map ./src/scss/TNU-styles.scss ./src/css-tnu/TNU-styles.css"
+    },
   "keywords": [],
   "author": "",
   "license": "ISC",

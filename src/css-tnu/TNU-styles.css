@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @font-face {
   font-family: arial-black;
   src: url("../assets/fonts/Arial/ariblk.ttf") format("truetype");
@@ -122,6 +121,17 @@
 @font-face {
   font-family: Inter-black;
   src: url("../assets/fonts/inter/Inter-Black.ttf") format("truetype");
+}
+/* Italic font wich contains multiple weights */
+@font-face {
+  font-family: "ExpletusSans-Italic";
+  src: url("../assets/fonts/Expletus-sans/ExpletusSans-Italic-VariableFont_wght.ttf") format("truetype");
+  font-style: italic;
+}
+/* Regular font wich contains multiple weights */
+@font-face {
+  font-family: "ExpletusSans";
+  src: url("../assets/fonts/Expletus-sans/ExpletusSans-VariableFont_wght.ttf") format("truetype");
 }
 html {
   background-color: black;
@@ -373,75 +383,6 @@ h1 {
   -o-border-radius: 73.5px;
 }
 
-/* option-1 but takes in just 16:9,
- so its too big for a large screen 
-
-
- .video-wrapper {
-  background-color: transparent;
-  position: relative;
-  padding-bottom: 56.25%;
-  proportion 16:9
-  height: auto;
-  overflow: hidden;
-
-}
-
-.video-wrapper iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100%;
-}
-
-*/
-/*We will take the option-2 👇*/
-.video-wrapper {
-  display: flex;
-  justify-content: space-between;
-  position: relative;
-  background-color: transparent;
-  position: relative;
-  max-width: 576px;
-  margin: 0 auto;
-}
-@media screen and (min-width: 992px) {
-  .video-wrapper {
-    max-width: 960px;
-  }
-}
-@media screen and (min-width: 1440px) {
-  .video-wrapper {
-    max-width: 1140px;
-  }
-}
-
-.video-wrapper::before {
-  position: absolute;
-  content: "";
-  left: 50%;
-  transform: translateX(-50%);
-  width: 100vw; /* Cambiado de min-width a width */
-  height: 100%;
-  background-color: rgb(0, 0, 0);
-}
-
-.video-wrapper::after {
-  content: "";
-  display: block;
-  padding-top: 56.25%;
-}
-
-.video-wrapper iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
-/*This is the opt-2 correctly, now the user can enjoy better*/
 .nav-link:focus,
 .nav-link:hover {
   color: rgba(255, 255, 255, 0.9);
@@ -460,11 +401,152 @@ h1 {
   background: linear-gradient(270deg, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 49.65%, rgba(0, 0, 0, 0) 100%);
 }
 
+.intro {
+  position: relative;
+  overflow-x: hidden;
+  background: linear-gradient(to right, #fff 0%, #eaeaea 11.46%, #d4d4d4 23.96%, #bfbfbf 35.42%, #ababab 46.88%, #959595 58.85%, #818181 70.31%, #6c6c6c 81.77%, #5c5c5c 90.63%, #4b4b4b 100%);
+  max-height: min(352px, 100vw);
+  padding-bottom: min(250px, 100vw);
+}
+.intro__stellar::after {
+  content: "";
+  position: absolute;
+  bottom: -12vw;
+  width: 100%;
+  height: 6vw;
+  transform: translateY(-6vw);
+  background: radial-gradient(30% 0.2vw at 50% 50%, rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0) 100%);
+  background-blend-mode: hard-light;
+  background-color: red;
+}
+.intro::before {
+  position: absolute;
+  content: "ENJOY YOUR FREEDOM";
+  display: flex;
+  bottom: 0;
+  width: 100%;
+  height: auto;
+  align-items: center;
+  background: linear-gradient(to top, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0.469) 67%, rgba(0, 0, 0, 0) 100%);
+  color: rgb(179, 179, 179);
+  text-align: start;
+  justify-self: center;
+  padding-left: min(250px, 7vw);
+  padding-top: min(120px, 90%);
+  padding-bottom: min(30px, 3vw);
+  color: rgba(255, 255, 255, 0.782);
+  text-shadow: 0px 0px 3px #fff;
+  font-size: min(9px, 1.7vw);
+  font-style: normal;
+  font-weight: 700;
+  line-height: 260%; /* 13.183px */
+  letter-spacing: min(5px, 1.5vw);
+  text-transform: uppercase;
+}
+@media screen and (min-width: 992px) {
+  .intro::before {
+    padding-left: min(640px, 25vw);
+  }
+}
+@media screen and (min-width: 1440px) {
+  .intro::before {
+    padding-left: min(932px, 25vw);
+  }
+}
+.intro__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: auto;
+}
+.intro__slogan {
+  min-width: min(300px, 33.33%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.intro__slogan > p span:nth-child(1) {
+  text-align: center;
+  background-color: #0a4408;
+  color: transparent;
+  text-shadow: 0px 2px 3px rgba(255, 255, 255, 0.577);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  font-family: ExpletusSans;
+  font-size: min(32px, 5.2vw);
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.intro__slogan > p span:nth-child(2) {
+  text-align: center;
+  background-color: #4d4d4d;
+  color: transparent;
+  text-shadow: 0px 2px 3px rgba(255, 255, 255, 0.577);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  font-family: ExpletusSans;
+  font-size: min(32px, 5.2vw);
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.intro__slogan > p span:nth-child(3) {
+  text-align: center;
+  background-color: #073562;
+  color: transparent;
+  text-shadow: 0px 2px 3px rgba(255, 255, 255, 0.577);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  font-family: ExpletusSans;
+  font-size: min(32px, 5.2vw);
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.intro__slogan > p:first-child {
+  display: flex;
+}
+.intro__slogan > p:nth-child(2) {
+  text-align: center;
+  text-shadow: 3.3px 1.6px 7.4px 0px rgba(255, 255, 255, 0.77);
+  font-family: hnt-bold;
+  font-size: min(12px, 2.2vw);
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 4.19px;
+  background: linear-gradient(to top, #000 -20%, rgba(251, 255, 0, 0.419) 150%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.intro__logo {
+  min-width: min(300px, 90%);
+  height: auto;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  z-index: 1;
+}
+.intro__logo > img {
+  width: min(280px, 100%);
+  padding: min(15px, 0.9vw);
+  height: auto;
+  margin-right: min(10px, -2vw);
+  filter: drop-shadow(12px 0px 16px rgba(255, 255, 255, 0.561));
+  -webkit-filter: drop-shadow(12px 0px 16px rgba(255, 255, 255, 0.561));
+}
+
 /*
 sec joel marcus
 for lap-desk design responsive
 */
 .secjoelmarcus {
+  margin-top: 50px;
   display: flex;
   flex-direction: row;
   padding-top: min(17px, 1.7vw);
@@ -632,6 +714,7 @@ for lap-desk design responsive
   overflow-x: hidden;
   overflow-y: hidden;
   margin: 0 auto;
+  margin-top: 50px;
 }
 .playstation__h2 {
   position: relative;
@@ -710,6 +793,7 @@ for lap-desk design responsive
   justify-content: center;
   align-items: center;
   position: relative;
+  margin-top: 100px;
 }
 .xbox__h2 {
   position: relative;
@@ -2733,39 +2817,4 @@ for lap-desk design responsive
   color: #ffba0a;
   height: auto;
   margin-top: 0;
-}
-
-.char-xb {
-  margin: min(200px, 10vw) auto min(9px, 3vw);
-  display: flex;
-  justify-content: center;
-}
-@media screen and (min-width: 1440px) {
-  .char-xb {
-    background: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, #000 20%, #000 50%, #000 80%, rgba(0, 0, 0, 0) 100%);
-  }
-}
-
-.char-xb-shadow {
-  position: relative;
-}
-
-@media screen and (min-width: 1440px) {
-  .char-xb-shadow::after {
-    position: absolute;
-    content: "";
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    background: rgba(0, 0, 0, 0.01);
-    box-shadow: 185px 0px 113px -134px #000 inset, -185px 0px 113px -134px #000 inset;
-  }
-}
-
-@media screen and (min-width: 1440px) {
-  .char-xbox-shadow img {
-    width: min(1200px, 100%);
-    z-index: -3;
-  }
 }
