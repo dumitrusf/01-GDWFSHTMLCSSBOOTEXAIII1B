@@ -541,6 +541,98 @@ h1 {
   -webkit-filter: drop-shadow(12px 0px 16px rgba(255, 255, 255, 0.561));
 }
 
+.banner {
+  height: auto;
+  position: relative;
+  padding-top: min(50px, 3vw);
+  background: linear-gradient(270deg, rgba(0, 0, 0, 0.614) 0%, #000 30.73%, #000 66.35%, #000 75.1%, rgba(0, 0, 0, 0.614) 100%);
+}
+.banner__wrapper {
+  position: relative;
+  height: auto;
+  width: 100%;
+}
+.banner__wrapper::before {
+  position: absolute;
+  content: "";
+  bottom: -1px;
+  left: 50%;
+  width: min(1440px, 100vw);
+  height: calc(100% + 2px);
+  background-color: transparent;
+  background: linear-gradient(to top, #000000 0%, rgba(0, 0, 0, 0.808108) 6.28%, rgba(0, 0, 0, 0.557881) 10.3%, rgba(0, 0, 0, 0.24) 17.46%, rgba(0, 0, 0, 0) 30.6%, rgba(0, 0, 0, 0) 100%), linear-gradient(to bottom, #000000 0%, rgba(0, 0, 0, 0.808108) 6.28%, rgba(0, 0, 0, 0.557881) 10.3%, rgba(0, 0, 0, 0.24) 17.46%, rgba(0, 0, 0, 0) 30.6%, rgba(0, 0, 0, 0) 100%);
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+}
+.banner::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  width: 100vw;
+  height: min(50px, 3vw);
+  background: radial-gradient(33.33% 0.09vw at 50% 50%, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
+  background-blend-mode: hard-light;
+  background-color: black;
+  padding-bottom: min(50px, 2vw);
+}
+
+.union {
+  color: white;
+  height: auto;
+  position: relative;
+}
+.union__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+}
+.union__content > img {
+  padding-top: min(12px, 0.5vw);
+  width: min(47px, 20%);
+}
+.union__p {
+  color: #ffffff;
+  text-align: center;
+  font-family: Arial;
+  font-size: min(8px, 1.7vw);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 157%; /* 10.96px */
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  width: min(255px, 75%);
+  height: auto;
+}
+.union__p--1 {
+  margin: min(10px, 5vw);
+}
+.union__p--1 {
+  width: min(256px, 76%);
+}
+.union__logo {
+  position: absolute;
+  display: flex;
+  justify-content: start;
+  top: 0;
+  left: 26%;
+  right: -26%;
+  max-width: min(1200px, 100%);
+  transform: translateX(-26vw);
+  -webkit-transform: translateX(-26vw);
+  -moz-transform: translateX(-26vw);
+  -ms-transform: translateX(-26vw);
+  -o-transform: translateX(-26vw);
+}
+.union__logo > img {
+  height: auto;
+  width: min(90px, 30%);
+}
+
 /*
 sec joel marcus
 for lap-desk design responsive
