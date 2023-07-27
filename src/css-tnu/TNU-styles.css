@@ -403,7 +403,7 @@ h1 {
 
 .intro {
   position: relative;
-  overflow-x: hidden;
+  overflow: hidden;
   background: linear-gradient(to right, #fff 0%, #eaeaea 11.46%, #d4d4d4 23.96%, #bfbfbf 35.42%, #ababab 46.88%, #959595 58.85%, #818181 70.31%, #6c6c6c 81.77%, #5c5c5c 90.63%, #4b4b4b 100%);
   max-height: min(352px, 100vw);
   padding-bottom: min(250px, 100vw);
@@ -545,7 +545,7 @@ h1 {
   height: auto;
   position: relative;
   padding-top: min(50px, 3vw);
-  background: linear-gradient(270deg, rgba(0, 0, 0, 0.614) 0%, #000 30.73%, #000 66.35%, #000 75.1%, rgba(0, 0, 0, 0.614) 100%);
+  background-color: black;
 }
 .banner__wrapper {
   position: relative;
@@ -631,6 +631,234 @@ h1 {
 .union__logo > img {
   height: auto;
   width: min(90px, 30%);
+}
+
+.service__games {
+  background: linear-gradient(to right, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0.4941176471) 30.73%, rgba(0, 0, 0, 0) 46.35%, rgba(0, 0, 0, 0.4941176471) 65.1%, rgb(0, 0, 0) 100%);
+}
+.service__logo {
+  display: flex;
+  justify-content: center;
+}
+.service__logo > img {
+  padding-top: min(16px, 10.2vw);
+  max-width: min(288px, 35%);
+}
+.service__games-head {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  color: white; /*por el momento*/
+}
+.service__games-head p:first-of-type {
+  text-align: center;
+  text-shadow: 0px 0px 13px rgba(234, 255, 0, 0.4705882353);
+  font-family: hnt-medium;
+  font-size: min(32px, 4vw);
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: min(10.56px, 2.7vw);
+}
+.service__games-head p:nth-of-type(2) {
+  font-family: hnt-regular;
+  font-size: min(17px, 3.1vw);
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: min(12.26px, 2vw);
+  text-shadow: 0px 0px 11px rgba(234, 255, 0, 0.368627451);
+  text-align: center;
+  width: 85%;
+}
+.service__games-head::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 40px;
+  background: radial-gradient(35% 0.15vw at 50% 5%, #ffffff 0%, rgba(255, 255, 255, 0) 100%), linear-gradient(to bottom, #000 0%, rgba(0, 0, 0, 0.4352941176) 45.73%, rgba(0, 0, 0, 0) 100%);
+  background-blend-mode: hard-light;
+}
+.service__games-foot {
+  background-color: black;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  color: white; /*por el momento*/
+  z-index: 5;
+}
+.service__games-foot > p:first-of-type {
+  color: white;
+  text-align: center;
+  text-shadow: 0px 0px 16px #f00;
+  line-height: 275%; /* 30.25px */
+  font-family: hnt-medium;
+  font-size: min(24px, 3.3vw);
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: min(7.56px, 1.5vw);
+}
+.service__games-foot > p:nth-of-type(2) {
+  color: white;
+  text-align: center;
+  text-shadow: 0px 0px 16px #f00;
+  font-family: hnt-light;
+  font-size: min(24px, 3.3vw);
+  font-style: normal;
+  letter-spacing: min(4.56px, 1.1vw);
+  text-shadow: 0px 0px 16px #f00, 0vw 0vw 1px #f00, 0vw 0vw 1px #f00, 0vw 0vw 1px #f00, 0vw 0vw 1px #f00;
+  font-size: min(14px, 2.9vw);
+}
+
+.wrapper-kratos {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  z-index: 5;
+}
+.wrapper-kratos::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.2039215686) 55.1%, #000000 100%);
+  top: 0;
+  left: 0;
+}
+.wrapper-kratos img {
+  filter: saturate(130%) brightness(110%) contrast(110%);
+  -webkit-filter: saturate(130%) brightness(110%) contrast(110%);
+}
+
+.entertainment {
+  position: relative;
+}
+.entertainment__shadow {
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.3960784314) 0%, rgba(0, 0, 0, 0.7568627451) 15%, rgba(0, 0, 0, 0.5843137255) 45%, rgba(0, 0, 0, 0.5294117647) 65%, rgba(0, 0, 0, 0.3843137255) 85%, rgba(0, 0, 0, 0.3960784314) 100%), linear-gradient(to bottom, rgba(0, 0, 0, 0.5333333333) 0%, rgba(0, 0, 0, 0.5764705882) 15%, rgba(0, 0, 0, 0) 45%, rgba(0, 0, 0, 0) 65%, rgba(0, 0, 6, 0.5764705882) 85%, rgba(0, 0, 0, 0.5333333333) 100%), linear-gradient(to left, rgba(92, 0, 0, 0.7176470588) 0%, rgba(92, 0, 0, 0.4352941176) 15%, #000000 45%, #000000 65%, rgba(92, 0, 0, 0.4352941176) 85%, rgba(92, 0, 0, 0.7176470588) 100%);
+  background-color: rgb(255, 0, 0);
+  /* background-color: black; */
+  padding: min(15px, 8vw);
+}
+@media screen and (min-width: 576px) {
+  .entertainment__shadow img {
+    flex: 0 0 100%;
+    border-radius: 50px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px;
+  }
+}
+.entertainment__content {
+  height: 100%;
+  max-width: 100%;
+  top: 0%;
+  left: 50%;
+  position: absolute;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  background: rgba(18, 1, 1, 0.564);
+  box-shadow: 0px 0px 120px 80px #000, 0px 0px 120px 52px #000 inset;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  padding-top: min(30px, 9vw);
+}
+@media screen and (min-width: 576px) {
+  .entertainment__content {
+    flex: 0 0 100%;
+    border-radius: 50px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px;
+    top: 5%;
+    max-width: 85%;
+    height: 90%;
+  }
+}
+@media screen and (min-width: 992px) {
+  .entertainment__content {
+    max-width: 90%;
+    height: 90%;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .entertainment__content {
+    max-width: 1220px;
+  }
+}
+.entertainment__columns {
+  min-height: 60%;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.entertainment__columns::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(0.2vw 82% at 50% 50%, #ffffff 45%, rgba(0, 0, 0, 0) 100%);
+  background-blend-mode: hard-light;
+  margin-top: min(17px, 2.2vw);
+}
+.entertainment__column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: min(30px, 2.5vw);
+}
+.entertainment__column > img {
+  width: min(130px, 17.33vw);
+  padding-bottom: min(50px, 7vw);
+  filter: drop-shadow(0 0 1.9px white);
+  -webkit-filter: drop-shadow(0 0 1.9px white);
+}
+.entertainment__paragraph {
+  display: flex;
+  max-width: min(1200px, 100%);
+  margin: auto auto;
+  text-align: center;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 5%;
+  min-height: 35%;
+}
+.entertainment__paragraph > p:first-of-type {
+  color: #ecf10a;
+  font-family: hnt-black;
+  font-size: min(16px, 2.6vw);
+  line-height: 162.5%;
+  letter-spacing: min(2.102px, 1vw);
+  width: 60%;
+  text-shadow: 0px 0px 5px rgba(237, 241, 10, 0.4941176471);
+}
+.entertainment__paragraph > p:nth-of-type(2) {
+  font-family: hnt-medium;
+  font-size: min(8px, 1.7vw);
+  text-shadow: 0px 0px 5px rgba(237, 241, 10, 0.4941176471);
+  color: #e5d53d;
+  text-align: center;
+  text-shadow: 0px 0px 12.362323761px 0px #ef6041;
+  max-width: 85%;
+  line-height: 205%; /* 14.873px */
+  letter-spacing: min(1.402px, 0.7vw);
+  padding-bottom: min(10px, 2vw);
 }
 
 /*
@@ -2909,4 +3137,39 @@ for lap-desk design responsive
   color: #ffba0a;
   height: auto;
   margin-top: 0;
+}
+
+.char-xb {
+  margin: min(200px, 10vw) auto min(9px, 3vw);
+  display: flex;
+  justify-content: center;
+}
+@media screen and (min-width: 1440px) {
+  .char-xb {
+    background: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, #000 20%, #000 50%, #000 80%, rgba(0, 0, 0, 0) 100%);
+  }
+}
+
+.char-xb-shadow {
+  position: relative;
+}
+
+@media screen and (min-width: 1440px) {
+  .char-xb-shadow::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.01);
+    box-shadow: 185px 0px 113px -134px #000 inset, -185px 0px 113px -134px #000 inset;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .char-xbox-shadow img {
+    width: min(1200px, 100%);
+    z-index: -3;
+  }
 }

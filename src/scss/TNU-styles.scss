@@ -352,7 +352,7 @@ h1 {
 // Sec-1 main introduction to the new service TNU
 .intro {
   position: relative;
-  overflow-x: hidden;
+  overflow: hidden;
   background: linear-gradient(
     to right,
     #fff 0%,
@@ -537,14 +537,7 @@ h1 {
   height: auto;
   position: relative;
   padding-top: min(50px, 3vw);
-  background: linear-gradient(
-    270deg,
-    rgba(0, 0, 0, 0.614) 0%,
-    #000 30.73%,
-    #000 66.35%,
-    #000 75.1%,
-    rgba(0, 0, 0, 0.614) 100%
-  );
+  background-color: black;
 
   &__wrapper {
     position: relative;
@@ -642,7 +635,7 @@ h1 {
   &__p--1 {
     width: min(256px, 76%);
   }
-  
+
   &__logo {
     position: absolute;
     display: flex;
@@ -656,16 +649,318 @@ h1 {
     -moz-transform: translateX(-26vw);
     -ms-transform: translateX(-26vw);
     -o-transform: translateX(-26vw);
-}
+  }
 
   &__logo > img {
     height: auto;
     width: min(90px, 30%);
   }
-  
 }
 
 // Sec-2 banner union
+
+// Sec-3 Entertainment
+
+.service {
+  &__games {
+    background: linear-gradient(
+      to right,
+      rgb(0, 0, 0) 0%,
+      #0000007e 30.73%,
+      #00000000 46.35%,
+      #0000007e 65.1%,
+      rgb(0, 0, 0) 100%
+    );
+  }
+
+  &__logo {
+    display: flex;
+    justify-content: center;
+
+    & > img {
+      padding-top: min(16px, 10.2vw);
+      max-width: min(288px, 35%);
+    }
+  }
+
+  &__games-head {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    color: white; /*por el momento*/
+
+    & p:first-of-type {
+      text-align: center;
+      text-shadow: 0px 0px 13px #eaff0078;
+      font-family: hnt-medium;
+      font-size: min(32px, 4vw);
+      font-style: normal;
+      font-weight: 700;
+      letter-spacing: min(10.56px, 2.7vw);
+    }
+
+    & p:nth-of-type(2) {
+      font-family: hnt-regular;
+      font-size: min(17px, 3.1vw);
+      font-style: normal;
+      font-weight: 700;
+      letter-spacing: min(12.26px, 2vw);
+      text-shadow: 0px 0px 11px #eaff005e;
+      text-align: center;
+      width: 85%;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 40px;
+      background: radial-gradient(
+          35% 0.15vw at 50% 5%,
+          #ffffff 0%,
+          rgba(255, 255, 255, 0) 100%
+        ),
+        linear-gradient(to bottom, #000 0%, #0000006f 45.73%, #00000000 100%);
+      background-blend-mode: hard-light;
+    }
+  }
+
+  &__games-foot {
+    background-color: black;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    color: white; /*por el momento*/
+    z-index: 5;
+
+    & > p:first-of-type {
+      color: white;
+      text-align: center;
+      text-shadow: 0px 0px 16px #f00;
+      line-height: 275%; /* 30.25px */
+      font-family: hnt-medium;
+      font-size: min(24px, 3.3vw);
+      font-style: normal;
+      font-weight: 700;
+      letter-spacing: min(7.56px, 1.5vw);
+    }
+
+    & > p:nth-of-type(2) {
+      color: white;
+      text-align: center;
+      text-shadow: 0px 0px 16px #f00;
+      font-family: hnt-light;
+      font-size: min(24px, 3.3vw);
+      font-style: normal;
+      letter-spacing: min(4.56px, 1.1vw);
+
+      text-shadow: 0px 0px 16px #f00, -0vw -0vw 1px #f00, 0vw 0vw 1px #f00,
+        -0vw 0vw 1px #f00, 0vw -0vw 1px #f00;
+      font-size: min(14px, 2.9vw);
+    }
+  }
+}
+
+.wrapper-kratos {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  z-index: 5;
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    background: linear-gradient(
+      to bottom,
+      #00000000 0%,
+      #00000034 55.1%,
+      #000000 100%
+    );
+    top: 0;
+    left: 0;
+  }
+
+  img {
+    filter: saturate(130%) brightness(110%) contrast(110%);
+    -webkit-filter: saturate(130%) brightness(110%) contrast(110%);
+  }
+}
+
+.entertainment {
+  position: relative;
+  &__shadow {
+    background: linear-gradient(
+        to right,
+        #00000065 0%,
+        #000000c1 15%,
+        #00000095 45%,
+        #00000087 65%,
+        #00000062 85%,
+        #00000065 100%
+      ),
+      linear-gradient(
+        to bottom,
+        #00000088 0%,
+        #00000093 15%,
+        #00000000 45%,
+        #00000000 65%,
+        #00000693 85%,
+        #00000088 100%
+      ),
+      linear-gradient(
+        to left,
+        #5c0000b7 0%,
+        #5c00006f 15%,
+        #000000 45%,
+        #000000 65%,
+        #5c00006f 85%,
+        #5c0000b7 100%
+      );
+    background-color: rgb(255, 0, 0);
+    /* background-color: black; */
+
+    & img {
+      @include responsive(tablet) {
+        flex: 0 0 100%;
+        border-radius: 50px;
+        -webkit-border-radius: 50px;
+        -moz-border-radius: 50px;
+        -ms-border-radius: 50px;
+        -o-border-radius: 50px;
+      }
+    }
+    padding: min(15px, 8vw);
+  }
+
+  &__content {
+    height: 100%;
+    max-width: 100%;
+    top: 0%;
+    left: 50%;
+    position: absolute;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+
+    background: rgba(18, 1, 1, 0.564);
+    box-shadow: 0px 0px 120px 80px #000, 0px 0px 120px 52px #000 inset;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    padding-top: min(30px, 9vw);
+
+    @include responsive(tablet) {
+      flex: 0 0 100%;
+      border-radius: 50px;
+      -webkit-border-radius: 50px;
+      -moz-border-radius: 50px;
+      -ms-border-radius: 50px;
+      -o-border-radius: 50px;
+      top: 5%;
+      max-width: 85%;
+      height: 90%;
+    }
+
+    @include responsive(laptop) {
+      max-width: 90%;
+      height: 90%;
+    }
+
+    @include responsive(desk) {
+      max-width: 1220px;
+    }
+  }
+
+  &__columns {
+    min-height: 60%;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(
+        0.2vw 82% at 50% 50%,
+        #ffffff 45%,
+        rgba(0, 0, 0, 0) 100%
+      );
+      background-blend-mode: hard-light;
+      margin-top: min(17px, 2.2vw);
+    }
+  }
+
+  &__column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    padding-top: min(30px, 2.5vw);
+
+    & > img {
+      width: min(130px, 17.33vw);
+      padding-bottom: min(50px, 7vw);
+      filter: drop-shadow(0 0 1.9px white);
+      -webkit-filter: drop-shadow(0 0 1.9px white);
+    }
+  }
+
+  &__paragraph {
+    display: flex;
+    max-width: min(1200px, 100%);
+    margin: auto auto;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 5%;
+    min-height: 35%;
+
+    & > p:first-of-type {
+      color: #ecf10a;
+      font-family: hnt-black;
+      font-size: min(16px, 2.6vw);
+      line-height: 162.5%;
+      letter-spacing: min(2.102px, 1vw);
+      width: 60%;
+      text-shadow: 0px 0px 5px #edf10a7e;
+    }
+
+    & > p:nth-of-type(2) {
+      font-family: hnt-medium;
+      font-size: min(8px, 1.7vw);
+      text-shadow: 0px 0px 5px #edf10a7e;
+
+      color: #e5d53d;
+      text-align: center;
+      text-shadow: 0px 0px 12.362323760986328px 0px #ef6041;
+      max-width: 85%;
+      line-height: 205%; /* 14.873px */
+      letter-spacing: min(1.402px, 0.7vw);
+      padding-bottom: min(10px, 2vw);
+    }
+  }
+}
+
+// Sec-3 Entertainment
 
 /*
 sec joel marcus
@@ -3516,6 +3811,50 @@ for lap-desk design responsive
     color: #ffba0a;
     height: auto;
     margin-top: 0;
+  }
+}
+
+.char-xb {
+  margin: min(200px, 10vw) auto min(9px, 3vw);
+  display: flex;
+  justify-content: center;
+
+  @include responsive(desk) {
+    background: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0) 0%,
+      #000 20%,
+      #000 50%,
+      #000 80%,
+      rgba(0, 0, 0, 0) 100%
+    );
+  }
+}
+
+.char-xb-shadow {
+  position: relative;
+  
+}
+
+.char-xb-shadow::after {
+  @include responsive(desk) {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.01);
+    box-shadow: 185px 0px 113px -134px #000 inset,
+      -185px 0px 113px -134px #000 inset;
+  }
+
+}
+
+.char-xbox-shadow img {
+  @include responsive(desk) {
+    width: min(1200px, 100%);
+    z-index: -3;
   }
 }
 
